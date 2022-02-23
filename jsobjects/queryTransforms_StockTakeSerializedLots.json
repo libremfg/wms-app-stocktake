@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "queryTransforms",
+    "pageId": "StockTakeSerializedLots",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\ttransformFetchCarrier: (response) =>{\n\t\treturn response.map((response) => {\n\t\t\treturn {\n\t\t\t\tlabel: response.code,\n\t\t\t\tvalue: response.code\n\t\t\t}\n\t\t})\n\t},\n\t\n\tcreateActionButtonLabel: (validationToken) =>{\n\t\tswitch (validationToken) {\n\t\t\t\t\tcase \"SERIAL_NOT_FOUND\": \t return \"Inbound Missing SubLot\";\n\t\t\t\t\tcase \"PALLET_MISMATCH\": \t return \"Move SubLot to Pallet\";\n\t\t\t\t\tcase \"WAREHOUSE_MISMATCH\": return \"Move SubLot to Warehouse\";\n\t\t\t\t\tdefault: \t\t\t\t\t\t\t\t\treturn \"NO ACTION AVAILABLE\"\n\t\t}\n\t},\n\t\n\ttransformFetchSerializedUnits: (response) =>{\n\t\treturn response.map((response) => {\n\t\t\treturn {\n\t\t\t\t\"Serial Number\": response.subLot ? response.subLot.code : response.serialNumberInput,\n\t\t\t\t\"Carrier Code\": response.carrier ? response.carrier.code : \"-\",\n\t\t\t\t\"Warehouse\": response.storageLocation ? response.storageLocation.name : \"-\",\n\t\t\t\t\"Validation\": response.stocktakeValidation,\n\t\t\t\t\"Action\": queryTransforms.createActionButtonLabel(response.stocktakeValidation)\n\t\t\t}\n\t\t})\n\t},\n\t\n\t\n}\n\n",
+    "variables": []
+  },
+  "id": "StockTakeSerializedLots_queryTransforms",
+  "deleted": false,
+  "gitSyncId": "618b5832da7cd651ee2730f2_61c4343ce89bc475f3cd14a9"
+}

@@ -1,0 +1,68 @@
+{
+  "unpublishedCollection": {
+    "name": "UnitData",
+    "pageId": "StockTakeSerializedLots",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tserializedUnits: {\n    \"getStockOnHand\": [\n      {\n        \"materialSubLot\": {\n          \"code\": \"000-000-000\"\n        },\n        \"carrier\": {\n          \"code\": \"001\"\n        },\n        \"status\": {\n          \"code\": \"Available\"\n        },\n        \"storageLocation\": {\n          \"name\": \"SYD/WH01/BIN01\",\n        },\n        \"quantity\": 1\n      },\n      {\n        \"materialSubLot\": {\n          \"code\": \"000-000-001\"\n        },\n        \"carrier\": {\n          \"code\": \"001\"\n        },\n        \"status\": {\n          \"code\": \"Available\"\n        },\n        \"storageLocation\": {\n          \"name\": \"SYD/WH01/BIN01\",\n        },\n        \"quantity\": 1\n      },\n      {\n        \"materialSubLot\": {\n          \"code\": \"000-000-002\"\n        },\n        \"carrier\": {\n          \"code\": \"001\"\n        },\n        \"status\": {\n          \"code\": \"Available\"\n        },\n        \"storageLocation\": {\n          \"name\": \"SYD/WH01/BIN01\"\n        },\n        \"quantity\": 1\n      }\n    ]\n  }\n}",
+    "variables": [
+      {
+        "name": "serializedUnits",
+        "value": {
+          "getStockOnHand": [
+            {
+              "materialSubLot": {
+                "code": "000-000-000"
+              },
+              "carrier": {
+                "code": "001"
+              },
+              "status": {
+                "code": "Available"
+              },
+              "storageLocation": {
+                "name": "SYD/WH01/BIN01"
+              },
+              "quantity": 1
+            },
+            {
+              "materialSubLot": {
+                "code": "000-000-001"
+              },
+              "carrier": {
+                "code": "001"
+              },
+              "status": {
+                "code": "Available"
+              },
+              "storageLocation": {
+                "name": "SYD/WH01/BIN01"
+              },
+              "quantity": 1
+            },
+            {
+              "materialSubLot": {
+                "code": "000-000-002"
+              },
+              "carrier": {
+                "code": "001"
+              },
+              "status": {
+                "code": "Available"
+              },
+              "storageLocation": {
+                "name": "VIC/WH03/ST01"
+              },
+              "quantity": 1
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "id": "StockTakeSerializedLots_UnitData",
+  "deleted": false,
+  "gitSyncId": "618b5832da7cd651ee2730f2_61c4343ce89bc475f3cd151e"
+}

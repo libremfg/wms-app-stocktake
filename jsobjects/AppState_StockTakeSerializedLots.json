@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "AppState",
+    "pageId": "StockTakeSerializedLots",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\ttabVisibility: () =>{\n\t\tif (!appsmith.store.validationQueryExecuted){\n\t\t\treturn true\n\t\t}\n\t\telse {\n\t\t\treturn appsmith.store.validationQueryExecuted\n\t\t}\n\t}\n}",
+    "variables": []
+  },
+  "id": "StockTakeSerializedLots_AppState",
+  "deleted": false,
+  "gitSyncId": "618b5832da7cd651ee2730f2_61c4343ce89bc475f3cd1657"
+}

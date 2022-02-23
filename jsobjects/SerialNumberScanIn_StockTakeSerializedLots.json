@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "SerialNumberScanIn",
+    "pageId": "StockTakeSerializedLots",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\t\n\tconvertSerialsToQueryFormat: () =>{\n\t\tif (!appsmith.store.serialList){\n\t\t\treturn [];\n\t\t}\n\t\t\n\t\treturn appsmith.store.serialList.map((serial) =>{\n\t\t\treturn {\n\t\t\t\tmaterialSubLot: {code: serial},\n\t\t\t\tcarrier:{code:CarrierSelect.selectedOptionValue },\n\t\t\t\tstorageLocation: {name: FetchWarehouse.data.data.queryEquipment[0].name}\n\t\t\t}\n\t\t})\n\t\t\n\t},\n\t\n\tserialNumberValid: (serialNumber) =>{\n\t\tif (serialNumber.length < 1){\n\t\t\treturn [false,\"Cannot submit an empty serial number\"]\n\t\t}\n\t\tif (!appsmith.store.serialList){\n\t\t\treturn [true,\"\"]\n\t\t}\n\t\tif (appsmith.store.serialList.includes(serialNumber)){\n\t\t\treturn [false, \"Serial Number already exists\"]\n\t\t}\n\t\t\n\t\treturn [true,\"\"]\n\t},\n\t\n\tstoreSerialNumber: (number) =>{\n\t\tif(!appsmith.store.serialList){\n\t\t\tstoreValue(\"serialList\",Array(),false)\n\t\t}\n\t\t\n\t\tconst newList = appsmith.store.serialList.concat([number])\n\t\tstoreValue(\"serialList\",newList,false)\n\t},\n\t\n\tgetSerialNumberList: () =>{\n\t\tif(!appsmith.store.serialList){\n\t\t\treturn Array()\n\t\t}\n\t\telse {\n\t\t\treturn appsmith.store.serialList.concat([])\n\t\t}\n\t},\n\t\n\tdeleteSerialNumberByIndex: (index) =>{\n\t\tif(!appsmith.store.serialList){\n\t\t\treturn \n\t\t}\n\t\telse {\n\t\t\tconst newSerialList = appsmith.store.serialList.filter((data, idx) => idx !== index );\n\t\t\tstoreValue(\"serialList\",newSerialList,false)\n\t\t}\n\t},\n\t\n\tclearScanIn: () =>{\n\t\tstoreValue(\"serialList\",Array(),false)\n\t\tstoreValue('validationQueryExecuted',false,false)\n\t}\n} ",
+    "variables": []
+  },
+  "id": "StockTakeSerializedLots_SerialNumberScanIn",
+  "deleted": false,
+  "gitSyncId": "618b5832da7cd651ee2730f2_61c4343ce89bc475f3cd14a4"
+}
