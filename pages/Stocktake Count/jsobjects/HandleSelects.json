@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "HandleSelects",
+    "pageId": "Stocktake Count",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\n\tselectBin: () => {\n\t\tGetBinCarriers.run()\n\t\tGetStocktakeJobOrder.run().\n\t\tthen(() => GetJobOrderJobResponses.run())\n\t},\n\tbtnSubmit: () => {\n\t\t\n\t}\n}",
+    "variables": []
+  },
+  "id": "Stocktake Count_HandleSelects",
+  "deleted": false,
+  "gitSyncId": "618b5832da7cd651ee2730f2_628724fa309fd93a9bf1df42"
+}

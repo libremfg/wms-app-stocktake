@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "StocktakeLists",
+    "pageId": "Stocktake Admin",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tgetLocationList: () => {\n\t\tvar locations = []\n\t\tfor (let i = 0; i < GetWarehouseBins.data.data.getEquipment.children.length; i++) {\n\t\t\tvar current = GetWarehouseBins.data.data.getEquipment.children[i]\n\t\t\tlocations.push(current.name + \": no carrier\")\n\t\t\tfor (let j = 0; j < current.carriers.length; j++) {\n\t\t\t\tlocations.push(current.name + \": \" + current.carriers[j].code)\n\t\t\t}\n\t\t}\n\t\treturn locations\n\t},\n\tgetJobResponseList: () => {\n\t\tvar locations = []\n\t\tfor (let i = 0; i < GetStocktakeJobResponses.data.data.getJobOrder.children.length; i++ ) {\n\t\t\tvar current = GetStocktakeJobResponses.data.data.getJobOrder.children[i]\n\t\t\tfor (let j = 0; j < current.jobResponses.length; j ++) {\n\t\t\t\tif (current.jobResponses[j].properties.length > 0) {\n\t\t\t\t\tlocations.push(current.equipment.name + \": \" + current.jobResponses[j].properties[0].description)\n\t\t\t\t} else {\n\t\t\t\t\tlocations.push(current.equipment.name + \": no carrier\")\n\t\t\t\t}\n\t\t\t\n\t\t\t}\n\t\t}\n\t\treturn locations\n\t},\n\tgetCountedList: () => {\n\t\tvar locations = []\n\t\tfor (let i = 0; i < GetStocktakeCountedLocations.data.data.getJobOrder.children.length; i++ ) {\n\t\t\tvar current = GetStocktakeCountedLocations.data.data.getJobOrder.children[i]\n\t\t\tfor (let j = 0; j < current.jobResponses.length; j ++) {\n\t\t\t\tif (current.jobResponses[j].properties.length > 0) {\n\t\t\t\t\tlocations.push(current.equipment.name + \": \" + current.jobResponses[j].properties[0].description)\n\t\t\t\t} else {\n\t\t\t\t\tlocations.push(current.equipment.name + \": no carrier\")\n\t\t\t\t}\n\t\t\t\n\t\t\t}\n\t\t}\n\t\treturn locations\n\t},\n\tgetFinishedList: () => {\n\t\tvar locations = []\n\t\tfor (let i = 0; i < GetStocktakeFinalisedLocations.data.data.getJobOrder.children.length; i++ ) {\n\t\t\tvar current = GetStocktakeFinalisedLocations.data.data.getJobOrder.children[i]\n\t\t\tfor (let j = 0; j < current.jobResponses.length; j ++) {\n\t\t\t\tif (current.jobResponses[j].properties.length > 0) {\n\t\t\t\t\tlocations.push(current.equipment.name + \": \" + current.jobResponses[j].properties[0].description)\n\t\t\t\t} else {\n\t\t\t\t\tlocations.push(current.equipment.name + \": no carrier\")\n\t\t\t\t}\n\t\t\t\n\t\t\t}\n\t\t}\n\t\treturn locations\n\t}\n}",
+    "variables": []
+  },
+  "id": "Stocktake Admin_StocktakeLists",
+  "deleted": false,
+  "gitSyncId": "618b5832da7cd651ee2730f2_626b8e66cca31f35e65b6c55"
+}

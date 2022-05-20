@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "DefaultTabs",
+    "pageId": "Stocktake Admin",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tstocktakeTabDefault: () => {\n\t\tif (GetWarehouseStocktakes.data.data.queryJobOrder.length > 0) {\n\t\t\treturn \"Ongoing\"\n\t\t}\n\t\treturn \"Unplanned\"\n\t}\n}",
+    "variables": []
+  },
+  "id": "Stocktake Admin_DefaultTabs",
+  "deleted": false,
+  "gitSyncId": "618b5832da7cd651ee2730f2_626b7246cca31f35e65b6519"
+}

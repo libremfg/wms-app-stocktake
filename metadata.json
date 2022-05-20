@@ -1,21 +1,215 @@
 {
-  "fileFormatVersion": 1,
   "clientSchemaVersion": 1,
-  "serverSchemaVersion": 1,
+  "serverSchemaVersion": 4,
+  "pageOrder": [
+    "StockTakeSerializedLots",
+    "Stocktake Admin",
+    "Stocktake Report",
+    "Stocktake Count"
+  ],
+  "publishedPageOrder": [
+    "StockTakeSerializedLots",
+    "Stocktake Admin",
+    "Stocktake Report",
+    "Stocktake Count"
+  ],
   "publishedDefaultPageName": "StockTakeSerializedLots",
   "unpublishedDefaultPageName": "StockTakeSerializedLots",
-  "editModeTheme": {
-    "name": "Classic",
-    "isSystemTheme": true,
-    "deleted": false,
-    "policies": []
-  },
-  "publishedTheme": {
-    "name": "Classic",
-    "isSystemTheme": true,
-    "deleted": false,
-    "policies": []
+  "invisibleActionFields": {
+    "StockTakeSerializedLots_AppState.tabVisibility": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "StockTakeSerializedLots_CreateOrderWithShipmentItems": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "StockTakeSerializedLots_FetchCarrier": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "StockTakeSerializedLots_FetchSerializedUnits": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "StockTakeSerializedLots_FetchWarehouse": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "StockTakeSerializedLots_InboundSerializedSubLot": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "StockTakeSerializedLots_SerialNumberScanIn.clearScanIn": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "StockTakeSerializedLots_SerialNumberScanIn.convertSerialsToQueryFormat": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "StockTakeSerializedLots_SerialNumberScanIn.deleteSerialNumberByIndex": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "StockTakeSerializedLots_SerialNumberScanIn.getSerialNumberList": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "StockTakeSerializedLots_SerialNumberScanIn.serialNumberValid": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "StockTakeSerializedLots_SerialNumberScanIn.storeSerialNumber": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "StockTakeSerializedLots_StockReportValidation.getValidationColor": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "StockTakeSerializedLots_StockReportValidation.runStockValidationQuery": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "StockTakeSerializedLots_StockReportValidation.validateSerialNumbers": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "StockTakeSerializedLots_queryTransforms.createActionButtonLabel": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "StockTakeSerializedLots_queryTransforms.transformFetchCarrier": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "StockTakeSerializedLots_queryTransforms.transformFetchSerializedUnits": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Admin_CreateStocktakeJobOrders": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Admin_DefaultTabs.stocktakeTabDefault": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Admin_FormatCreateStocktakeMutation.getStocktakeJobOrderInput": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Admin_GetSiteWarehouses": {
+      "unpublishedUserSetOnLoad": true,
+      "publishedUserSetOnLoad": true
+    },
+    "Stocktake Admin_GetStocktakeCountedLocations": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Admin_GetStocktakeFinalisedLocations": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Admin_GetStocktakeJobResponses": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Admin_GetStocktakeLists.getLists": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Admin_GetUserSites": {
+      "unpublishedUserSetOnLoad": true,
+      "publishedUserSetOnLoad": true
+    },
+    "Stocktake Admin_GetWarehouseBins": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Admin_GetWarehouseCycleCounts": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Admin_GetWarehouseStocktakes": {
+      "unpublishedUserSetOnLoad": true,
+      "publishedUserSetOnLoad": true
+    },
+    "Stocktake Admin_JS_SiteList.getUserSiteList": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Admin_StocktakeLists.getCountedList": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Admin_StocktakeLists.getFinishedList": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Admin_StocktakeLists.getJobResponseList": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Admin_StocktakeLists.getLocationList": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Count_CreateJobResponseCarrier": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Count_CreateJobResponseNoCarrier": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Count_GetBinCarriers": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Count_GetJobOrderJobResponses": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Count_GetMaterialDefinition": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Count_GetMaterialsAtLocation": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Count_GetSiteWarehouses": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Count_GetStocktakeJobOrder": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Count_GetUserSites": {
+      "unpublishedUserSetOnLoad": true,
+      "publishedUserSetOnLoad": true
+    },
+    "Stocktake Count_GetWarehouseBins": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Count_HandleSelects.btnSubmit": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Count_HandleSelects.selectBin": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Count_JS_SiteList.getUserSiteList": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    }
   },
   "publishedLayoutmongoEscapedWidgets": {},
-  "unpublishedLayoutmongoEscapedWidgets": {}
+  "unpublishedLayoutmongoEscapedWidgets": {},
+  "fileFormatVersion": 2
 }

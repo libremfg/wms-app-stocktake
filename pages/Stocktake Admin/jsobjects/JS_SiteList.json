@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "JS_SiteList",
+    "pageId": "Stocktake Admin",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tgetUserSiteList : () => {\n\t\tconst flattened = []\n\t\tGetUserSites.data.data.getUser.hasRole.map((userRole) => {\n\t\t\tuserRole.responsibilities.map((site) => {\n\t\t\t\tflattened.push(site)\n\t\t\t})\n\t\t})\n\t\tconst result = flattened.map((row)=>{\n\t\t\treturn {label:row.name, value:row.id}\n\t\t})\n\t\treturn result\n\t\t}\n}",
+    "variables": []
+  },
+  "id": "Stocktake Admin_JS_SiteList",
+  "deleted": false,
+  "gitSyncId": "618b5832da7cd651ee2730f2_626b5a5dcca31f35e65b617c"
+}
