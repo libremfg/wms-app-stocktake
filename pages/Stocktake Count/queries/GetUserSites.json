@@ -26,7 +26,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tname:appsmith.user.email\n\t\t},\n    query: `\nquery($name:String!){\n  getUser(username:$name){\n    name\n    hasRole@cascade{\n      role{\n        name\n        hasGrantedRights(filter:{name:{eq:isAdmin}}){\n          name\n        }\n      }\n      responsibilities(filter:{equipmentLevel:{eq:Site}}){\n        id\n        name\n      }\n    }\n  }\n}\n    `\n})\n}}",
+      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tname:appsmith.user.email\n\t\t},\n    query: `\nquery($name:String!){\n  getUser(username:$name){\n\t\tid\n    name\n    hasRole@cascade{\n      role{\n        name\n        hasGrantedRights(filter:{name:{eq:isAdmin}}){\n          name\n        }\n      }\n      responsibilities(filter:{equipmentLevel:{eq:Site}}){\n        id\n        name\n      }\n    }\n  }\n}\n    `\n})\n}}",
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
@@ -47,7 +47,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n    variables: {\n\t\t\tname:appsmith.user.email\n\t\t},\n    query: `\nquery($name:String!){\n  getUser(username:$name){\n    name\n    hasRole@cascade{\n      role{\n        name\n        hasGrantedRights(filter:{name:{eq:isAdmin}}){\n          name\n        }\n      }\n      responsibilities(filter:{equipmentLevel:{eq:Site}}){\n        id\n        name\n      }\n    }\n  }\n}\n    `\n})"
+      "JSON.stringify({\n    variables: {\n\t\t\tname:appsmith.user.email\n\t\t},\n    query: `\nquery($name:String!){\n  getUser(username:$name){\n\t\tid\n    name\n    hasRole@cascade{\n      role{\n        name\n        hasGrantedRights(filter:{name:{eq:isAdmin}}){\n          name\n        }\n      }\n      responsibilities(filter:{equipmentLevel:{eq:Site}}){\n        id\n        name\n      }\n    }\n  }\n}\n    `\n})"
     ],
     "userSetOnLoad": true,
     "confirmBeforeExecute": false,

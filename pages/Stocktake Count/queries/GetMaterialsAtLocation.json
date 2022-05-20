@@ -26,7 +26,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tstorage:selectStocktakeBin.selectedOptionLabel,\n\t\t\tcarrier:selectStocktakeCarrier.selectedOptionValue\n\t\t},\n    query: `\nquery GetEquipment($storage:String!,$carrier:ID!){\n  getStockOnHand(filter:{carrier:{id:$carrier},storageLocation:{name:$storage}}){\n    material {\n      code\n      id\n    }\n  }\n}\n    `\n})\n}}",
+      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tstorage:selectStocktakeBin.selectedOptionLabel,\n\t\t\tcarrier:selectStocktakeLooseOwner.selectedOptionValue\n\t\t},\n    query: `\nquery GetEquipment($storage:String!,$carrier:ID!){\n  getStockOnHand(filter:{carrier:{id:$carrier},storageLocation:{name:$storage}}){\n    material {\n      code\n      id\n    }\n  }\n}\n    `\n})\n}}",
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
@@ -47,7 +47,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n    variables: {\n\t\t\tstorage:selectStocktakeBin.selectedOptionLabel,\n\t\t\tcarrier:selectStocktakeCarrier.selectedOptionValue\n\t\t},\n    query: `\nquery GetEquipment($storage:String!,$carrier:ID!){\n  getStockOnHand(filter:{carrier:{id:$carrier},storageLocation:{name:$storage}}){\n    material {\n      code\n      id\n    }\n  }\n}\n    `\n})"
+      "JSON.stringify({\n    variables: {\n\t\t\tstorage:selectStocktakeBin.selectedOptionLabel,\n\t\t\tcarrier:selectStocktakeLooseOwner.selectedOptionValue\n\t\t},\n    query: `\nquery GetEquipment($storage:String!,$carrier:ID!){\n  getStockOnHand(filter:{carrier:{id:$carrier},storageLocation:{name:$storage}}){\n    material {\n      code\n      id\n    }\n  }\n}\n    `\n})"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

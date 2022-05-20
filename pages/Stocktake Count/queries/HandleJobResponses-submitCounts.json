@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "btnSubmit",
-    "fullyQualifiedName": "HandleSelects.btnSubmit",
+    "name": "submitCounts",
+    "fullyQualifiedName": "HandleJobResponses.submitCounts",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,12 +14,12 @@
       "userPermissions": []
     },
     "pageId": "Stocktake Count",
-    "collectionId": "Stocktake Count_HandleSelects",
+    "collectionId": "Stocktake Count_HandleJobResponses",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\treturn HandleJobResponses.createJobResponse()\n\t\t\t.then(() => GetJobOrderJobResponses.run()\n\t\t\t.then(() => HandleJobResponses.submitCounts()))\n\t}",
+      "body": "() => {\n\t\tif (HandleOwnerStatus.getOwnerID() == \"\") {\n\t\t\treturn AddStocktakeCountNoOwner;\n\t\t} else {\n\t\t\treturn AddStocktakeCountOwner;\n\t\t}\n\t}",
       "jsArguments": [],
       "isAsync": false
     },
@@ -33,14 +33,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\treturn HandleJobResponses.createJobResponse()\n\t\t\t.then(() => GetJobOrderJobResponses.run()\n\t\t\t.then(() => HandleJobResponses.submitCounts()))\n\t}"
+      "() => {\n\t\tif (HandleOwnerStatus.getOwnerID() == \"\") {\n\t\t\treturn AddStocktakeCountNoOwner;\n\t\t} else {\n\t\t\treturn AddStocktakeCountOwner;\n\t\t}\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Stocktake Count_HandleSelects.btnSubmit",
+  "id": "Stocktake Count_HandleJobResponses.submitCounts",
   "deleted": false,
-  "gitSyncId": "618b5832da7cd651ee2730f2_6287275a309fd93a9bf1e003"
+  "gitSyncId": "618b5832da7cd651ee2730f2_62872e47309fd93a9bf1e1ea"
 }

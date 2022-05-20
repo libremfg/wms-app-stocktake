@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 990,
+          "bottomRow": 1140,
           "containerStyle": "none",
           "snapRows": 99,
           "parentRowSpace": 1,
@@ -37,8 +37,8 @@
               ],
               "displayName": "Container",
               "iconSVG": "/static/media/icon.1977dca3.svg",
-              "topRow": 8,
-              "bottomRow": 59,
+              "topRow": 52,
+              "bottomRow": 112,
               "parentRowSpace": 10,
               "type": "CONTAINER_WIDGET",
               "hideCard": false,
@@ -51,7 +51,7 @@
                   "widgetName": "Canvas1",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 480,
+                  "bottomRow": 580,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": false,
@@ -164,58 +164,13 @@
                     },
                     {
                       "boxShadow": "none",
-                      "widgetName": "selectStocktakeCarrier",
-                      "isFilterable": true,
-                      "displayName": "Select",
-                      "iconSVG": "/static/media/icon.bd99caba.svg",
-                      "labelText": "Carrier",
-                      "topRow": 17,
-                      "bottomRow": 21,
-                      "parentRowSpace": 10,
-                      "labelWidth": 5,
-                      "type": "SELECT_WIDGET",
-                      "serverSideFiltering": false,
-                      "hideCard": false,
-                      "defaultOptionValue": "",
-                      "animateLoading": true,
-                      "parentColumnSpace": 8.458984375,
-                      "dynamicTriggerPathList": [],
-                      "leftColumn": 1,
-                      "dynamicBindingPathList": [
-                        {
-                          "key": "accentColor"
-                        },
-                        {
-                          "key": "options"
-                        }
-                      ],
-                      "labelPosition": "Left",
-                      "options": "{{GetBinCarriers.data.data.getEquipment.carriers}}",
-                      "placeholderText": "Select option",
-                      "isDisabled": false,
-                      "key": "etfghx8tw9",
-                      "labelTextSize": "0.875rem",
-                      "isRequired": false,
-                      "rightColumn": 39,
-                      "widgetId": "9pm9zmney9",
-                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-                      "isVisible": true,
-                      "version": 1,
-                      "parentId": "oa40w2vcw4",
-                      "labelAlignment": "left",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "borderRadius": "0px"
-                    },
-                    {
-                      "boxShadow": "none",
                       "widgetName": "selectStocktakeBin",
                       "isFilterable": true,
                       "displayName": "Select",
                       "iconSVG": "/static/media/icon.bd99caba.svg",
                       "labelText": "Bin",
-                      "topRow": 12,
-                      "bottomRow": 16,
+                      "topRow": 11,
+                      "bottomRow": 15,
                       "parentRowSpace": 10,
                       "labelWidth": 5,
                       "type": "SELECT_WIDGET",
@@ -262,8 +217,8 @@
                       "widgetName": "inpStocktakeCount",
                       "displayName": "Input",
                       "iconSVG": "/static/media/icon.9f505595.svg",
-                      "topRow": 35,
-                      "bottomRow": 39,
+                      "topRow": 47,
+                      "bottomRow": 51,
                       "parentRowSpace": 10,
                       "labelWidth": 5,
                       "autoFocus": false,
@@ -303,17 +258,24 @@
                     {
                       "boxShadow": "none",
                       "widgetName": "btnCloseCount",
+                      "onClick": "{{HandleSelects.btnSubmit()}}",
                       "buttonColor": "#03B365",
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca02633.svg",
-                      "topRow": 42,
-                      "bottomRow": 46,
+                      "topRow": 52,
+                      "bottomRow": 56,
                       "parentRowSpace": 10,
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
                       "parentColumnSpace": 8.458984375,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
                       "leftColumn": 1,
+                      "dynamicBindingPathList": [],
                       "text": "Submit",
                       "isDisabled": false,
                       "key": "pcq5g5gji9",
@@ -410,8 +372,8 @@
                       "isCanvas": true,
                       "displayName": "Tabs",
                       "iconSVG": "/static/media/icon.74a6d653.svg",
-                      "topRow": 22,
-                      "bottomRow": 33,
+                      "topRow": 36,
+                      "bottomRow": 47,
                       "parentRowSpace": 10,
                       "type": "TABS_WIDGET",
                       "hideCard": false,
@@ -604,7 +566,7 @@
                         }
                       ],
                       "key": "6abp516y21",
-                      "rightColumn": 39,
+                      "rightColumn": 41,
                       "widgetId": "10mre9d20g",
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "defaultTab": "Stocked Materials",
@@ -633,47 +595,370 @@
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
                     },
                     {
-                      "widgetName": "Text1",
-                      "displayName": "Text",
-                      "iconSVG": "/static/media/icon.97c59b52.svg",
-                      "topRow": 20,
-                      "bottomRow": 24,
+                      "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+                      "widgetName": "tabCarrierSwitch",
+                      "isCanvas": true,
+                      "displayName": "Tabs",
+                      "iconSVG": "/static/media/icon.74a6d653.svg",
+                      "topRow": 17,
+                      "bottomRow": 36,
                       "parentRowSpace": 10,
-                      "type": "TEXT_WIDGET",
+                      "type": "TABS_WIDGET",
                       "hideCard": false,
+                      "shouldScrollContents": false,
                       "animateLoading": true,
-                      "overflow": "NONE",
-                      "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-                      "parentColumnSpace": 11.3828125,
+                      "parentColumnSpace": 15.03759765625,
                       "dynamicTriggerPathList": [],
-                      "leftColumn": 42,
+                      "leftColumn": 1,
                       "dynamicBindingPathList": [
                         {
-                          "key": "fontFamily"
+                          "key": "accentColor"
                         },
                         {
                           "key": "borderRadius"
                         },
                         {
-                          "key": "text"
+                          "key": "boxShadow"
                         }
                       ],
-                      "shouldTruncate": false,
-                      "truncateButtonColor": "#FFC13D",
-                      "text": "{{GetJobOrderJobResponses.data.data.getJobOrder}}",
-                      "key": "904owjazh3",
-                      "rightColumn": 58,
-                      "textAlign": "LEFT",
-                      "widgetId": "4r3243b6a3",
+                      "children": [
+                        {
+                          "tabId": "tab1",
+                          "boxShadow": "none",
+                          "widgetName": "Canvas4",
+                          "displayName": "Canvas",
+                          "topRow": 0,
+                          "bottomRow": 390,
+                          "parentRowSpace": 1,
+                          "type": "CANVAS_WIDGET",
+                          "canExtend": true,
+                          "hideCard": true,
+                          "shouldScrollContents": false,
+                          "minHeight": 400,
+                          "parentColumnSpace": 1,
+                          "dynamicTriggerPathList": [],
+                          "leftColumn": 0,
+                          "dynamicBindingPathList": [
+                            {
+                              "key": "borderRadius"
+                            },
+                            {
+                              "key": "accentColor"
+                            }
+                          ],
+                          "children": [
+                            {
+                              "boxShadow": "none",
+                              "widgetName": "selectStocktakeCarrierOwner",
+                              "isFilterable": true,
+                              "displayName": "Select",
+                              "iconSVG": "/static/media/icon.bd99caba.svg",
+                              "labelText": "Owner",
+                              "topRow": 9,
+                              "bottomRow": 13,
+                              "parentRowSpace": 10,
+                              "labelWidth": "10",
+                              "type": "SELECT_WIDGET",
+                              "serverSideFiltering": false,
+                              "hideCard": false,
+                              "defaultOptionValue": "",
+                              "animateLoading": true,
+                              "parentColumnSpace": 8.458984375,
+                              "dynamicTriggerPathList": [],
+                              "leftColumn": 1,
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "accentColor"
+                                },
+                                {
+                                  "key": "options"
+                                }
+                              ],
+                              "labelPosition": "Auto",
+                              "options": "{{GetPartners.data.data.queryPartner}}",
+                              "placeholderText": "Select option",
+                              "isDisabled": false,
+                              "key": "etfghx8tw9",
+                              "labelTextSize": "0.875rem",
+                              "isRequired": false,
+                              "rightColumn": 64,
+                              "widgetId": "s8oce5qgem",
+                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "isVisible": true,
+                              "version": 1,
+                              "parentId": "6n013bsnnd",
+                              "labelAlignment": "left",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "borderRadius": "0px"
+                            },
+                            {
+                              "boxShadow": "none",
+                              "widgetName": "selectStocktakeCarrier",
+                              "isFilterable": true,
+                              "displayName": "Select",
+                              "iconSVG": "/static/media/icon.bd99caba.svg",
+                              "labelText": "Carrier",
+                              "topRow": 1,
+                              "bottomRow": 5,
+                              "parentRowSpace": 10,
+                              "labelWidth": "10",
+                              "type": "SELECT_WIDGET",
+                              "serverSideFiltering": false,
+                              "hideCard": false,
+                              "defaultOptionValue": "",
+                              "animateLoading": true,
+                              "parentColumnSpace": 8.458984375,
+                              "dynamicTriggerPathList": [
+                                {
+                                  "key": "onOptionChange"
+                                }
+                              ],
+                              "leftColumn": 1,
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "accentColor"
+                                },
+                                {
+                                  "key": "options"
+                                }
+                              ],
+                              "labelPosition": "Auto",
+                              "options": "{{GetBinCarriers.data.data.getEquipment.carriers}}",
+                              "placeholderText": "Select option",
+                              "isDisabled": false,
+                              "key": "etfghx8tw9",
+                              "labelTextSize": "0.875rem",
+                              "isRequired": false,
+                              "rightColumn": 64,
+                              "widgetId": "d23sjp9d53",
+                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "isVisible": true,
+                              "version": 1,
+                              "parentId": "6n013bsnnd",
+                              "labelAlignment": "left",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "borderRadius": "0px",
+                              "onOptionChange": "{{GetCarrierDetails.run()}}"
+                            },
+                            {
+                              "widgetName": "txtCarrierStatus",
+                              "displayName": "Text",
+                              "iconSVG": "/static/media/icon.97c59b52.svg",
+                              "topRow": 5,
+                              "bottomRow": 9,
+                              "parentRowSpace": 10,
+                              "type": "TEXT_WIDGET",
+                              "hideCard": false,
+                              "animateLoading": true,
+                              "overflow": "NONE",
+                              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+                              "parentColumnSpace": 7.943878173828125,
+                              "dynamicTriggerPathList": [],
+                              "leftColumn": 1,
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "fontFamily"
+                                },
+                                {
+                                  "key": "borderRadius"
+                                },
+                                {
+                                  "key": "text"
+                                }
+                              ],
+                              "shouldTruncate": false,
+                              "truncateButtonColor": "#FFC13D",
+                              "text": "Status: {{GetCarrierDetails.data.data.getCarrier.status.code}}",
+                              "key": "904owjazh3",
+                              "rightColumn": 32,
+                              "textAlign": "LEFT",
+                              "widgetId": "tt3x66w0vq",
+                              "isVisible": true,
+                              "fontStyle": "",
+                              "textColor": "#231F20",
+                              "version": 1,
+                              "parentId": "6n013bsnnd",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                              "fontSize": "1rem"
+                            }
+                          ],
+                          "isDisabled": false,
+                          "key": "qmca5723a2",
+                          "tabName": "Stored on Carrier",
+                          "rightColumn": 360.90234375,
+                          "detachFromLayout": true,
+                          "widgetId": "6n013bsnnd",
+                          "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                          "isVisible": true,
+                          "version": 1,
+                          "parentId": "dnnsqwtm3t",
+                          "renderMode": "CANVAS",
+                          "isLoading": false,
+                          "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
+                        },
+                        {
+                          "tabId": "tab2",
+                          "boxShadow": "none",
+                          "widgetName": "Canvas5",
+                          "displayName": "Canvas",
+                          "topRow": 0,
+                          "bottomRow": 390,
+                          "parentRowSpace": 1,
+                          "type": "CANVAS_WIDGET",
+                          "canExtend": true,
+                          "hideCard": true,
+                          "shouldScrollContents": false,
+                          "minHeight": 400,
+                          "parentColumnSpace": 1,
+                          "dynamicTriggerPathList": [],
+                          "leftColumn": 0,
+                          "dynamicBindingPathList": [
+                            {
+                              "key": "borderRadius"
+                            },
+                            {
+                              "key": "accentColor"
+                            }
+                          ],
+                          "children": [
+                            {
+                              "boxShadow": "none",
+                              "widgetName": "selectStocktakeStatus",
+                              "isFilterable": true,
+                              "displayName": "Select",
+                              "iconSVG": "/static/media/icon.bd99caba.svg",
+                              "labelText": "Status",
+                              "topRow": 4,
+                              "bottomRow": 8,
+                              "parentRowSpace": 10,
+                              "labelWidth": "10",
+                              "type": "SELECT_WIDGET",
+                              "serverSideFiltering": false,
+                              "hideCard": false,
+                              "defaultOptionValue": "Available",
+                              "animateLoading": true,
+                              "parentColumnSpace": 8.458984375,
+                              "dynamicTriggerPathList": [],
+                              "leftColumn": 0,
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "accentColor"
+                                },
+                                {
+                                  "key": "options"
+                                }
+                              ],
+                              "labelPosition": "Auto",
+                              "options": "{{GetMaterialStatus.data.data.queryMaterialStatus}}",
+                              "placeholderText": "Select option",
+                              "isDisabled": false,
+                              "key": "etfghx8tw9",
+                              "labelTextSize": "0.875rem",
+                              "isRequired": false,
+                              "rightColumn": 63,
+                              "widgetId": "zmwoeoavdz",
+                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "isVisible": true,
+                              "version": 1,
+                              "parentId": "5wwl8mjade",
+                              "labelAlignment": "left",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "borderRadius": "0px"
+                            },
+                            {
+                              "boxShadow": "none",
+                              "widgetName": "selectStocktakeLooseOwner",
+                              "isFilterable": true,
+                              "displayName": "Select",
+                              "iconSVG": "/static/media/icon.bd99caba.svg",
+                              "labelText": "Owner",
+                              "topRow": 0,
+                              "bottomRow": 4,
+                              "parentRowSpace": 10,
+                              "labelWidth": "10",
+                              "type": "SELECT_WIDGET",
+                              "serverSideFiltering": false,
+                              "hideCard": false,
+                              "defaultOptionValue": "",
+                              "animateLoading": true,
+                              "parentColumnSpace": 8.458984375,
+                              "dynamicTriggerPathList": [],
+                              "leftColumn": 0,
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "accentColor"
+                                },
+                                {
+                                  "key": "options"
+                                }
+                              ],
+                              "labelPosition": "Auto",
+                              "options": "{{GetPartners.data.data.queryPartner}}",
+                              "placeholderText": "Select option",
+                              "isDisabled": false,
+                              "key": "etfghx8tw9",
+                              "labelTextSize": "0.875rem",
+                              "isRequired": false,
+                              "rightColumn": 63,
+                              "widgetId": "9pm9zmney9",
+                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "isVisible": true,
+                              "version": 1,
+                              "parentId": "5wwl8mjade",
+                              "labelAlignment": "left",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "borderRadius": "0px"
+                            }
+                          ],
+                          "isDisabled": false,
+                          "key": "qmca5723a2",
+                          "tabName": "Loose Items",
+                          "rightColumn": 360.90234375,
+                          "detachFromLayout": true,
+                          "widgetId": "5wwl8mjade",
+                          "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                          "isVisible": true,
+                          "version": 1,
+                          "parentId": "dnnsqwtm3t",
+                          "renderMode": "CANVAS",
+                          "isLoading": false,
+                          "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
+                        }
+                      ],
+                      "key": "6abp516y21",
+                      "rightColumn": 41,
+                      "widgetId": "dnnsqwtm3t",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "defaultTab": "Stored on Carrier",
+                      "shouldShowTabs": true,
+                      "tabsObj": {
+                        "tab1": {
+                          "label": "Stored on Carrier",
+                          "id": "tab1",
+                          "widgetId": "6n013bsnnd",
+                          "isVisible": true,
+                          "index": 0
+                        },
+                        "tab2": {
+                          "label": "Loose Items",
+                          "id": "tab2",
+                          "widgetId": "5wwl8mjade",
+                          "isVisible": true,
+                          "index": 1
+                        }
+                      },
                       "isVisible": true,
-                      "fontStyle": "BOLD",
-                      "textColor": "#231F20",
-                      "version": 1,
+                      "version": 3,
                       "parentId": "oa40w2vcw4",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "fontSize": "1rem"
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
                     }
                   ],
                   "key": "m0cwt5q3x0",
@@ -694,7 +979,7 @@
               "key": "w9bevdlidh",
               "labelTextSize": "0.875rem",
               "backgroundColor": "#FFFFFF",
-              "rightColumn": 51,
+              "rightColumn": 56,
               "widgetId": "6kvcs55k2o",
               "containerStyle": "card",
               "isVisible": true,
@@ -714,22 +999,12 @@
               "confirmBeforeExecute": false,
               "pluginType": "API",
               "jsonPathKeys": [
-                "JSON.stringify({\n    variables: {\n\t\t\tname:appsmith.user.email\n\t\t},\n    query: `\nquery($name:String!){\n  getUser(username:$name){\n    name\n    hasRole@cascade{\n      role{\n        name\n        hasGrantedRights(filter:{name:{eq:isAdmin}}){\n          name\n        }\n      }\n      responsibilities(filter:{equipmentLevel:{eq:Site}}){\n        id\n        name\n      }\n    }\n  }\n}\n    `\n})"
+                "JSON.stringify({\n    variables: {\n\t\t\tname:appsmith.user.email\n\t\t},\n    query: `\nquery($name:String!){\n  getUser(username:$name){\n\t\tid\n    name\n    hasRole@cascade{\n      role{\n        name\n        hasGrantedRights(filter:{name:{eq:isAdmin}}){\n          name\n        }\n      }\n      responsibilities(filter:{equipmentLevel:{eq:Site}}){\n        id\n        name\n      }\n    }\n  }\n}\n    `\n})"
               ],
               "timeoutInMillisecond": 10000
             }
           ],
           [
-            {
-              "id": "Stocktake Count_GetJobOrderJobResponses",
-              "name": "GetJobOrderJobResponses",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "JSON.stringify({\n    variables: {\n\t\t\tid:GetStocktakeJobOrder.data.data.queryJobOrder[0].id,\n\t\t},\n    query: `\nquery GetJobOrder($id:ID!){\n  getJobOrder(id:$id) {\n    jobResponses {\n      id\n      equipment {\n        id\n      }\n      materialActual {\n        carrier {\n          id\n        }\n      }\n\t\t\tproperties {\n\t\t\t\tname\n\t\t\t\tdescription\n\t\t\t}\n    }\n  }\n}`\n})"
-              ],
-              "timeoutInMillisecond": 10000
-            },
             {
               "id": "Stocktake Count_GetMaterialDefinition",
               "name": "GetMaterialDefinition",
@@ -741,14 +1016,24 @@
               "timeoutInMillisecond": 10000
             },
             {
-              "id": "Stocktake Count_GetStocktakeJobOrder",
-              "name": "GetStocktakeJobOrder",
+              "id": "Stocktake Count_GetMaterialStatus",
+              "name": "GetMaterialStatus",
               "confirmBeforeExecute": false,
               "pluginType": "API",
               "jsonPathKeys": [
-                "JSON.stringify({\n    variables: {\n\t\t\tequip:selectStocktakeBin.selectedOptionValue,\n\t\t},\n    query: `\nquery QueryJobOrder($equip:[ID!]!) {\n  queryJobOrder (filter:{dispatchStatus:{eq:ACTIVE}}) @cascade{\n\t\tid\n    equipment(filter:{id:$equip}) {\n      id\n    }\n  }\n}`\n})"
+                "JSON.stringify({\n    variables: null,\n    query: `\n\tquery{\n\t\tqueryMaterialStatus{\n\t\t\tvalue:id\n\t\t\tlabel:code\n\t\t}\n\t}`\n})"
               ],
-              "timeoutInMillisecond": 10000
+              "timeoutInMillisecond": 300003
+            },
+            {
+              "id": "Stocktake Count_GetPartners",
+              "name": "GetPartners",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "JSON.stringify({\n    variables: null,\n    query: `\n\tquery{\n\t\tqueryPartner{\n\t\t\tvalue:id\n\t\t\tlabel:name\n\t\t}\n\t}`\n})"
+              ],
+              "timeoutInMillisecond": 300003
             }
           ],
           [
@@ -768,7 +1053,7 @@
               "confirmBeforeExecute": false,
               "pluginType": "API",
               "jsonPathKeys": [
-                "JSON.stringify({\n    variables: {\n\t\t\tstorage:selectStocktakeBin.selectedOptionLabel,\n\t\t\tcarrier:selectStocktakeCarrier.selectedOptionValue\n\t\t},\n    query: `\nquery GetEquipment($storage:String!,$carrier:ID!){\n  getStockOnHand(filter:{carrier:{id:$carrier},storageLocation:{name:$storage}}){\n    material {\n      code\n      id\n    }\n  }\n}\n    `\n})"
+                "JSON.stringify({\n    variables: {\n\t\t\tstorage:selectStocktakeBin.selectedOptionLabel,\n\t\t\tcarrier:selectStocktakeLooseOwner.selectedOptionValue\n\t\t},\n    query: `\nquery GetEquipment($storage:String!,$carrier:ID!){\n  getStockOnHand(filter:{carrier:{id:$carrier},storageLocation:{name:$storage}}){\n    material {\n      code\n      id\n    }\n  }\n}\n    `\n})"
               ],
               "timeoutInMillisecond": 10000
             },
@@ -792,14 +1077,27 @@
               ],
               "timeoutInMillisecond": 10000
             }
+          ],
+          [
+            {
+              "id": "Stocktake Count_GetCarrierDetails",
+              "name": "GetCarrierDetails",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "JSON.stringify({\n    variables: {\n\t\t\tid:selectStocktakeCarrier.selectedOptionValue\n\t\t},\n    query: `\nquery GetCarrier($id:ID!){\n  getCarrier(id:$id){\n    id\n    code\n    status {\n\t\t  code\n\t\t\tid\n\t\t}\n\t\towner {\n\t\t\tid\n\t\t\tname\n\t\t}\n  }\n}\n    `\n})"
+              ],
+              "timeoutInMillisecond": 10000
+            }
           ]
         ],
         "widgetNames": [
           "Canvas1",
           "Canvas2",
           "Canvas3",
+          "Canvas4",
+          "Canvas5",
           "MainContainer",
-          "Text1",
           "btnCloseCount",
           "btnLocationHistory",
           "ctnStocktakeCount",
@@ -808,9 +1106,14 @@
           "selectStockedMaterial",
           "selectStocktakeBin",
           "selectStocktakeCarrier",
+          "selectStocktakeCarrierOwner",
+          "selectStocktakeLooseOwner",
+          "selectStocktakeStatus",
           "selectUnstockedMaterial",
           "selectWarehouse",
+          "tabCarrierSwitch",
           "tabMaterialSelect",
+          "txtCarrierStatus",
           "txtStocktakeCountTitle"
         ],
         "validOnPageLoadActions": true,

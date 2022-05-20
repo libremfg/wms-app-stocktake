@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "HandleOwnerStatus",
+    "pageId": "Stocktake Count",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\n\tgetOwnerID: () => {\n\t\tif (selectStocktakeCarrier.selectedOptionValue == \"\") {\n\t\t\treturn selectStocktakeLooseOwner.selectedOptionValue\n\t\t} \n\t\treturn selectStocktakeCarrierOwner.selectedOptionValue\n\t},\n\tgetStatusCode: () => {\n\t\tif (selectStocktakeCarrier.selectedOptionValue == \"\") {\n\t\t\treturn selectStocktakeStatus.selectedOptionLabel\n\t\t}\n\t\treturn GetCarrierDetails.data.data.getCarrier.status.code\n\t}\n\t\n}",
+    "variables": []
+  },
+  "id": "Stocktake Count_HandleOwnerStatus",
+  "deleted": false,
+  "gitSyncId": "618b5832da7cd651ee2730f2_628751737901344ba8d10754"
+}

@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "CreateStocktakeJobOrders",
+    "name": "GetPartners",
     "datasource": {
       "name": "Libre",
       "pluginId": "restapi-plugin",
@@ -13,9 +13,9 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Stocktake Admin",
+    "pageId": "Stocktake Count",
     "actionConfiguration": {
-      "timeoutInMillisecond": 10000,
+      "timeoutInMillisecond": 300003,
       "paginationType": "NONE",
       "path": "/graphql",
       "headers": [
@@ -26,7 +26,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tinput:FormatCreateStocktakeMutation.getStocktakeJobOrderInput()\n\t\t},\n    query: `\nmutation AddJobOrder($input:[AddJobOrderInput!]!){\n  addJobOrder(input:$input){numUids}\n}\n    `\n})\n}}",
+      "body": "{{\nJSON.stringify({\n    variables: null,\n    query: `\n\tquery{\n\t\tqueryPartner{\n\t\t\tvalue:id\n\t\t\tlabel:name\n\t\t}\n\t}`\n})\n}}",
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
@@ -37,24 +37,26 @@
         "apiContentType": "application/json"
       }
     },
-    "executeOnLoad": false,
+    "executeOnLoad": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
       }
     ],
     "isValid": true,
-    "invalids": [],
+    "invalids": [
+      "'Query timeout' field must be an integer between 0 and 60000"
+    ],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n    variables: {\n\t\t\tinput:FormatCreateStocktakeMutation.getStocktakeJobOrderInput()\n\t\t},\n    query: `\nmutation AddJobOrder($input:[AddJobOrderInput!]!){\n  addJobOrder(input:$input){numUids}\n}\n    `\n})"
+      "JSON.stringify({\n    variables: null,\n    query: `\n\tquery{\n\t\tqueryPartner{\n\t\t\tvalue:id\n\t\t\tlabel:name\n\t\t}\n\t}`\n})"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Stocktake Admin_CreateStocktakeJobOrders",
+  "id": "Stocktake Count_GetPartners",
   "deleted": false,
-  "gitSyncId": "618b5832da7cd651ee2730f2_626b6bc8cca31f35e65b63f9"
+  "gitSyncId": "618b5832da7cd651ee2730f2_62874ab57901344ba8d10434"
 }

@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "CreateStocktakeJobOrders",
+    "name": "GetCarrierDetails",
     "datasource": {
       "name": "Libre",
       "pluginId": "restapi-plugin",
@@ -13,7 +13,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Stocktake Admin",
+    "pageId": "Stocktake Count",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -26,7 +26,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tinput:FormatCreateStocktakeMutation.getStocktakeJobOrderInput()\n\t\t},\n    query: `\nmutation AddJobOrder($input:[AddJobOrderInput!]!){\n  addJobOrder(input:$input){numUids}\n}\n    `\n})\n}}",
+      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tid:selectStocktakeCarrier.selectedOptionValue\n\t\t},\n    query: `\nquery GetCarrier($id:ID!){\n  getCarrier(id:$id){\n    id\n    code\n    status {\n\t\t  code\n\t\t\tid\n\t\t}\n\t\towner {\n\t\t\tid\n\t\t\tname\n\t\t}\n  }\n}\n    `\n})\n}}",
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
@@ -37,7 +37,7 @@
         "apiContentType": "application/json"
       }
     },
-    "executeOnLoad": false,
+    "executeOnLoad": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -47,14 +47,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n    variables: {\n\t\t\tinput:FormatCreateStocktakeMutation.getStocktakeJobOrderInput()\n\t\t},\n    query: `\nmutation AddJobOrder($input:[AddJobOrderInput!]!){\n  addJobOrder(input:$input){numUids}\n}\n    `\n})"
+      "JSON.stringify({\n    variables: {\n\t\t\tid:selectStocktakeCarrier.selectedOptionValue\n\t\t},\n    query: `\nquery GetCarrier($id:ID!){\n  getCarrier(id:$id){\n    id\n    code\n    status {\n\t\t  code\n\t\t\tid\n\t\t}\n\t\towner {\n\t\t\tid\n\t\t\tname\n\t\t}\n  }\n}\n    `\n})"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Stocktake Admin_CreateStocktakeJobOrders",
+  "id": "Stocktake Count_GetCarrierDetails",
   "deleted": false,
-  "gitSyncId": "618b5832da7cd651ee2730f2_626b6bc8cca31f35e65b63f9"
+  "gitSyncId": "618b5832da7cd651ee2730f2_628750977901344ba8d106f7"
 }

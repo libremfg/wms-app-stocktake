@@ -156,6 +156,14 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "Stocktake Count_AddStocktakeCountNoOwner": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Count_AddStocktakeCountOwner": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Stocktake Count_CreateJobResponseCarrier": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
@@ -168,6 +176,10 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "Stocktake Count_GetCarrierDetails": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Stocktake Count_GetJobOrderJobResponses": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
@@ -176,7 +188,15 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "Stocktake Count_GetMaterialStatus": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Stocktake Count_GetMaterialsAtLocation": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Count_GetPartners": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
@@ -196,6 +216,26 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "Stocktake Count_HandleJobResponses.activeJobResponse": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Count_HandleJobResponses.createJobResponse": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Count_HandleJobResponses.submitCounts": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Count_HandleOwnerStatus.getOwnerID": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Count_HandleOwnerStatus.getStatusCode": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Stocktake Count_HandleSelects.btnSubmit": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
@@ -205,6 +245,10 @@
       "publishedUserSetOnLoad": false
     },
     "Stocktake Count_JS_SiteList.getUserSiteList": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Count_Validation.canSubmit": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     }
