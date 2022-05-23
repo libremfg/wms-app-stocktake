@@ -1134,7 +1134,8 @@
                       "columnOrder": [
                         "Material",
                         "Quantity",
-                        "Status"
+                        "Status",
+                        "Owner"
                       ],
                       "isVisibleDownload": true,
                       "dynamicPropertyPathList": [],
@@ -1189,6 +1190,9 @@
                         },
                         {
                           "key": "primaryColumns.Status.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.Owner.computedValue"
                         }
                       ],
                       "leftColumn": 1,
@@ -1243,6 +1247,25 @@
                           "isDerived": false,
                           "label": "Status",
                           "computedValue": "{{tableStocktakeCounts.sanitizedTableData.map((currentRow) => ( currentRow.Status))}}"
+                        },
+                        "Owner": {
+                          "index": 3,
+                          "width": 150,
+                          "id": "Owner",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "Owner",
+                          "computedValue": "{{tableStocktakeCounts.sanitizedTableData.map((currentRow) => ( currentRow.Owner))}}",
+                          "cellBackground": ""
                         }
                       },
                       "delimiter": ",",
@@ -1494,16 +1517,6 @@
               "pluginType": "API",
               "jsonPathKeys": [
                 "JSON.stringify({\n    variables: {\n\t\t\tid:selectSite.selectedOptionValue,\n\t\t},\n    query: `\n\tquery($id:ID!){\n\t\tgetEquipment(id:$id){\n\t\t\tid\n\t\t\tchildren {\n\t\t\t\tvalue:id\n\t\t\t\tlabel:name\n\t\t\t}\n\t\t}\n\t}`\n})"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Stocktake Count_GetWarehouseBins",
-              "name": "GetWarehouseBins",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "JSON.stringify({\n    variables: {\n\t\t\tid:selectWarehouse.selectedOptionValue\n\t\t},\n    query: `\nquery GetEquipment($id:ID!){\n  getEquipment(id:$id){\n    id\n    name\n    children {\n      label:name \n      value:id\n    }\n  }\n}\n    `\n})"
               ],
               "timeoutInMillisecond": 10000
             }

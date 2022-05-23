@@ -224,10 +224,6 @@
       "unpublishedUserSetOnLoad": true,
       "publishedUserSetOnLoad": true
     },
-    "Stocktake Count_GetWarehouseBins": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
     "Stocktake Count_HandleJobResponses.activeJobResponse": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
@@ -273,6 +269,42 @@
       "publishedUserSetOnLoad": false
     },
     "Stocktake Count_Validation.canSubmit": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Report_GetBinCarriers": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Report_GetJobOrderJobResponses": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Report_GetSiteWarehouses": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Report_GetStocktakeCounts": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Report_GetStocktakeJobOrder": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Report_GetUserSites": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Report_GetWarehouseBins": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Report_HandleSelects.selectBin": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Report_JS_SiteList.getUserSiteList": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     }

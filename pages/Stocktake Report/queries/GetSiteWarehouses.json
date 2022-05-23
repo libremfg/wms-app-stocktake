@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "GetWarehouseBins",
+    "name": "GetSiteWarehouses",
     "datasource": {
       "name": "Libre",
       "pluginId": "restapi-plugin",
@@ -13,7 +13,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Stocktake Count",
+    "pageId": "Stocktake Report",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -26,7 +26,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tid:selectWarehouse.selectedOptionValue\n\t\t},\n    query: `\nquery GetEquipment($id:ID!){\n  getEquipment(id:$id){\n    id\n    name\n    children {\n      label:name \n      value:id\n    }\n  }\n}\n    `\n})\n}}",
+      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tid:selectSite.selectedOptionValue,\n\t\t},\n    query: `\n\tquery($id:ID!){\n\t\tgetEquipment(id:$id){\n\t\t\tid\n\t\t\tchildren {\n\t\t\t\tvalue:id\n\t\t\t\tlabel:name\n\t\t\t}\n\t\t}\n\t}`\n})\n}}",
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
@@ -47,14 +47,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n    variables: {\n\t\t\tid:selectWarehouse.selectedOptionValue\n\t\t},\n    query: `\nquery GetEquipment($id:ID!){\n  getEquipment(id:$id){\n    id\n    name\n    children {\n      label:name \n      value:id\n    }\n  }\n}\n    `\n})"
+      "JSON.stringify({\n    variables: {\n\t\t\tid:selectSite.selectedOptionValue,\n\t\t},\n    query: `\n\tquery($id:ID!){\n\t\tgetEquipment(id:$id){\n\t\t\tid\n\t\t\tchildren {\n\t\t\t\tvalue:id\n\t\t\t\tlabel:name\n\t\t\t}\n\t\t}\n\t}`\n})"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Stocktake Count_GetWarehouseBins",
+  "id": "Stocktake Report_GetSiteWarehouses",
   "deleted": false,
-  "gitSyncId": "618b5832da7cd651ee2730f2_6286f511309fd93a9bf1d27e"
+  "gitSyncId": "618b5832da7cd651ee2730f2_628b238b7901344ba8d1b3c0"
 }

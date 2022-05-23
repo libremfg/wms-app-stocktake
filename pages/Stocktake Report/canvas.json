@@ -27,6 +27,108 @@
           "children": [
             {
               "boxShadow": "none",
+              "widgetName": "selectSite",
+              "isFilterable": true,
+              "displayName": "Select",
+              "iconSVG": "/static/media/icon.bd99caba.svg",
+              "labelText": "Site",
+              "topRow": 8,
+              "bottomRow": 12,
+              "parentRowSpace": 10,
+              "labelWidth": 5,
+              "type": "SELECT_WIDGET",
+              "serverSideFiltering": false,
+              "hideCard": false,
+              "defaultOptionValue": "",
+              "animateLoading": true,
+              "parentColumnSpace": 23.390625,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onOptionChange"
+                }
+              ],
+              "leftColumn": 5,
+              "dynamicBindingPathList": [
+                {
+                  "key": "options"
+                },
+                {
+                  "key": "accentColor"
+                }
+              ],
+              "labelPosition": "Left",
+              "options": "{{JS_SiteList.getUserSiteList()}}",
+              "labelStyle": "BOLD",
+              "placeholderText": "Select option",
+              "isDisabled": false,
+              "key": "zenji4njyl",
+              "labelTextSize": "0.875rem",
+              "isRequired": false,
+              "rightColumn": 23,
+              "widgetId": "kqzy3x67b1",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "labelAlignment": "left",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "borderRadius": "0px",
+              "onOptionChange": "{{GetSiteWarehouses.run()}}"
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "selectWarehouse",
+              "isFilterable": true,
+              "displayName": "Select",
+              "iconSVG": "/static/media/icon.bd99caba.svg",
+              "labelText": "Warehouse",
+              "topRow": 8,
+              "bottomRow": 12,
+              "parentRowSpace": 10,
+              "labelWidth": 5,
+              "type": "SELECT_WIDGET",
+              "serverSideFiltering": false,
+              "hideCard": false,
+              "defaultOptionValue": "",
+              "animateLoading": true,
+              "parentColumnSpace": 23.390625,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onOptionChange"
+                }
+              ],
+              "leftColumn": 23,
+              "dynamicBindingPathList": [
+                {
+                  "key": "options"
+                },
+                {
+                  "key": "accentColor"
+                }
+              ],
+              "labelPosition": "Left",
+              "options": "{{GetSiteWarehouses.data.data.getEquipment.children}}",
+              "labelStyle": "BOLD",
+              "placeholderText": "Select option",
+              "isDisabled": false,
+              "key": "zenji4njyl",
+              "labelTextSize": "0.875rem",
+              "isRequired": false,
+              "rightColumn": 43,
+              "widgetId": "ua6j8d9hkx",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "labelAlignment": "left",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "borderRadius": "0px",
+              "onOptionChange": "{{GetWarehouseBins.run()}}"
+            },
+            {
+              "boxShadow": "none",
               "widgetName": "ctnStocktakeReports",
               "borderColor": "transparent",
               "isCanvas": true,
@@ -37,8 +139,8 @@
               ],
               "displayName": "Container",
               "iconSVG": "/static/media/icon.1977dca3.svg",
-              "topRow": 11,
-              "bottomRow": 83,
+              "topRow": 14,
+              "bottomRow": 86,
               "parentRowSpace": 10,
               "type": "CONTAINER_WIDGET",
               "hideCard": false,
@@ -82,10 +184,13 @@
                       "dynamicBindingPathList": [
                         {
                           "key": "accentColor"
+                        },
+                        {
+                          "key": "options"
                         }
                       ],
                       "labelPosition": "Left",
-                      "options": "",
+                      "options": "{{GetBinCarriers.data.data.getEquipment.carriers}}",
                       "placeholderText": "Select option",
                       "isDisabled": false,
                       "key": "etfghx8tw9",
@@ -119,15 +224,22 @@
                       "defaultOptionValue": "",
                       "animateLoading": true,
                       "parentColumnSpace": 13.210205078125,
-                      "dynamicTriggerPathList": [],
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onOptionChange"
+                        }
+                      ],
                       "leftColumn": 2,
                       "dynamicBindingPathList": [
                         {
                           "key": "accentColor"
+                        },
+                        {
+                          "key": "options"
                         }
                       ],
                       "labelPosition": "Left",
-                      "options": "",
+                      "options": "{{GetWarehouseBins.data.data.getEquipment.children}}",
                       "placeholderText": "Select option",
                       "isDisabled": false,
                       "key": "etfghx8tw9",
@@ -142,7 +254,8 @@
                       "labelAlignment": "left",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "borderRadius": "0px"
+                      "borderRadius": "0px",
+                      "onOptionChange": "{{HandleSelects.selectBin()}}"
                     },
                     {
                       "boxShadow": "none",
@@ -532,13 +645,60 @@
             }
           ]
         },
-        "layoutOnLoadActions": [],
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Stocktake Report_GetUserSites",
+              "name": "GetUserSites",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "JSON.stringify({\n    variables: {\n\t\t\tname:appsmith.user.email\n\t\t},\n    query: `\nquery($name:String!){\n  getUser(username:$name){\n\t\tid\n    name\n    hasRole@cascade{\n      role{\n        name\n        hasGrantedRights(filter:{name:{eq:isAdmin}}){\n          name\n        }\n      }\n      responsibilities(filter:{equipmentLevel:{eq:Site}}){\n        id\n        name\n      }\n    }\n  }\n}\n    `\n})"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Stocktake Report_GetBinCarriers",
+              "name": "GetBinCarriers",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "JSON.stringify({\n    variables: {\n\t\t\tid:selectReportBin.selectedOptionValue\n\t\t},\n    query: `\nquery GetEquipment($id:ID!){\n  getEquipment(id:$id){\n    id\n    name\n    carriers {\n      label:code\n      value:id\n    }\n  }\n}\n    `\n})"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Stocktake Report_GetSiteWarehouses",
+              "name": "GetSiteWarehouses",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "JSON.stringify({\n    variables: {\n\t\t\tid:selectSite.selectedOptionValue,\n\t\t},\n    query: `\n\tquery($id:ID!){\n\t\tgetEquipment(id:$id){\n\t\t\tid\n\t\t\tchildren {\n\t\t\t\tvalue:id\n\t\t\t\tlabel:name\n\t\t\t}\n\t\t}\n\t}`\n})"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Stocktake Report_GetWarehouseBins",
+              "name": "GetWarehouseBins",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "JSON.stringify({\n    variables: {\n\t\t\tid:selectWarehouse.selectedOptionValue\n\t\t},\n    query: `\nquery GetEquipment($id:ID!){\n  getEquipment(id:$id){\n    id\n    name\n    children {\n      label:name \n      value:id\n    }\n  }\n}\n    `\n})"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
         "widgetNames": [
           "Canvas1",
           "MainContainer",
           "ctnStocktakeReports",
           "selectReportBin",
           "selectReportCarrier",
+          "selectSite",
+          "selectWarehouse",
           "submitStocktake",
           "tableStocktakeReport",
           "txtStocktakeReportsTitle"
