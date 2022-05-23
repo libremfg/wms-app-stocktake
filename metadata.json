@@ -276,6 +276,10 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "Stocktake Report_Format.stocktakeAdjustmentInput": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Stocktake Report_GetBinCarriers": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
@@ -312,11 +316,19 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "Stocktake Report_HandleSelects.addCommentSelect": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Stocktake Report_HandleSelects.selectBin": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
     "Stocktake Report_HandleSelects.selectCarrier": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Report_HandleSelects.setAdjustmentSelect": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
