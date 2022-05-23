@@ -26,7 +26,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tid:GetStocktakeJobOrder.data.data.queryJobOrder[0].id,\n\t\t},\n    query: `\nquery GetJobOrder($id:ID!){\n  getJobOrder(id:$id) {\n    jobResponses {\n      id\n      equipment {\n        id\n      }\n      materialActual {\n        carrier {\n          id\n        }\n      }\n\t\t\tproperties {\n\t\t\t\tname\n\t\t\t\tdescription\n\t\t\t}\n    }\n  }\n}`\n})\n}}",
+      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tid:GetStocktakeJobOrder.data.data.queryJobOrder[0].id,\n\t\t},\n    query: `\nquery GetJobOrder($id:ID!){\n  getJobOrder(id:$id) {\n\t\tparent {\n\t\t\tid\n\t\t}\n    jobResponses {\n      id\n      equipment {\n        id\n      }\n      materialActual {\n        carrier {\n          id\n        }\n      }\n    }\n  }\n}`\n})\n}}",
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
@@ -37,7 +37,7 @@
         "apiContentType": "application/json"
       }
     },
-    "executeOnLoad": false,
+    "executeOnLoad": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -47,7 +47,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n    variables: {\n\t\t\tid:GetStocktakeJobOrder.data.data.queryJobOrder[0].id,\n\t\t},\n    query: `\nquery GetJobOrder($id:ID!){\n  getJobOrder(id:$id) {\n    jobResponses {\n      id\n      equipment {\n        id\n      }\n      materialActual {\n        carrier {\n          id\n        }\n      }\n\t\t\tproperties {\n\t\t\t\tname\n\t\t\t\tdescription\n\t\t\t}\n    }\n  }\n}`\n})"
+      "JSON.stringify({\n    variables: {\n\t\t\tid:GetStocktakeJobOrder.data.data.queryJobOrder[0].id,\n\t\t},\n    query: `\nquery GetJobOrder($id:ID!){\n  getJobOrder(id:$id) {\n\t\tparent {\n\t\t\tid\n\t\t}\n    jobResponses {\n      id\n      equipment {\n        id\n      }\n      materialActual {\n        carrier {\n          id\n        }\n      }\n    }\n  }\n}`\n})"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

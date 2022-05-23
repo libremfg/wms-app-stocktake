@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1140,
+          "bottomRow": 990,
           "containerStyle": "none",
           "snapRows": 99,
           "parentRowSpace": 1,
@@ -37,14 +37,14 @@
               ],
               "displayName": "Container",
               "iconSVG": "/static/media/icon.1977dca3.svg",
-              "topRow": 52,
-              "bottomRow": 112,
+              "topRow": 13,
+              "bottomRow": 73,
               "parentRowSpace": 10,
               "type": "CONTAINER_WIDGET",
               "hideCard": false,
               "animateLoading": true,
               "parentColumnSpace": 23.390625,
-              "leftColumn": 19,
+              "leftColumn": 10,
               "children": [
                 {
                   "boxShadow": "none",
@@ -260,6 +260,11 @@
                       "widgetName": "btnCloseCount",
                       "onClick": "{{HandleSelects.btnSubmit()}}",
                       "buttonColor": "#03B365",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "isDisabled"
+                        }
+                      ],
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca02633.svg",
                       "topRow": 52,
@@ -275,9 +280,13 @@
                         }
                       ],
                       "leftColumn": 1,
-                      "dynamicBindingPathList": [],
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "isDisabled"
+                        }
+                      ],
                       "text": "Submit",
-                      "isDisabled": false,
+                      "isDisabled": "{{!Validation.canSubmit()}}",
                       "key": "pcq5g5gji9",
                       "labelTextSize": "0.875rem",
                       "rightColumn": 17,
@@ -296,24 +305,29 @@
                     {
                       "boxShadow": "none",
                       "widgetName": "btnLocationHistory",
+                      "onClick": "{{GetStocktakeCounts.run(() => showModal('modalStocktakeCounts'), () => {})}}",
                       "buttonColor": "#03B365",
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca02633.svg",
-                      "topRow": 12,
-                      "bottomRow": 16,
+                      "topRow": 11,
+                      "bottomRow": 15,
                       "parentRowSpace": 10,
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
                       "parentColumnSpace": 8.458984375,
-                      "dynamicTriggerPathList": [],
-                      "leftColumn": 41,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
+                      "leftColumn": 42,
                       "dynamicBindingPathList": [],
                       "text": "View Items Counted",
                       "isDisabled": false,
                       "key": "pcq5g5gji9",
                       "labelTextSize": "0.875rem",
-                      "rightColumn": 60,
+                      "rightColumn": 61,
                       "isDefaultClickDisabled": true,
                       "widgetId": "aoyuv6lfzo",
                       "isVisible": true,
@@ -447,7 +461,7 @@
                                 }
                               ],
                               "labelPosition": "Auto",
-                              "options": "{{GetMaterialsAtLocation.data.data.getStockOnHand.material}}",
+                              "options": "{{_.map(GetMaterialsAtLocation.data.data.getStockOnHand, \"material\")}}",
                               "placeholderText": "Select option",
                               "isDisabled": false,
                               "key": "etfghx8tw9",
@@ -740,7 +754,7 @@
                               "renderMode": "CANVAS",
                               "isLoading": false,
                               "borderRadius": "0px",
-                              "onOptionChange": "{{GetCarrierDetails.run()}}"
+                              "onOptionChange": "{{HandleSelects.selectCarrier()}}"
                             },
                             {
                               "widgetName": "txtCarrierStatus",
@@ -979,7 +993,7 @@
               "key": "w9bevdlidh",
               "labelTextSize": "0.875rem",
               "backgroundColor": "#FFFFFF",
-              "rightColumn": 56,
+              "rightColumn": 47,
               "widgetId": "6kvcs55k2o",
               "containerStyle": "card",
               "isVisible": true,
@@ -988,6 +1002,410 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "borderRadius": "0px"
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "modalStocktakeCounts",
+              "isCanvas": true,
+              "displayName": "Modal",
+              "iconSVG": "/static/media/icon.4975978e.svg",
+              "topRow": 27,
+              "bottomRow": 51,
+              "parentRowSpace": 10,
+              "type": "MODAL_WIDGET",
+              "hideCard": false,
+              "shouldScrollContents": true,
+              "animateLoading": true,
+              "parentColumnSpace": 23.390625,
+              "leftColumn": 2,
+              "dynamicBindingPathList": [
+                {
+                  "key": "borderRadius"
+                }
+              ],
+              "children": [
+                {
+                  "boxShadow": "none",
+                  "widgetName": "Canvas6",
+                  "displayName": "Canvas",
+                  "topRow": 0,
+                  "bottomRow": 590,
+                  "parentRowSpace": 1,
+                  "type": "CANVAS_WIDGET",
+                  "canExtend": true,
+                  "hideCard": true,
+                  "shouldScrollContents": false,
+                  "minHeight": 600,
+                  "parentColumnSpace": 1,
+                  "dynamicTriggerPathList": [],
+                  "leftColumn": 0,
+                  "dynamicBindingPathList": [
+                    {
+                      "key": "borderRadius"
+                    },
+                    {
+                      "key": "accentColor"
+                    }
+                  ],
+                  "children": [
+                    {
+                      "widgetName": "txtCountedItemsTitle",
+                      "displayName": "Text",
+                      "iconSVG": "/static/media/icon.97c59b52.svg",
+                      "topRow": 1,
+                      "bottomRow": 5,
+                      "type": "TEXT_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "overflow": "NONE",
+                      "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 10,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "fontFamily"
+                        },
+                        {
+                          "key": "borderRadius"
+                        }
+                      ],
+                      "shouldTruncate": false,
+                      "truncateButtonColor": "#FFC13D",
+                      "text": "Counted Items",
+                      "key": "coglllnrji",
+                      "rightColumn": 50,
+                      "textAlign": "CENTER",
+                      "widgetId": "vemdenu5x9",
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "textColor": "#231F20",
+                      "version": 1,
+                      "parentId": "z0tee1ykwt",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "fontSize": "1.5rem"
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "btnCloseModalStocktakeCounts",
+                      "onClick": "{{closeModal('modalStocktakeCounts')}}",
+                      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "displayName": "Button",
+                      "iconSVG": "/static/media/icon.cca02633.svg",
+                      "topRow": 1,
+                      "bottomRow": 5,
+                      "type": "BUTTON_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 56,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "buttonColor"
+                        },
+                        {
+                          "key": "borderRadius"
+                        }
+                      ],
+                      "text": "",
+                      "isDisabled": false,
+                      "key": "yh3uc2samo",
+                      "rightColumn": 62,
+                      "isDefaultClickDisabled": true,
+                      "iconName": "cross",
+                      "widgetId": "ijdt61u7hh",
+                      "buttonStyle": "PRIMARY",
+                      "isVisible": true,
+                      "recaptchaType": "V3",
+                      "version": 1,
+                      "parentId": "z0tee1ykwt",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "buttonVariant": "SECONDARY",
+                      "iconAlign": "left",
+                      "placement": "CENTER"
+                    },
+                    {
+                      "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+                      "widgetName": "tableStocktakeCounts",
+                      "defaultPageSize": 0,
+                      "columnOrder": [
+                        "Material",
+                        "Quantity",
+                        "Status"
+                      ],
+                      "isVisibleDownload": true,
+                      "dynamicPropertyPathList": [],
+                      "displayName": "Table",
+                      "iconSVG": "/static/media/icon.db8a9cbd.svg",
+                      "topRow": 10,
+                      "bottomRow": 56,
+                      "isSortable": true,
+                      "parentRowSpace": 10,
+                      "type": "TABLE_WIDGET",
+                      "defaultSelectedRow": "0",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "parentColumnSpace": 10.71875,
+                      "dynamicTriggerPathList": [],
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "accentColor"
+                        },
+                        {
+                          "key": "borderRadius"
+                        },
+                        {
+                          "key": "boxShadow"
+                        },
+                        {
+                          "key": "childStylesheet.button.buttonColor"
+                        },
+                        {
+                          "key": "childStylesheet.button.borderRadius"
+                        },
+                        {
+                          "key": "childStylesheet.menuButton.menuColor"
+                        },
+                        {
+                          "key": "childStylesheet.menuButton.borderRadius"
+                        },
+                        {
+                          "key": "childStylesheet.iconButton.menuColor"
+                        },
+                        {
+                          "key": "childStylesheet.iconButton.borderRadius"
+                        },
+                        {
+                          "key": "tableData"
+                        },
+                        {
+                          "key": "primaryColumns.Material.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.Quantity.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.Status.computedValue"
+                        }
+                      ],
+                      "leftColumn": 1,
+                      "primaryColumns": {
+                        "Material": {
+                          "index": 0,
+                          "width": 150,
+                          "id": "Material",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "Material",
+                          "computedValue": "{{tableStocktakeCounts.sanitizedTableData.map((currentRow) => ( currentRow.Material))}}"
+                        },
+                        "Quantity": {
+                          "index": 1,
+                          "width": 150,
+                          "id": "Quantity",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "Quantity",
+                          "computedValue": "{{tableStocktakeCounts.sanitizedTableData.map((currentRow) => ( currentRow.Quantity))}}"
+                        },
+                        "Status": {
+                          "index": 2,
+                          "width": 150,
+                          "id": "Status",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "Status",
+                          "computedValue": "{{tableStocktakeCounts.sanitizedTableData.map((currentRow) => ( currentRow.Status))}}"
+                        }
+                      },
+                      "delimiter": ",",
+                      "key": "9hs802o9u4",
+                      "derivedColumns": {},
+                      "rightColumn": 62,
+                      "textSize": "0.875rem",
+                      "widgetId": "x5r51cct61",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "isVisibleFilters": true,
+                      "tableData": "{{Formatting.stocktakeCountTable()}}",
+                      "isVisible": true,
+                      "label": "Data",
+                      "searchKey": "",
+                      "enableClientSideSearch": true,
+                      "version": 3,
+                      "totalRecordsCount": 0,
+                      "parentId": "z0tee1ykwt",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "horizontalAlignment": "LEFT",
+                      "isVisibleSearch": true,
+                      "childStylesheet": {
+                        "button": {
+                          "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                          "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                          "boxShadow": "none"
+                        },
+                        "menuButton": {
+                          "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                          "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                          "boxShadow": "none"
+                        },
+                        "iconButton": {
+                          "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                          "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                          "boxShadow": "none"
+                        }
+                      },
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "isVisiblePagination": true,
+                      "verticalAlignment": "CENTER",
+                      "columnSizeMap": {
+                        "task": 245,
+                        "step": 62,
+                        "status": 75,
+                        "Material": 289
+                      }
+                    },
+                    {
+                      "widgetName": "txtStocktakeCountsBin",
+                      "displayName": "Text",
+                      "iconSVG": "/static/media/icon.97c59b52.svg",
+                      "topRow": 6,
+                      "bottomRow": 10,
+                      "parentRowSpace": 10,
+                      "type": "TEXT_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "overflow": "NONE",
+                      "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+                      "parentColumnSpace": 10.71875,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 1,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "fontFamily"
+                        },
+                        {
+                          "key": "borderRadius"
+                        },
+                        {
+                          "key": "text"
+                        }
+                      ],
+                      "shouldTruncate": false,
+                      "truncateButtonColor": "#FFC13D",
+                      "text": "Bin: {{selectStocktakeBin.selectedOptionLabel}}",
+                      "key": "coglllnrji",
+                      "rightColumn": 24,
+                      "textAlign": "LEFT",
+                      "widgetId": "08b9jelen3",
+                      "isVisible": true,
+                      "fontStyle": "",
+                      "textColor": "#231F20",
+                      "version": 1,
+                      "parentId": "z0tee1ykwt",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "fontSize": "1rem"
+                    },
+                    {
+                      "widgetName": "txtStocktakeCountsCarrier",
+                      "displayName": "Text",
+                      "iconSVG": "/static/media/icon.97c59b52.svg",
+                      "topRow": 6,
+                      "bottomRow": 10,
+                      "parentRowSpace": 10,
+                      "type": "TEXT_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "overflow": "NONE",
+                      "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+                      "parentColumnSpace": 10.71875,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 24,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "fontFamily"
+                        },
+                        {
+                          "key": "borderRadius"
+                        },
+                        {
+                          "key": "text"
+                        }
+                      ],
+                      "shouldTruncate": false,
+                      "truncateButtonColor": "#FFC13D",
+                      "text": "Carrier: {{Formatting.activeCarrier()}}",
+                      "key": "coglllnrji",
+                      "rightColumn": 40,
+                      "textAlign": "LEFT",
+                      "widgetId": "13z8f5h5of",
+                      "isVisible": true,
+                      "fontStyle": "",
+                      "textColor": "#231F20",
+                      "version": 1,
+                      "parentId": "z0tee1ykwt",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "fontSize": "1rem"
+                    }
+                  ],
+                  "isDisabled": false,
+                  "key": "viklmvdpb2",
+                  "rightColumn": 561.375,
+                  "detachFromLayout": true,
+                  "widgetId": "z0tee1ykwt",
+                  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "isVisible": true,
+                  "version": 1,
+                  "parentId": "yu96h30s3g",
+                  "renderMode": "CANVAS",
+                  "isLoading": false,
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
+                }
+              ],
+              "key": "smiqvywtbo",
+              "height": 600,
+              "rightColumn": 26,
+              "detachFromLayout": true,
+              "widgetId": "yu96h30s3g",
+              "canOutsideClickClose": true,
+              "canEscapeKeyClose": true,
+              "version": 2,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "width": 698
             }
           ]
         },
@@ -1038,22 +1456,34 @@
           ],
           [
             {
+              "id": "Stocktake Count_GetMaterialsAtLocation",
+              "name": "GetMaterialsAtLocation",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "JSON.stringify({\n    variables: {\n\t\t\tstorage:selectStocktakeBin.selectedOptionLabel,\n\t\t\tcarrier:selectStocktakeCarrier.selectedOptionValue\n\t\t},\n    query: `\nquery GetEquipment($storage:String!,$carrier:ID!){\n  getStockOnHand(filter:{carrier:{id:$carrier},storageLocation:{name:$storage}}){\n    material {\n      label:code\n      value:id\n    }\n  }\n}\n    `\n})"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Stocktake Count_GetStocktakeJobOrder",
+              "name": "GetStocktakeJobOrder",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "JSON.stringify({\n    variables: {\n\t\t\tequip:selectStocktakeBin.selectedOptionValue,\n\t\t},\n    query: `\nquery QueryJobOrder($equip:[ID!]!) {\n  queryJobOrder (filter:{dispatchStatus:{eq:ACTIVE}}) @cascade{\n\t\tid\n\t\tname\n\t\tparent {\n\t\t\tid\n\t\t\tname\n\t\t}\n    equipment(filter:{id:$equip}) {\n      id\n    }\n  }\n}`\n})"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
               "id": "Stocktake Count_GetBinCarriers",
               "name": "GetBinCarriers",
               "confirmBeforeExecute": false,
               "pluginType": "API",
               "jsonPathKeys": [
                 "JSON.stringify({\n    variables: {\n\t\t\tid:selectStocktakeBin.selectedOptionValue\n\t\t},\n    query: `\nquery GetEquipment($id:ID!){\n  getEquipment(id:$id){\n    id\n    name\n    carriers {\n      label:code\n      value:id\n    }\n  }\n}\n    `\n})"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Stocktake Count_GetMaterialsAtLocation",
-              "name": "GetMaterialsAtLocation",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "JSON.stringify({\n    variables: {\n\t\t\tstorage:selectStocktakeBin.selectedOptionLabel,\n\t\t\tcarrier:selectStocktakeLooseOwner.selectedOptionValue\n\t\t},\n    query: `\nquery GetEquipment($storage:String!,$carrier:ID!){\n  getStockOnHand(filter:{carrier:{id:$carrier},storageLocation:{name:$storage}}){\n    material {\n      code\n      id\n    }\n  }\n}\n    `\n})"
               ],
               "timeoutInMillisecond": 10000
             },
@@ -1088,6 +1518,28 @@
                 "JSON.stringify({\n    variables: {\n\t\t\tid:selectStocktakeCarrier.selectedOptionValue\n\t\t},\n    query: `\nquery GetCarrier($id:ID!){\n  getCarrier(id:$id){\n    id\n    code\n    status {\n\t\t  code\n\t\t\tid\n\t\t}\n\t\towner {\n\t\t\tid\n\t\t\tname\n\t\t}\n  }\n}\n    `\n})"
               ],
               "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Stocktake Count_GetStocktakeCounts",
+              "name": "GetStocktakeCounts",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "JSON.stringify({\n    variables: {\n\t\t\tinput: {\n  \t\t\tstocktakeName: GetStocktakeJobOrder.data.data.queryJobOrder[0].parent.name,\n    \t\tfilter: {\n\t\t\t\t\tjobResponse: {id:HandleJobResponses.activeJobResponse()},\n      \t\tgroupBy: {\n        \t\tcarrier: true,\n        \t\towner: true,\n        \t\tmaterial: true,\n        \t\tstatus: true,\n        \t\tstorageLocation: true\n      \t}\n    }\n\t}\n\t\t},\n    query: `\nquery GetStocktakeCount($input:GetStocktakeCountInput!){\n  getStocktakeCount(input:$input) {\n    material{id,code},\n    owner{id,name},\n    status{code},\n    quantity\n  }\n}`\n})"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Stocktake Count_GetJobOrderJobResponses",
+              "name": "GetJobOrderJobResponses",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "JSON.stringify({\n    variables: {\n\t\t\tid:GetStocktakeJobOrder.data.data.queryJobOrder[0].id,\n\t\t},\n    query: `\nquery GetJobOrder($id:ID!){\n  getJobOrder(id:$id) {\n\t\tparent {\n\t\t\tid\n\t\t}\n    jobResponses {\n      id\n      equipment {\n        id\n      }\n      materialActual {\n        carrier {\n          id\n        }\n      }\n    }\n  }\n}`\n})"
+              ],
+              "timeoutInMillisecond": 10000
             }
           ]
         ],
@@ -1097,11 +1549,14 @@
           "Canvas3",
           "Canvas4",
           "Canvas5",
+          "Canvas6",
           "MainContainer",
           "btnCloseCount",
+          "btnCloseModalStocktakeCounts",
           "btnLocationHistory",
           "ctnStocktakeCount",
           "inpStocktakeCount",
+          "modalStocktakeCounts",
           "selectSite",
           "selectStockedMaterial",
           "selectStocktakeBin",
@@ -1113,8 +1568,12 @@
           "selectWarehouse",
           "tabCarrierSwitch",
           "tabMaterialSelect",
+          "tableStocktakeCounts",
           "txtCarrierStatus",
-          "txtStocktakeCountTitle"
+          "txtCountedItemsTitle",
+          "txtStocktakeCountTitle",
+          "txtStocktakeCountsBin",
+          "txtStocktakeCountsCarrier"
         ],
         "validOnPageLoadActions": true,
         "id": "Stocktake Count",

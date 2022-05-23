@@ -32,7 +32,10 @@
         {
           "value": true
         }
-      ]
+      ],
+      "formData": {
+        "apiContentType": "application/json"
+      }
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [

@@ -19,13 +19,14 @@
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 57,
+          "version": 58,
           "minHeight": 980,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
           "leftColumn": 0,
           "children": [
             {
+              "boxShadow": "none",
               "widgetName": "SERIAL_NOT_FOUND",
               "isCanvas": true,
               "displayName": "Modal",
@@ -41,6 +42,7 @@
               "dynamicBindingPathList": [],
               "children": [
                 {
+                  "boxShadow": "none",
                   "widgetName": "Canvas5",
                   "displayName": "Canvas",
                   "topRow": 0,
@@ -57,6 +59,7 @@
                   "dynamicBindingPathList": [],
                   "children": [
                     {
+                      "boxShadow": "none",
                       "widgetName": "Select2CopyCopy",
                       "isFilterable": false,
                       "displayName": "Select",
@@ -73,7 +76,11 @@
                       "parentColumnSpace": 11.25,
                       "dynamicTriggerPathList": [],
                       "leftColumn": 15,
-                      "dynamicBindingPathList": [],
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "accentColor"
+                        }
+                      ],
                       "options": [
                         {
                           "label": "Blue",
@@ -91,16 +98,20 @@
                       "placeholderText": "Select option",
                       "isDisabled": false,
                       "key": "o3l9ffr6l8",
+                      "labelTextSize": "0.875rem",
                       "isRequired": false,
                       "rightColumn": 35,
                       "widgetId": "fitylcpylz",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisible": true,
                       "version": 1,
                       "parentId": "5vvqcun882",
                       "renderMode": "CANVAS",
-                      "isLoading": false
+                      "isLoading": false,
+                      "borderRadius": "0px"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "Text10CopyCopyCopy",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -112,10 +123,12 @@
                       "parentColumnSpace": 11.25,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 5,
                       "dynamicBindingPathList": [],
                       "text": "Material",
                       "key": "0lkbgxp1v9",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 15,
                       "textAlign": "LEFT",
                       "widgetId": "vh1nj4u5wm",
@@ -126,9 +139,11 @@
                       "parentId": "5vvqcun882",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "PARAGRAPH"
+                      "borderRadius": "0px",
+                      "fontSize": "0.875rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "Select2Copy",
                       "isFilterable": false,
                       "displayName": "Select",
@@ -145,7 +160,11 @@
                       "parentColumnSpace": 11.25,
                       "dynamicTriggerPathList": [],
                       "leftColumn": 15,
-                      "dynamicBindingPathList": [],
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "accentColor"
+                        }
+                      ],
                       "options": [
                         {
                           "label": "Blue",
@@ -163,16 +182,20 @@
                       "placeholderText": "Select option",
                       "isDisabled": false,
                       "key": "o3l9ffr6l8",
+                      "labelTextSize": "0.875rem",
                       "isRequired": false,
                       "rightColumn": 35,
                       "widgetId": "wc8adbrcw2",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisible": true,
                       "version": 1,
                       "parentId": "5vvqcun882",
                       "renderMode": "CANVAS",
-                      "isLoading": false
+                      "isLoading": false,
+                      "borderRadius": "0px"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "Text10CopyCopy",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -184,10 +207,12 @@
                       "parentColumnSpace": 11.25,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 5,
                       "dynamicBindingPathList": [],
                       "text": "Location",
                       "key": "0lkbgxp1v9",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 15,
                       "textAlign": "LEFT",
                       "widgetId": "cg6pedachv",
@@ -198,9 +223,11 @@
                       "parentId": "5vvqcun882",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "PARAGRAPH"
+                      "borderRadius": "0px",
+                      "fontSize": "0.875rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "Text10Copy",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -212,10 +239,12 @@
                       "parentColumnSpace": 11.25,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 6,
                       "dynamicBindingPathList": [],
                       "text": "Carrier",
                       "key": "0lkbgxp1v9",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 15,
                       "textAlign": "LEFT",
                       "widgetId": "pv1rbaomod",
@@ -226,35 +255,44 @@
                       "parentId": "5vvqcun882",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "PARAGRAPH"
+                      "borderRadius": "0px",
+                      "fontSize": "0.875rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "Icon1",
-                      "rightColumn": 64,
                       "onClick": "{{closeModal('SERIAL_NOT_FOUND')}}",
-                      "iconName": "cross",
                       "buttonColor": "#2E3D49",
                       "displayName": "Icon",
                       "iconSVG": "/static/media/icon.31d6cfe0.svg",
-                      "widgetId": "n6p53374z2",
                       "topRow": 1,
                       "bottomRow": 5,
-                      "isVisible": true,
                       "type": "ICON_BUTTON_WIDGET",
-                      "version": 1,
                       "hideCard": true,
+                      "leftColumn": 56,
+                      "dynamicBindingPathList": [],
+                      "iconSize": 24,
+                      "key": "kapizdv3ar",
+                      "labelTextSize": "0.875rem",
+                      "rightColumn": 64,
+                      "iconName": "cross",
+                      "widgetId": "n6p53374z2",
+                      "isVisible": true,
+                      "version": 1,
                       "parentId": "5vvqcun882",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "leftColumn": 56,
-                      "dynamicBindingPathList": [],
-                      "borderRadius": "SHARP",
-                      "buttonVariant": "TERTIARY",
-                      "iconSize": 24,
-                      "key": "kapizdv3ar"
+                      "borderRadius": "0px",
+                      "buttonVariant": "TERTIARY"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "Text4",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "fontSize"
+                        }
+                      ],
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
                       "topRow": 1,
@@ -263,10 +301,12 @@
                       "hideCard": false,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 1,
                       "dynamicBindingPathList": [],
                       "text": "Inbound Serialized SubLot",
                       "key": "d0wztgwyut",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 55,
                       "textAlign": "LEFT",
                       "widgetId": "6isyza5pkg",
@@ -277,9 +317,11 @@
                       "parentId": "5vvqcun882",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "HEADING1"
+                      "borderRadius": "0px",
+                      "fontSize": "1.5rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "Button3",
                       "onClick": "{{closeModal('SERIAL_NOT_FOUND')}}",
                       "buttonColor": "#03B365",
@@ -294,6 +336,7 @@
                       "text": "Close",
                       "isDisabled": false,
                       "key": "l4wjw81sd1",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 42,
                       "isDefaultClickDisabled": true,
                       "widgetId": "zlw2nsbe56",
@@ -304,9 +347,11 @@
                       "parentId": "5vvqcun882",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "buttonVariant": "SECONDARY"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "Button4",
                       "buttonColor": "#03B365",
                       "displayName": "Button",
@@ -320,6 +365,7 @@
                       "text": "Confirm",
                       "isDisabled": false,
                       "key": "l4wjw81sd1",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 56,
                       "isDefaultClickDisabled": true,
                       "widgetId": "rn6syfoye8",
@@ -330,9 +376,11 @@
                       "parentId": "5vvqcun882",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "buttonVariant": "PRIMARY"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "Text9",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -344,10 +392,12 @@
                       "parentColumnSpace": 12.3125,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 1,
                       "dynamicBindingPathList": [],
                       "text": "Serialized SubLot (...) has not been located in the system. Please inbound the SubLot:",
                       "key": "0lkbgxp1v9",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 51,
                       "textAlign": "LEFT",
                       "widgetId": "6fzk2tof1u",
@@ -358,9 +408,11 @@
                       "parentId": "5vvqcun882",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "PARAGRAPH"
+                      "borderRadius": "0px",
+                      "fontSize": "0.875rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "Input2",
                       "displayName": "Input",
                       "iconSVG": "/static/media/icon.9f505595.svg",
@@ -373,13 +425,20 @@
                       "parentColumnSpace": 11.25,
                       "resetOnSubmit": true,
                       "leftColumn": 15,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "accentColor"
+                        }
+                      ],
                       "labelStyle": "",
                       "inputType": "TEXT",
                       "isDisabled": false,
                       "key": "z81llroxsb",
+                      "labelTextSize": "0.875rem",
                       "isRequired": false,
                       "rightColumn": 35,
                       "widgetId": "y4y10nge7q",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisible": true,
                       "label": "",
                       "allowCurrencyChange": false,
@@ -387,10 +446,12 @@
                       "parentId": "5vvqcun882",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "iconAlign": "left",
                       "defaultText": ""
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "Text10",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -402,10 +463,12 @@
                       "parentColumnSpace": 11.25,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 1,
                       "dynamicBindingPathList": [],
                       "text": "Serial Number",
                       "key": "0lkbgxp1v9",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 15,
                       "textAlign": "LEFT",
                       "widgetId": "exn7h92xey",
@@ -416,9 +479,11 @@
                       "parentId": "5vvqcun882",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "PARAGRAPH"
+                      "borderRadius": "0px",
+                      "fontSize": "0.875rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "Select2",
                       "isFilterable": false,
                       "displayName": "Select",
@@ -435,7 +500,11 @@
                       "parentColumnSpace": 11.25,
                       "dynamicTriggerPathList": [],
                       "leftColumn": 15,
-                      "dynamicBindingPathList": [],
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "accentColor"
+                        }
+                      ],
                       "options": [
                         {
                           "label": "Blue",
@@ -453,18 +522,22 @@
                       "placeholderText": "Select option",
                       "isDisabled": false,
                       "key": "o3l9ffr6l8",
+                      "labelTextSize": "0.875rem",
                       "isRequired": false,
                       "rightColumn": 35,
                       "widgetId": "9hsr5jr35x",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisible": true,
                       "version": 1,
                       "parentId": "5vvqcun882",
                       "renderMode": "CANVAS",
-                      "isLoading": false
+                      "isLoading": false,
+                      "borderRadius": "0px"
                     }
                   ],
                   "isDisabled": false,
                   "key": "ypaxkjbemi",
+                  "labelTextSize": "0.875rem",
                   "rightColumn": 0,
                   "detachFromLayout": true,
                   "widgetId": "5vvqcun882",
@@ -472,11 +545,13 @@
                   "version": 1,
                   "parentId": "vuyypnttje",
                   "renderMode": "CANVAS",
-                  "isLoading": false
+                  "isLoading": false,
+                  "borderRadius": "0px"
                 }
               ],
               "key": "h2zdjvwpzs",
               "height": 756,
+              "labelTextSize": "0.875rem",
               "rightColumn": 0,
               "detachFromLayout": true,
               "widgetId": "vuyypnttje",
@@ -486,9 +561,11 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
+              "borderRadius": "0px",
               "width": 732
             },
             {
+              "boxShadow": "none",
               "widgetName": "WAREHOUSE_MISMATCH",
               "isCanvas": true,
               "displayName": "Modal",
@@ -504,6 +581,7 @@
               "dynamicBindingPathList": [],
               "children": [
                 {
+                  "boxShadow": "none",
                   "widgetName": "Canvas6",
                   "displayName": "Canvas",
                   "topRow": 0,
@@ -519,32 +597,40 @@
                   "dynamicBindingPathList": [],
                   "children": [
                     {
+                      "boxShadow": "none",
                       "widgetName": "Icon2",
-                      "rightColumn": 64,
                       "onClick": "{{closeModal('WAREHOUSE_MISMATCH')}}",
-                      "iconName": "cross",
                       "buttonColor": "#2E3D49",
                       "displayName": "Icon",
                       "iconSVG": "/static/media/icon.31d6cfe0.svg",
-                      "widgetId": "fxedfoo2d1",
                       "topRow": 1,
                       "bottomRow": 5,
-                      "isVisible": true,
                       "type": "ICON_BUTTON_WIDGET",
-                      "version": 1,
                       "hideCard": true,
+                      "leftColumn": 56,
+                      "dynamicBindingPathList": [],
+                      "iconSize": 24,
+                      "key": "kapizdv3ar",
+                      "labelTextSize": "0.875rem",
+                      "rightColumn": 64,
+                      "iconName": "cross",
+                      "widgetId": "fxedfoo2d1",
+                      "isVisible": true,
+                      "version": 1,
                       "parentId": "xdescwxp66",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "leftColumn": 56,
-                      "dynamicBindingPathList": [],
-                      "borderRadius": "SHARP",
-                      "buttonVariant": "TERTIARY",
-                      "iconSize": 24,
-                      "key": "kapizdv3ar"
+                      "borderRadius": "0px",
+                      "buttonVariant": "TERTIARY"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "Text5",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "fontSize"
+                        }
+                      ],
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
                       "topRow": 1,
@@ -553,10 +639,12 @@
                       "hideCard": false,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 1,
                       "dynamicBindingPathList": [],
                       "text": "Move SubLot to Warehouse",
                       "key": "d0wztgwyut",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 56,
                       "textAlign": "LEFT",
                       "widgetId": "1vjs7nkc5w",
@@ -567,9 +655,11 @@
                       "parentId": "xdescwxp66",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "HEADING1"
+                      "borderRadius": "0px",
+                      "fontSize": "1.5rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "Button5",
                       "onClick": "{{closeModal('WAREHOUSE_MISMATCH')}}",
                       "buttonColor": "#03B365",
@@ -584,6 +674,7 @@
                       "text": "Close",
                       "isDisabled": false,
                       "key": "l4wjw81sd1",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 45,
                       "isDefaultClickDisabled": true,
                       "widgetId": "o8wrhy7ujn",
@@ -594,9 +685,11 @@
                       "parentId": "xdescwxp66",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "buttonVariant": "SECONDARY"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "Button6",
                       "buttonColor": "#03B365",
                       "displayName": "Button",
@@ -610,6 +703,7 @@
                       "text": "Confirm",
                       "isDisabled": false,
                       "key": "l4wjw81sd1",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 57,
                       "isDefaultClickDisabled": true,
                       "widgetId": "os95eci92k",
@@ -620,9 +714,11 @@
                       "parentId": "xdescwxp66",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "buttonVariant": "PRIMARY"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "Text11",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -634,10 +730,12 @@
                       "parentColumnSpace": 13.0625,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 1,
                       "dynamicBindingPathList": [],
                       "text": "Unfortunately, this SubLot should be located in a different Warehouse. Currently, it is not possible to move Serialized SubLot between Warehouse. Please refer to documentation for further instruction in dealing with this issue.",
                       "key": "0lkbgxp1v9",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 56,
                       "textAlign": "LEFT",
                       "widgetId": "cxuhttkb3j",
@@ -648,11 +746,13 @@
                       "parentId": "xdescwxp66",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "PARAGRAPH"
+                      "borderRadius": "0px",
+                      "fontSize": "0.875rem"
                     }
                   ],
                   "isDisabled": false,
                   "key": "ypaxkjbemi",
+                  "labelTextSize": "0.875rem",
                   "rightColumn": 424.5703125,
                   "detachFromLayout": true,
                   "widgetId": "xdescwxp66",
@@ -660,11 +760,13 @@
                   "version": 1,
                   "parentId": "xabcw7sahj",
                   "renderMode": "CANVAS",
-                  "isLoading": false
+                  "isLoading": false,
+                  "borderRadius": "0px"
                 }
               ],
               "key": "h2zdjvwpzs",
               "height": 216,
+              "labelTextSize": "0.875rem",
               "rightColumn": 32,
               "detachFromLayout": true,
               "widgetId": "xabcw7sahj",
@@ -674,9 +776,11 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
+              "borderRadius": "0px",
               "width": 762
             },
             {
+              "boxShadow": "none",
               "widgetName": "SERIAL_FOUND",
               "isCanvas": true,
               "displayName": "Modal",
@@ -692,6 +796,7 @@
               "dynamicBindingPathList": [],
               "children": [
                 {
+                  "boxShadow": "none",
                   "widgetName": "Canvas7",
                   "displayName": "Canvas",
                   "topRow": 0,
@@ -707,32 +812,40 @@
                   "dynamicBindingPathList": [],
                   "children": [
                     {
+                      "boxShadow": "none",
                       "widgetName": "Icon3",
-                      "rightColumn": 64,
                       "onClick": "{{closeModal('SERIAL_FOUND')}}",
-                      "iconName": "cross",
                       "buttonColor": "#2E3D49",
                       "displayName": "Icon",
                       "iconSVG": "/static/media/icon.31d6cfe0.svg",
-                      "widgetId": "scm9t4i9dq",
                       "topRow": 1,
                       "bottomRow": 5,
-                      "isVisible": true,
                       "type": "ICON_BUTTON_WIDGET",
-                      "version": 1,
                       "hideCard": true,
+                      "leftColumn": 56,
+                      "dynamicBindingPathList": [],
+                      "iconSize": 24,
+                      "key": "774vq5qe0x",
+                      "labelTextSize": "0.875rem",
+                      "rightColumn": 64,
+                      "iconName": "cross",
+                      "widgetId": "scm9t4i9dq",
+                      "isVisible": true,
+                      "version": 1,
                       "parentId": "hppj8rvtnn",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "leftColumn": 56,
-                      "dynamicBindingPathList": [],
-                      "borderRadius": "SHARP",
-                      "buttonVariant": "TERTIARY",
-                      "iconSize": 24,
-                      "key": "774vq5qe0x"
+                      "borderRadius": "0px",
+                      "buttonVariant": "TERTIARY"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "Text",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "fontSize"
+                        }
+                      ],
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
                       "topRow": 1,
@@ -741,10 +854,12 @@
                       "hideCard": false,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 1,
                       "dynamicBindingPathList": [],
                       "text": "Move Warehouse",
                       "key": "ykppzlnsog",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 36,
                       "textAlign": "LEFT",
                       "widgetId": "g9ij3brh06",
@@ -755,9 +870,11 @@
                       "parentId": "hppj8rvtnn",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "HEADING1"
+                      "borderRadius": "0px",
+                      "fontSize": "1.5rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "Button7",
                       "onClick": "{{closeModal('SERIAL_FOUND')}}",
                       "buttonColor": "#03B365",
@@ -772,6 +889,7 @@
                       "text": "Close",
                       "isDisabled": false,
                       "key": "h46hodnxqg",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 48,
                       "isDefaultClickDisabled": true,
                       "widgetId": "meektvs8jz",
@@ -782,9 +900,11 @@
                       "parentId": "hppj8rvtnn",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "buttonVariant": "SECONDARY"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "Button8",
                       "buttonColor": "#03B365",
                       "displayName": "Button",
@@ -798,6 +918,7 @@
                       "text": "Confirm",
                       "isDisabled": false,
                       "key": "h46hodnxqg",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 60,
                       "isDefaultClickDisabled": true,
                       "widgetId": "oia6p3a99v",
@@ -808,11 +929,13 @@
                       "parentId": "hppj8rvtnn",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "buttonVariant": "PRIMARY"
                     }
                   ],
                   "isDisabled": false,
                   "key": "sz7wih2jo2",
+                  "labelTextSize": "0.875rem",
                   "rightColumn": 461.625,
                   "detachFromLayout": true,
                   "widgetId": "hppj8rvtnn",
@@ -820,11 +943,13 @@
                   "version": 1,
                   "parentId": "fpfxv1n9qq",
                   "renderMode": "CANVAS",
-                  "isLoading": false
+                  "isLoading": false,
+                  "borderRadius": "0px"
                 }
               ],
               "key": "on2fcnx6rn",
               "height": 240,
+              "labelTextSize": "0.875rem",
               "rightColumn": 39,
               "detachFromLayout": true,
               "widgetId": "fpfxv1n9qq",
@@ -834,9 +959,11 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
+              "borderRadius": "0px",
               "width": 456
             },
             {
+              "boxShadow": "none",
               "widgetName": "PALLET_MISMATCH",
               "isCanvas": true,
               "displayName": "Modal",
@@ -853,6 +980,7 @@
               "dynamicBindingPathList": [],
               "children": [
                 {
+                  "boxShadow": "none",
                   "widgetName": "Canvas8",
                   "displayName": "Canvas",
                   "topRow": 0,
@@ -868,32 +996,40 @@
                   "dynamicBindingPathList": [],
                   "children": [
                     {
+                      "boxShadow": "none",
                       "widgetName": "Icon4",
-                      "rightColumn": 64,
                       "onClick": "{{closeModal('PALLET_MISMATCH')}}",
-                      "iconName": "cross",
                       "buttonColor": "#2E3D49",
                       "displayName": "Icon",
                       "iconSVG": "/static/media/icon.31d6cfe0.svg",
-                      "widgetId": "b7c3h69m4d",
                       "topRow": 1,
                       "bottomRow": 5,
-                      "isVisible": true,
                       "type": "ICON_BUTTON_WIDGET",
-                      "version": 1,
                       "hideCard": true,
+                      "leftColumn": 56,
+                      "dynamicBindingPathList": [],
+                      "iconSize": 24,
+                      "key": "774vq5qe0x",
+                      "labelTextSize": "0.875rem",
+                      "rightColumn": 64,
+                      "iconName": "cross",
+                      "widgetId": "b7c3h69m4d",
+                      "isVisible": true,
+                      "version": 1,
                       "parentId": "00c237glyi",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "leftColumn": 56,
-                      "dynamicBindingPathList": [],
-                      "borderRadius": "SHARP",
-                      "buttonVariant": "TERTIARY",
-                      "iconSize": 24,
-                      "key": "774vq5qe0x"
+                      "borderRadius": "0px",
+                      "buttonVariant": "TERTIARY"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "ModalTitle",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "fontSize"
+                        }
+                      ],
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
                       "topRow": 1,
@@ -902,10 +1038,12 @@
                       "hideCard": false,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 1,
                       "dynamicBindingPathList": [],
                       "text": "Move SubLot to Carrier",
                       "key": "ykppzlnsog",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 41,
                       "textAlign": "LEFT",
                       "widgetId": "olaxlziyxb",
@@ -916,9 +1054,11 @@
                       "parentId": "00c237glyi",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "HEADING1"
+                      "borderRadius": "0px",
+                      "fontSize": "1.5rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "Button9",
                       "onClick": "{{closeModal('PALLET_MISMATCH')}}",
                       "buttonColor": "#03B365",
@@ -933,6 +1073,7 @@
                       "text": "Close",
                       "isDisabled": false,
                       "key": "h46hodnxqg",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 44,
                       "isDefaultClickDisabled": true,
                       "widgetId": "5im99the5v",
@@ -943,9 +1084,11 @@
                       "parentId": "00c237glyi",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "buttonVariant": "SECONDARY"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "Button10",
                       "buttonColor": "#03B365",
                       "displayName": "Button",
@@ -959,6 +1102,7 @@
                       "text": "Confirm",
                       "isDisabled": false,
                       "key": "h46hodnxqg",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 58,
                       "isDefaultClickDisabled": true,
                       "widgetId": "7f7j3ev57e",
@@ -969,9 +1113,11 @@
                       "parentId": "00c237glyi",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "buttonVariant": "PRIMARY"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "Text7",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -983,10 +1129,12 @@
                       "parentColumnSpace": 13.1875,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 1,
                       "dynamicBindingPathList": [],
                       "text": "Serialized SubLot (..) will be moved from Carrier ... to Carrier. Please provide a reason and a comment:",
                       "key": "0lkbgxp1v9",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 56,
                       "textAlign": "LEFT",
                       "widgetId": "6zrof5h154",
@@ -997,9 +1145,11 @@
                       "parentId": "00c237glyi",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "PARAGRAPH"
+                      "borderRadius": "0px",
+                      "fontSize": "0.875rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "Input1",
                       "displayName": "Input",
                       "iconSVG": "/static/media/icon.9f505595.svg",
@@ -1012,13 +1162,20 @@
                       "parentColumnSpace": 12.0625,
                       "resetOnSubmit": true,
                       "leftColumn": 1,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "accentColor"
+                        }
+                      ],
                       "labelStyle": "",
                       "inputType": "TEXT",
                       "isDisabled": false,
                       "key": "z81llroxsb",
+                      "labelTextSize": "0.875rem",
                       "isRequired": false,
                       "rightColumn": 57,
                       "widgetId": "jjyol8ob3s",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisible": true,
                       "label": "",
                       "allowCurrencyChange": false,
@@ -1026,10 +1183,12 @@
                       "parentId": "00c237glyi",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "iconAlign": "left",
                       "defaultText": ""
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "Text8",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -1041,10 +1200,12 @@
                       "parentColumnSpace": 12.0625,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 1,
                       "dynamicBindingPathList": [],
                       "text": "Comment",
                       "key": "0lkbgxp1v9",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 17,
                       "textAlign": "LEFT",
                       "widgetId": "ayzdmoozbk",
@@ -1055,9 +1216,11 @@
                       "parentId": "00c237glyi",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "PARAGRAPH"
+                      "borderRadius": "0px",
+                      "fontSize": "0.875rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "Select1",
                       "isFilterable": false,
                       "displayName": "Select",
@@ -1074,7 +1237,11 @@
                       "parentColumnSpace": 12.0625,
                       "dynamicTriggerPathList": [],
                       "leftColumn": 1,
-                      "dynamicBindingPathList": [],
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "accentColor"
+                        }
+                      ],
                       "options": [
                         {
                           "label": "Blue",
@@ -1093,18 +1260,22 @@
                       "placeholderText": "Select option",
                       "isDisabled": false,
                       "key": "o3l9ffr6l8",
+                      "labelTextSize": "0.875rem",
                       "isRequired": false,
                       "rightColumn": 36,
                       "widgetId": "9108z1xjwi",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisible": true,
                       "version": 1,
                       "parentId": "00c237glyi",
                       "renderMode": "CANVAS",
-                      "isLoading": false
+                      "isLoading": false,
+                      "borderRadius": "0px"
                     }
                   ],
                   "isDisabled": false,
                   "key": "sz7wih2jo2",
+                  "labelTextSize": "0.875rem",
                   "rightColumn": 461.625,
                   "detachFromLayout": true,
                   "widgetId": "00c237glyi",
@@ -1112,11 +1283,13 @@
                   "version": 1,
                   "parentId": "ok6voglf0u",
                   "renderMode": "CANVAS",
-                  "isLoading": false
+                  "isLoading": false,
+                  "borderRadius": "0px"
                 }
               ],
               "key": "on2fcnx6rn",
               "height": 378,
+              "labelTextSize": "0.875rem",
               "rightColumn": 33,
               "detachFromLayout": true,
               "widgetId": "ok6voglf0u",
@@ -1126,10 +1299,17 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
+              "borderRadius": "0px",
               "width": 784
             },
             {
+              "boxShadow": "none",
               "widgetName": "Text2",
+              "dynamicPropertyPathList": [
+                {
+                  "key": "fontSize"
+                }
+              ],
               "displayName": "Text",
               "iconSVG": "/static/media/icon.97c59b52.svg",
               "topRow": 0,
@@ -1140,10 +1320,12 @@
               "parentColumnSpace": 18.880859375,
               "dynamicTriggerPathList": [],
               "overflow": "NONE",
+              "fontFamily": "System Default",
               "leftColumn": 1,
               "dynamicBindingPathList": [],
               "text": "Serialized Stock Validation Report",
               "key": "24httoc4nn",
+              "labelTextSize": "0.875rem",
               "rightColumn": 30,
               "textAlign": "LEFT",
               "widgetId": "uwb8ehd7w6",
@@ -1154,9 +1336,11 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "fontSize": "HEADING1"
+              "borderRadius": "0px",
+              "fontSize": "1.5rem"
             },
             {
+              "boxShadow": "none",
               "widgetName": "Tabs1",
               "isCanvas": true,
               "dynamicPropertyPathList": [
@@ -1187,11 +1371,15 @@
                 },
                 {
                   "key": "tabsObj.tab1.isVisible"
+                },
+                {
+                  "key": "accentColor"
                 }
               ],
               "children": [
                 {
                   "tabId": "tab1",
+                  "boxShadow": "none",
                   "widgetName": "Canvas2",
                   "displayName": "Canvas",
                   "topRow": 0,
@@ -1208,13 +1396,16 @@
                   "dynamicBindingPathList": [],
                   "children": [
                     {
-                      "boxShadow": "NONE",
+                      "boxShadow": "none",
                       "widgetName": "Container1",
                       "borderColor": "transparent",
                       "isCanvas": true,
                       "dynamicPropertyPathList": [
                         {
                           "key": "isVisible"
+                        },
+                        {
+                          "key": "borderRadius"
                         }
                       ],
                       "displayName": "Container",
@@ -1234,29 +1425,22 @@
                       ],
                       "children": [
                         {
+                          "boxShadow": "none",
                           "widgetName": "Canvas1",
-                          "rightColumn": 1831.5,
-                          "detachFromLayout": true,
                           "displayName": "Canvas",
-                          "widgetId": "t0ysvqrdyf",
-                          "containerStyle": "none",
                           "topRow": 0,
                           "bottomRow": 750,
                           "parentRowSpace": 1,
-                          "isVisible": true,
                           "type": "CANVAS_WIDGET",
                           "canExtend": false,
-                          "version": 1,
                           "hideCard": true,
-                          "parentId": "uwuqfoprcp",
                           "minHeight": 400,
-                          "renderMode": "CANVAS",
-                          "isLoading": false,
                           "parentColumnSpace": 1,
                           "leftColumn": 0,
                           "dynamicBindingPathList": [],
                           "children": [
                             {
+                              "boxShadow": "none",
                               "widgetName": "Button2Copy",
                               "onClick": "{{SerialNumberScanIn.clearScanIn()}}",
                               "buttonColor": "#03B365",
@@ -1286,6 +1470,7 @@
                               "text": "Clear Scan In",
                               "isDisabled": "",
                               "key": "ev354m2uml",
+                              "labelTextSize": "0.875rem",
                               "rightColumn": 52,
                               "isDefaultClickDisabled": true,
                               "widgetId": "wrmgud65hf",
@@ -1295,9 +1480,11 @@
                               "parentId": "t0ysvqrdyf",
                               "renderMode": "CANVAS",
                               "isLoading": false,
+                              "borderRadius": "0px",
                               "buttonVariant": "PRIMARY"
                             },
                             {
+                              "boxShadow": "none",
                               "widgetName": "PutAwayInput",
                               "dynamicPropertyPathList": [
                                 {
@@ -1331,6 +1518,9 @@
                                 },
                                 {
                                   "key": "errorMessage"
+                                },
+                                {
+                                  "key": "accentColor"
                                 }
                               ],
                               "labelStyle": "",
@@ -1338,10 +1528,12 @@
                               "isDisabled": false,
                               "key": "k33lhym254",
                               "validation": "{{SerialNumberScanIn.serialNumberValid(PutAwayInput.text)[0]}}",
+                              "labelTextSize": "0.875rem",
                               "isRequired": true,
                               "onTextChanged": "",
                               "rightColumn": 35,
                               "widgetId": "dt2s13nrfu",
+                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                               "errorMessage": "{{SerialNumberScanIn.serialNumberValid(PutAwayInput.text)[1]}}",
                               "isVisible": true,
                               "label": "",
@@ -1350,10 +1542,12 @@
                               "parentId": "t0ysvqrdyf",
                               "renderMode": "CANVAS",
                               "isLoading": false,
+                              "borderRadius": "0px",
                               "iconAlign": "left",
                               "defaultText": ""
                             },
                             {
+                              "boxShadow": "none",
                               "widgetName": "Table1",
                               "onSort": "",
                               "defaultPageSize": 0,
@@ -1399,6 +1593,9 @@
                                 },
                                 {
                                   "key": "primaryColumns.customColumn1.buttonLabel"
+                                },
+                                {
+                                  "key": "accentColor"
                                 }
                               ],
                               "leftColumn": 1,
@@ -1419,7 +1616,9 @@
                                   "buttonStyle": "rgb(3, 179, 101)",
                                   "buttonLabelColor": "#FFFFFF",
                                   "buttonLabel": "{{Table1.sanitizedTableData.map((currentRow) => ( 'Delete'))}}",
-                                  "onClick": "{{SerialNumberScanIn.deleteSerialNumberByIndex(currentRow.index)}}"
+                                  "onClick": "{{SerialNumberScanIn.deleteSerialNumberByIndex(currentRow.index)}}",
+                                  "borderRadius": "0px",
+                                  "boxShadow": "none"
                                 },
                                 "index": {
                                   "index": 0,
@@ -1428,7 +1627,7 @@
                                   "horizontalAlignment": "LEFT",
                                   "verticalAlignment": "CENTER",
                                   "columnType": "number",
-                                  "textSize": "PARAGRAPH",
+                                  "textSize": "0.875rem",
                                   "enableFilter": true,
                                   "enableSort": true,
                                   "isVisible": true,
@@ -1436,7 +1635,9 @@
                                   "isCellVisible": true,
                                   "isDerived": false,
                                   "label": "index",
-                                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.index))}}"
+                                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.index))}}",
+                                  "borderRadius": "0px",
+                                  "boxShadow": "none"
                                 },
                                 "number": {
                                   "index": 1,
@@ -1445,7 +1646,7 @@
                                   "horizontalAlignment": "LEFT",
                                   "verticalAlignment": "CENTER",
                                   "columnType": "text",
-                                  "textSize": "PARAGRAPH",
+                                  "textSize": "0.875rem",
                                   "enableFilter": true,
                                   "enableSort": true,
                                   "isVisible": true,
@@ -1453,7 +1654,9 @@
                                   "isCellVisible": true,
                                   "isDerived": false,
                                   "label": "Serial Number",
-                                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.number))}}"
+                                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.number))}}",
+                                  "borderRadius": "0px",
+                                  "boxShadow": "none"
                                 }
                               },
                               "delimiter": ",",
@@ -1475,12 +1678,16 @@
                                   "buttonStyle": "rgb(3, 179, 101)",
                                   "buttonLabelColor": "#FFFFFF",
                                   "buttonLabel": "{{Table1.sanitizedTableData.map((currentRow) => ( 'Delete'))}}",
-                                  "onClick": ""
+                                  "onClick": "",
+                                  "borderRadius": "0px",
+                                  "boxShadow": "none"
                                 }
                               },
+                              "labelTextSize": "0.875rem",
                               "rightColumn": 64,
-                              "textSize": "PARAGRAPH",
+                              "textSize": "0.875rem",
                               "widgetId": "fikhtjnf4s",
+                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                               "isVisibleFilters": false,
                               "tableData": "{{\nSerialNumberScanIn.getSerialNumberList().map((number,index) =>{\n\treturn {index,number}\n})\n}}",
                               "isVisible": true,
@@ -1493,6 +1700,24 @@
                               "isLoading": false,
                               "horizontalAlignment": "LEFT",
                               "isVisibleSearch": false,
+                              "childStylesheet": {
+                                "button": {
+                                  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                                  "boxShadow": "none"
+                                },
+                                "menuButton": {
+                                  "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                                  "boxShadow": "none"
+                                },
+                                "iconButton": {
+                                  "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                                  "boxShadow": "none"
+                                }
+                              },
+                              "borderRadius": "0px",
                               "isVisiblePagination": true,
                               "verticalAlignment": "CENTER",
                               "columnSizeMap": {
@@ -1505,7 +1730,13 @@
                               }
                             },
                             {
+                              "boxShadow": "none",
                               "widgetName": "Text1",
+                              "dynamicPropertyPathList": [
+                                {
+                                  "key": "fontSize"
+                                }
+                              ],
                               "displayName": "Text",
                               "iconSVG": "/static/media/icon.97c59b52.svg",
                               "topRow": 0,
@@ -1516,10 +1747,12 @@
                               "parentColumnSpace": 19.5,
                               "dynamicTriggerPathList": [],
                               "overflow": "NONE",
+                              "fontFamily": "System Default",
                               "leftColumn": 1,
                               "dynamicBindingPathList": [],
                               "text": "Serialised Unit Scan In",
                               "key": "grbjg8xjo6",
+                              "labelTextSize": "0.875rem",
                               "rightColumn": 19,
                               "textAlign": "LEFT",
                               "widgetId": "gz6acbl1qv",
@@ -1530,9 +1763,11 @@
                               "parentId": "t0ysvqrdyf",
                               "renderMode": "CANVAS",
                               "isLoading": false,
-                              "fontSize": "HEADING2"
+                              "borderRadius": "0px",
+                              "fontSize": "1.125rem"
                             },
                             {
+                              "boxShadow": "none",
                               "widgetName": "Button2",
                               "onClick": "{{StockReportValidation.runStockValidationQuery()}}",
                               "buttonColor": "#03B365",
@@ -1563,6 +1798,7 @@
                               "text": "Run Stock Check Report",
                               "isDisabled": "{{Table1.tableData.length < 1}}",
                               "key": "ev354m2uml",
+                              "labelTextSize": "0.875rem",
                               "rightColumn": 64,
                               "isDefaultClickDisabled": true,
                               "widgetId": "w6ed6w7e9q",
@@ -1572,14 +1808,27 @@
                               "parentId": "t0ysvqrdyf",
                               "renderMode": "CANVAS",
                               "isLoading": false,
+                              "borderRadius": "0px",
                               "buttonVariant": "PRIMARY"
                             }
                           ],
-                          "key": "4we1sk6yfd"
+                          "key": "4we1sk6yfd",
+                          "labelTextSize": "0.875rem",
+                          "rightColumn": 1831.5,
+                          "detachFromLayout": true,
+                          "widgetId": "t0ysvqrdyf",
+                          "containerStyle": "none",
+                          "isVisible": true,
+                          "version": 1,
+                          "parentId": "uwuqfoprcp",
+                          "renderMode": "CANVAS",
+                          "isLoading": false,
+                          "borderRadius": "0px"
                         }
                       ],
                       "borderWidth": "0",
                       "key": "acy9un16e8",
+                      "labelTextSize": "0.875rem",
                       "backgroundColor": "#FFFFFF",
                       "rightColumn": 61,
                       "widgetId": "uwuqfoprcp",
@@ -1589,9 +1838,10 @@
                       "parentId": "lun8zsyzq8",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "borderRadius": "0"
+                      "borderRadius": "0px"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "CarrierSelect",
                       "isFilterable": false,
                       "displayName": "Select",
@@ -1618,24 +1868,36 @@
                         },
                         {
                           "key": "defaultOptionValue"
+                        },
+                        {
+                          "key": "accentColor"
                         }
                       ],
                       "options": "{{\nqueryTransforms.transformFetchCarrier(FetchCarrier.data.data.queryCarrier)}}",
                       "placeholderText": "Select option",
                       "isDisabled": false,
                       "key": "jsxq0h2eld",
+                      "labelTextSize": "0.875rem",
                       "isRequired": true,
                       "rightColumn": 21,
                       "widgetId": "ov39gjn31o",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisible": true,
                       "version": 1,
                       "parentId": "lun8zsyzq8",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "onOptionChange": "{{FetchWarehouse.run()}}"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "Text3",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "fontSize"
+                        }
+                      ],
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
                       "topRow": 2,
@@ -1646,10 +1908,12 @@
                       "parentColumnSpace": 17.6904296875,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 2,
                       "dynamicBindingPathList": [],
                       "text": "Select Carrier",
                       "key": "d0wztgwyut",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 10,
                       "textAlign": "LEFT",
                       "widgetId": "johq8sskfg",
@@ -1660,11 +1924,13 @@
                       "parentId": "lun8zsyzq8",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "HEADING2"
+                      "borderRadius": "0px",
+                      "fontSize": "1.125rem"
                     }
                   ],
                   "isDisabled": false,
                   "key": "czjl8mtnz4",
+                  "labelTextSize": "0.875rem",
                   "tabName": "Unit Scan In",
                   "rightColumn": 475.5,
                   "detachFromLayout": true,
@@ -1673,10 +1939,12 @@
                   "version": 1,
                   "parentId": "2odnlu7vay",
                   "renderMode": "CANVAS",
-                  "isLoading": false
+                  "isLoading": false,
+                  "borderRadius": "0px"
                 },
                 {
                   "tabId": "tab2",
+                  "boxShadow": "none",
                   "widgetName": "Canvas3",
                   "displayName": "Canvas",
                   "topRow": 0,
@@ -1693,6 +1961,7 @@
                   "dynamicBindingPathList": [],
                   "children": [
                     {
+                      "boxShadow": "none",
                       "widgetName": "Table2",
                       "defaultPageSize": 0,
                       "columnOrder": [
@@ -1765,6 +2034,9 @@
                         },
                         {
                           "key": "primaryColumns.Action.menuButtonLabel"
+                        },
+                        {
+                          "key": "accentColor"
                         }
                       ],
                       "leftColumn": 1,
@@ -1776,7 +2048,7 @@
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
                           "columnType": "text",
-                          "textSize": "PARAGRAPH",
+                          "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
                           "isVisible": true,
@@ -1785,7 +2057,9 @@
                           "isDerived": false,
                           "label": "Warehouse",
                           "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.Warehouse))}}",
-                          "cellBackground": "{{Table2.sanitizedTableData.map((currentRow) => ( StockReportValidation.getValidationColor(currentRow.Validation).warehouseColor))}}"
+                          "cellBackground": "{{Table2.sanitizedTableData.map((currentRow) => ( StockReportValidation.getValidationColor(currentRow.Validation).warehouseColor))}}",
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
                         },
                         "Action": {
                           "index": 5,
@@ -1794,7 +2068,7 @@
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
                           "columnType": "button",
-                          "textSize": "PARAGRAPH",
+                          "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
                           "isVisible": true,
@@ -1807,7 +2081,9 @@
                           "onClick": "{{showModal(currentRow.Validation)}}",
                           "buttonColor": "#FFFFFF",
                           "buttonLabelColor": "#231F20",
-                          "menuButtonLabel": "{{Table2.sanitizedTableData.map((currentRow) => ( 'Open Menu'))}}"
+                          "menuButtonLabel": "{{Table2.sanitizedTableData.map((currentRow) => ( 'Open Menu'))}}",
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
                         },
                         "Carrier_Code": {
                           "index": 4,
@@ -1816,7 +2092,7 @@
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
                           "columnType": "text",
-                          "textSize": "PARAGRAPH",
+                          "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
                           "isVisible": true,
@@ -1825,7 +2101,9 @@
                           "isDerived": false,
                           "label": "Carrier_Code",
                           "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.Carrier_Code))}}",
-                          "cellBackground": "{{Table2.sanitizedTableData.map((currentRow) => ( StockReportValidation.getValidationColor(currentRow.Validation).carrierColor))}}"
+                          "cellBackground": "{{Table2.sanitizedTableData.map((currentRow) => ( StockReportValidation.getValidationColor(currentRow.Validation).carrierColor))}}",
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
                         },
                         "Serial_Number": {
                           "index": 3,
@@ -1834,7 +2112,7 @@
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
                           "columnType": "text",
-                          "textSize": "PARAGRAPH",
+                          "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
                           "isVisible": true,
@@ -1844,7 +2122,9 @@
                           "label": "Serial_Number",
                           "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.Serial_Number))}}",
                           "textColor": "",
-                          "cellBackground": "{{Table2.sanitizedTableData.map((currentRow) => ( StockReportValidation.getValidationColor(currentRow.Validation).serialColor))}}"
+                          "cellBackground": "{{Table2.sanitizedTableData.map((currentRow) => ( StockReportValidation.getValidationColor(currentRow.Validation).serialColor))}}",
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
                         },
                         "Validation": {
                           "index": 3,
@@ -1853,7 +2133,7 @@
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
                           "columnType": "text",
-                          "textSize": "PARAGRAPH",
+                          "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
                           "isVisible": false,
@@ -1861,15 +2141,19 @@
                           "isCellVisible": true,
                           "isDerived": false,
                           "label": "Validation",
-                          "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.Validation))}}"
+                          "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.Validation))}}",
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
                         }
                       },
                       "delimiter": ",",
                       "key": "7pcff8sw2g",
                       "derivedColumns": {},
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 63,
-                      "textSize": "PARAGRAPH",
+                      "textSize": "0.875rem",
                       "widgetId": "r3nyjfj41r",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisibleFilters": true,
                       "tableData": "{{queryTransforms.transformFetchSerializedUnits(appsmith.store.QueryReturn)}}",
                       "isVisible": true,
@@ -1882,6 +2166,24 @@
                       "isLoading": false,
                       "horizontalAlignment": "LEFT",
                       "isVisibleSearch": true,
+                      "childStylesheet": {
+                        "button": {
+                          "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                          "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                          "boxShadow": "none"
+                        },
+                        "menuButton": {
+                          "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                          "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                          "boxShadow": "none"
+                        },
+                        "iconButton": {
+                          "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                          "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                          "boxShadow": "none"
+                        }
+                      },
+                      "borderRadius": "0px",
                       "isVisiblePagination": true,
                       "verticalAlignment": "CENTER",
                       "columnSizeMap": {
@@ -1899,7 +2201,13 @@
                       }
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "Text6",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "fontSize"
+                        }
+                      ],
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
                       "topRow": 0,
@@ -1910,10 +2218,12 @@
                       "parentColumnSpace": 19.2265625,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 1,
                       "dynamicBindingPathList": [],
                       "text": "Validation Report",
                       "key": "ykppzlnsog",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 14,
                       "textAlign": "LEFT",
                       "widgetId": "jzxyqmncgm",
@@ -1924,9 +2234,11 @@
                       "parentId": "k87we8h405",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "HEADING2"
+                      "borderRadius": "0px",
+                      "fontSize": "1.125rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "Button11",
                       "onClick": "{{storeValue('validationQueryExecuted',false,false)}}",
                       "buttonColor": "#03B365",
@@ -1953,6 +2265,7 @@
                       "text": "Update Report",
                       "isDisabled": false,
                       "key": "7c0j6om43c",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 63,
                       "isDefaultClickDisabled": true,
                       "widgetId": "mqzk5u1wqg",
@@ -1962,11 +2275,13 @@
                       "parentId": "k87we8h405",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "buttonVariant": "PRIMARY"
                     }
                   ],
                   "isDisabled": false,
                   "key": "czjl8mtnz4",
+                  "labelTextSize": "0.875rem",
                   "tabName": "Stock Report",
                   "rightColumn": 475.5,
                   "detachFromLayout": true,
@@ -1975,12 +2290,15 @@
                   "version": 1,
                   "parentId": "2odnlu7vay",
                   "renderMode": "CANVAS",
-                  "isLoading": false
+                  "isLoading": false,
+                  "borderRadius": "0px"
                 }
               ],
               "key": "lyx1vdcivx",
+              "labelTextSize": "0.875rem",
               "rightColumn": 59,
               "widgetId": "2odnlu7vay",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
               "defaultTab": "Unit Scan In",
               "shouldShowTabs": true,
               "tabsObj": {
@@ -2003,7 +2321,8 @@
               "version": 3,
               "parentId": "0",
               "renderMode": "CANVAS",
-              "isLoading": false
+              "isLoading": false,
+              "borderRadius": "0px"
             }
           ]
         },

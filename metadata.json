@@ -172,6 +172,14 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "Stocktake Count_Formatting.activeCarrier": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Count_Formatting.stocktakeCountTable": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Stocktake Count_GetBinCarriers": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
@@ -201,6 +209,10 @@
       "publishedUserSetOnLoad": false
     },
     "Stocktake Count_GetSiteWarehouses": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Count_GetStocktakeCounts": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
@@ -241,6 +253,18 @@
       "publishedUserSetOnLoad": false
     },
     "Stocktake Count_HandleSelects.selectBin": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Count_HandleSelects.selectCarrier": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Count_JSObject1.myFun1": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Count_JSObject1.myFun2": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },

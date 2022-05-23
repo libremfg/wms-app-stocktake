@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "btnSubmit",
-    "fullyQualifiedName": "HandleSelects.btnSubmit",
+    "name": "activeCarrier",
+    "fullyQualifiedName": "Formatting.activeCarrier",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,14 +14,14 @@
       "userPermissions": []
     },
     "pageId": "Stocktake Count",
-    "collectionId": "Stocktake Count_HandleSelects",
+    "collectionId": "Stocktake Count_Formatting",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\treturn HandleJobResponses.createJobResponse()\n\t\t\t.then(() => GetJobOrderJobResponses.run()\n\t\t\t.then(() => HandleJobResponses.submitCounts())\n\t\t\t)\n\t}",
+      "body": "() => {\n\t\tif (tabCarrierSwitch.selectedTab == \"Stored on Carrier\") {\n\t\t\treturn selectStocktakeCarrier.selectedOptionLabel\n\t\t} else {\n\t\t\treturn \"\"\n\t\t}\n\t}",
       "jsArguments": [],
-      "isAsync": true
+      "isAsync": false
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [
@@ -33,14 +33,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\treturn HandleJobResponses.createJobResponse()\n\t\t\t.then(() => GetJobOrderJobResponses.run()\n\t\t\t.then(() => HandleJobResponses.submitCounts())\n\t\t\t)\n\t}"
+      "() => {\n\t\tif (tabCarrierSwitch.selectedTab == \"Stored on Carrier\") {\n\t\t\treturn selectStocktakeCarrier.selectedOptionLabel\n\t\t} else {\n\t\t\treturn \"\"\n\t\t}\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Stocktake Count_HandleSelects.btnSubmit",
+  "id": "Stocktake Count_Formatting.activeCarrier",
   "deleted": false,
-  "gitSyncId": "618b5832da7cd651ee2730f2_6287275a309fd93a9bf1e003"
+  "gitSyncId": "618b5832da7cd651ee2730f2_628af5277901344ba8d1a7e8"
 }

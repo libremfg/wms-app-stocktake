@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\tif (inpStocktakeCount.text == \"\") {\n\t\t\treturn false\n\t\t}\n\t\tif (parseInt(inpStocktakeCount.text) == 0) {\n\t\t\treturn false\n\t\t}\n\t\tif (tabMaterialSelect.selectedTab == \"\") {\n\t\t\tif (selectStockedMaterial.selectedOptionValue == \"\") {\n\t\t\t\treturn false\n\t\t\t}\n\t\t} else {\n\t\t\tif (selectUnstockedMaterial.selectedOptionValue == \"\") {\n\t\t\t\treturn false\n\t\t\t}\n\t\t}\n\t}",
+      "body": "() => {\n\t\tif (selectStocktakeBin.selectedOptionValue == \"\") {\n\t\t\treturn false\n\t\t}\n\t\tif (inpStocktakeCount.text == null) {\n\t\t\treturn false\n\t\t}\n\t\tif (parseInt(inpStocktakeCount.text) == 0) {\n\t\t\treturn false\n\t\t}\n\t\tif (tabMaterialSelect.selectedTab == \"Stocked Materials\") {\n\t\t\tif (selectStockedMaterial.selectedOptionLabel == \"\") {\n\t\t\t\treturn false\n\t\t\t}\n\t\t} else {\n\t\t\tif (selectUnstockedMaterial.selectedOptionLabel == \"\") {\n\t\t\t\treturn false\n\t\t\t}\n\t\t}\n\t\treturn true\n\t}",
       "jsArguments": [],
       "isAsync": false
     },
@@ -34,7 +34,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\tif (inpStocktakeCount.text == \"\") {\n\t\t\treturn false\n\t\t}\n\t\tif (parseInt(inpStocktakeCount.text) == 0) {\n\t\t\treturn false\n\t\t}\n\t\tif (tabMaterialSelect.selectedTab == \"\") {\n\t\t\tif (selectStockedMaterial.selectedOptionValue == \"\") {\n\t\t\t\treturn false\n\t\t\t}\n\t\t} else {\n\t\t\tif (selectUnstockedMaterial.selectedOptionValue == \"\") {\n\t\t\t\treturn false\n\t\t\t}\n\t\t}\n\t}"
+      "() => {\n\t\tif (selectStocktakeBin.selectedOptionValue == \"\") {\n\t\t\treturn false\n\t\t}\n\t\tif (inpStocktakeCount.text == null) {\n\t\t\treturn false\n\t\t}\n\t\tif (parseInt(inpStocktakeCount.text) == 0) {\n\t\t\treturn false\n\t\t}\n\t\tif (tabMaterialSelect.selectedTab == \"Stocked Materials\") {\n\t\t\tif (selectStockedMaterial.selectedOptionLabel == \"\") {\n\t\t\t\treturn false\n\t\t\t}\n\t\t} else {\n\t\t\tif (selectUnstockedMaterial.selectedOptionLabel == \"\") {\n\t\t\t\treturn false\n\t\t\t}\n\t\t}\n\t\treturn true\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
