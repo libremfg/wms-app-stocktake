@@ -179,7 +179,11 @@
                       "defaultOptionValue": "",
                       "animateLoading": true,
                       "parentColumnSpace": 13.210205078125,
-                      "dynamicTriggerPathList": [],
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onOptionChange"
+                        }
+                      ],
                       "leftColumn": 2,
                       "dynamicBindingPathList": [
                         {
@@ -205,7 +209,8 @@
                       "labelAlignment": "left",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "borderRadius": "0px"
+                      "borderRadius": "0px",
+                      "onOptionChange": "{{HandleSelects.selectBin()}}"
                     },
                     {
                       "boxShadow": "none",

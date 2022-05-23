@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "selectBin",
-    "fullyQualifiedName": "HandleSelects.selectBin",
+    "name": "selectCarrier",
+    "fullyQualifiedName": "HandleSelects.selectCarrier",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\tGetBinCarriers.run()\n\t\treturn GetStocktakeJobOrder.run()\n\t\t.then(() => GetJobOrderJobResponses.run())\n\t\t.then(() => GetStockOnHand.run())\n\t\t.then(() => GetStocktakeCounts.run())\n\t}",
+      "body": "() => {\n\t\tGetStockOnHand.run()\n\t\tGetStocktakeCounts.run()\n\t}",
       "jsArguments": [],
       "isAsync": true
     },
@@ -33,14 +33,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\tGetBinCarriers.run()\n\t\treturn GetStocktakeJobOrder.run()\n\t\t.then(() => GetJobOrderJobResponses.run())\n\t\t.then(() => GetStockOnHand.run())\n\t\t.then(() => GetStocktakeCounts.run())\n\t}"
+      "() => {\n\t\tGetStockOnHand.run()\n\t\tGetStocktakeCounts.run()\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Stocktake Report_HandleSelects.selectBin",
+  "id": "Stocktake Report_HandleSelects.selectCarrier",
   "deleted": false,
-  "gitSyncId": "618b5832da7cd651ee2730f2_628b292e7901344ba8d1b55b"
+  "gitSyncId": "618b5832da7cd651ee2730f2_628b379e7901344ba8d1b9b7"
 }

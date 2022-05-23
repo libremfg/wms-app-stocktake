@@ -6,7 +6,7 @@
     "pluginType": "JS",
     "actions": [],
     "archivedActions": [],
-    "body": "export default {\n\n\n\tselectBin: () => {\n\t\tGetBinCarriers.run()\n\t\treturn GetStocktakeJobOrder.run().\n\t\tthen(() => GetJobOrderJobResponses.run())\n\t}\n\n}",
+    "body": "export default {\n\n\n\tselectBin: () => {\n\t\tGetBinCarriers.run()\n\t\treturn GetStocktakeJobOrder.run()\n\t\t.then(() => GetJobOrderJobResponses.run())\n\t\t.then(() => GetStockOnHand.run())\n\t\t.then(() => GetStocktakeCounts.run())\n\t},\n\tselectCarrier: () => {\n\t\tGetStockOnHand.run()\n\t\tGetStocktakeCounts.run()\n\t}\n\n}",
     "variables": []
   },
   "id": "Stocktake Report_HandleSelects",
