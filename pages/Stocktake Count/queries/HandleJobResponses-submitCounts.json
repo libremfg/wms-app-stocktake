@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "async () => {\n\t\tif (HandleOwnerStatus.getOwnerID() == \"\") {\n\t\t\treturn AddStocktakeCountNoOwner;\n\t\t} else {\n\t\t\treturn AddStocktakeCountOwner;\n\t\t}\n\t}",
+      "body": "() => {\n\t\tif (HandleOwnerStatus.getOwnerID() == \"\") {\n\t\t\treturn AddStocktakeCountNoOwner.run();\n\t\t} else {\n\t\t\treturn AddStocktakeCountOwner.run();\n\t\t}\n\t}",
       "jsArguments": [],
       "isAsync": true
     },
@@ -33,7 +33,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "async () => {\n\t\tif (HandleOwnerStatus.getOwnerID() == \"\") {\n\t\t\treturn AddStocktakeCountNoOwner;\n\t\t} else {\n\t\t\treturn AddStocktakeCountOwner;\n\t\t}\n\t}"
+      "() => {\n\t\tif (HandleOwnerStatus.getOwnerID() == \"\") {\n\t\t\treturn AddStocktakeCountNoOwner.run();\n\t\t} else {\n\t\t\treturn AddStocktakeCountOwner.run();\n\t\t}\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

@@ -26,7 +26,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\t\n  input: {\n   \tmaterial:{\"code\": selectStockedMaterial.selectedOptionLabel},\n    stoctake: {\"id\": GetStocktakeJobOrder.data.data.queryJobOrder[0].id},\n\t\tjobResponse: {\"id\": HandleJobResponses.activeJobResponse()},\n\t\tuser: {\"id\": GetUserSites.data.data.getUser.id},\n\t\towner: {\"id\": HandleOwnerStatus.getOwnerID()},\n  \tstatus: {\"code\": HandleOwnerStatus.getStatusCode()}\n}\n\t\t},\n    query: `\nmutation AddStocktakeCount($input:[AddStocktakeCountInput!]!){\n  addStocktakeCount(input:$input){\n    quantity\n  }\n}\n    `\n})\n}}",
+      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\t\n  input: {\n   \tmaterial:{\"code\": selectStockedMaterial.selectedOptionLabel},\n    stocktake: {\"id\": GetStocktakeJobOrder.data.data.queryJobOrder[0].id},\n\t\tjobResponse: {\"id\": HandleJobResponses.activeJobResponse()},\n\t\tuser: {\"id\": GetUserSites.data.data.getUser.id},\n\t\towner: {\"id\": HandleOwnerStatus.getOwnerID()},\n  \tstatus: {\"code\": HandleOwnerStatus.getStatusCode()},\n\t\tquantity: parseInt(inpStocktakeCount.text)\n}\n\t\t},\n    query: `\nmutation AddStocktakeCount($input:[AddStocktakeCountInput!]!){\n  addStocktakeCount(input:$input){\n    quantity\n  }\n}\n    `\n})\n}}",
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
@@ -47,7 +47,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n    variables: {\n\t\t\t\n  input: {\n   \tmaterial:{\"code\": selectStockedMaterial.selectedOptionLabel},\n    stoctake: {\"id\": GetStocktakeJobOrder.data.data.queryJobOrder[0].id},\n\t\tjobResponse: {\"id\": HandleJobResponses.activeJobResponse()},\n\t\tuser: {\"id\": GetUserSites.data.data.getUser.id},\n\t\towner: {\"id\": HandleOwnerStatus.getOwnerID()},\n  \tstatus: {\"code\": HandleOwnerStatus.getStatusCode()}\n}\n\t\t},\n    query: `\nmutation AddStocktakeCount($input:[AddStocktakeCountInput!]!){\n  addStocktakeCount(input:$input){\n    quantity\n  }\n}\n    `\n})"
+      "JSON.stringify({\n    variables: {\n\t\t\t\n  input: {\n   \tmaterial:{\"code\": selectStockedMaterial.selectedOptionLabel},\n    stocktake: {\"id\": GetStocktakeJobOrder.data.data.queryJobOrder[0].id},\n\t\tjobResponse: {\"id\": HandleJobResponses.activeJobResponse()},\n\t\tuser: {\"id\": GetUserSites.data.data.getUser.id},\n\t\towner: {\"id\": HandleOwnerStatus.getOwnerID()},\n  \tstatus: {\"code\": HandleOwnerStatus.getStatusCode()},\n\t\tquantity: parseInt(inpStocktakeCount.text)\n}\n\t\t},\n    query: `\nmutation AddStocktakeCount($input:[AddStocktakeCountInput!]!){\n  addStocktakeCount(input:$input){\n    quantity\n  }\n}\n    `\n})"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
