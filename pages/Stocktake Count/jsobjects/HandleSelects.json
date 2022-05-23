@@ -6,7 +6,7 @@
     "pluginType": "JS",
     "actions": [],
     "archivedActions": [],
-    "body": "export default {\n\n\tselectBin: () => {\n\t\tGetBinCarriers.run()\n\t\tGetMaterialsAtLocation.run()\n\t\treturn GetStocktakeJobOrder.run().\n\t\tthen(() => GetJobOrderJobResponses.run())\n\t},\n\tselectCarrier: () => {\n\t\tGetMaterialsAtLocation.run()\n\t\tGetCarrierDetails.run()\n\t},\n\tbtnSubmit: () => {\n\t\treturn HandleJobResponses.createJobResponse()\n\t\t\t.then(() => GetJobOrderJobResponses.run()\n\t\t\t.then(() => HandleJobResponses.submitCounts())\n\t\t\t)\n\t}\n}",
+    "body": "export default {\n\n\tselectBin: () => {\n\t\tGetBinCarriers.run()\n\t\tGetMaterialsAtLocation.run()\n\t\treturn GetStocktakeJobOrder.run().\n\t\tthen(() => GetJobOrderJobResponses.run())\n\t},\n\tselectCarrier: () => {\n\t\tGetMaterialsAtLocation.run()\n\t\tGetCarrierDetails.run()\n\t},\n\tbtnSubmit: async () => {\n\t\treturn HandleJobResponses.createJobResponse()\n\t\t\t.then(() => GetJobOrderJobResponses.run())\n\t\t\t.then(() => HandleJobResponses.submitCounts())\n\t}\n}",
     "variables": []
   },
   "id": "Stocktake Count_HandleSelects",
