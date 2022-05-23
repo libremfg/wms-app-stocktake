@@ -37,7 +37,7 @@
         "apiContentType": "application/json"
       }
     },
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -49,7 +49,7 @@
     "jsonPathKeys": [
       "JSON.stringify({\n    variables: {\n\t\t\tinput: {\n  \t\t\tstocktakeName: GetStocktakeJobOrder.data.data.queryJobOrder[0].parent.name,\n    \t\tfilter: {\n\t\t\t\t\tjobResponse: {id:HandleJobResponses.activeJobResponse()},\n      \t\tgroupBy: {\n        \t\tcarrier: true,\n        \t\towner: true,\n        \t\tmaterial: true,\n        \t\tstatus: true,\n        \t\tstorageLocation: true\n      \t}\n    }\n\t}\n\t\t},\n    query: `\nquery GetStocktakeCount($input:GetStocktakeCountInput!){\n  getStocktakeCount(input:$input) {\n    material{id,code},\n    owner{id,name},\n    status{code},\n    quantity\n  }\n}`\n})"
     ],
-    "userSetOnLoad": false,
+    "userSetOnLoad": true,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []

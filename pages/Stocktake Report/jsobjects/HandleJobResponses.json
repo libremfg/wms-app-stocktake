@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "HandleJobResponses",
+    "pageId": "Stocktake Report",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\n\tactiveJobResponse: () => {\n\t\tfor (let i = 0; i < GetJobOrderJobResponses.data.data.getJobOrder.jobResponses.length; i++) {\n\t\t\tlet line = GetJobOrderJobResponses.data.data.getJobOrder.jobResponses[0]\n\t\t\tif (line.materialActual.carrier != null) {\n\t\t\t\tif (line.materialActual.carrier.id == selectReportCarrier.selectedOptionValue) {\n\t\t\t\t\treturn line.id\n\t\t\t\t}\n\t\t\t} else {\n\t\t\t\treturn line.id\n\t\t\t}\n\t\t}\n\t\treturn \"\"\n\t}\n\t\n}",
+    "variables": []
+  },
+  "id": "Stocktake Report_HandleJobResponses",
+  "deleted": false,
+  "gitSyncId": "618b5832da7cd651ee2730f2_628b2ec37901344ba8d1b6ca"
+}

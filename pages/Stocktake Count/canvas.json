@@ -1531,16 +1531,6 @@
                 "JSON.stringify({\n    variables: {\n\t\t\tid:selectStocktakeCarrier.selectedOptionValue\n\t\t},\n    query: `\nquery GetCarrier($id:ID!){\n  getCarrier(id:$id){\n    id\n    code\n    status {\n\t\t  code\n\t\t\tid\n\t\t}\n\t\towner {\n\t\t\tid\n\t\t\tname\n\t\t}\n  }\n}\n    `\n})"
               ],
               "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Stocktake Count_GetStocktakeCounts",
-              "name": "GetStocktakeCounts",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "JSON.stringify({\n    variables: {\n\t\t\tinput: {\n  \t\t\tstocktakeName: GetStocktakeJobOrder.data.data.queryJobOrder[0].parent.name,\n    \t\tfilter: {\n\t\t\t\t\tjobResponse: {id:HandleJobResponses.activeJobResponse()},\n      \t\tgroupBy: {\n        \t\tcarrier: true,\n        \t\towner: true,\n        \t\tmaterial: true,\n        \t\tstatus: true,\n        \t\tstorageLocation: true\n      \t}\n    }\n\t}\n\t\t},\n    query: `\nquery GetStocktakeCount($input:GetStocktakeCountInput!){\n  getStocktakeCount(input:$input) {\n    material{id,code},\n    owner{id,name},\n    status{code},\n    quantity\n  }\n}`\n})"
-              ],
-              "timeoutInMillisecond": 10000
             }
           ],
           [

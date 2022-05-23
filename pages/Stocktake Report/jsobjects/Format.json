@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "Format",
+    "pageId": "Stocktake Report",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\n\tcreateStocktakeTable: () => {\n\t\tif (GetStocktakeCounts.data.data == null) {\n\t\t\tlet ret = []\n\t\t\treturn ret\n\t\t}\n\t\tif (GetStockOnHand.data.data == null) {\n\t\t\tlet ret = []\n\t\t\treturn ret\n\t\t}\n\t\treturn \n\t}\n\t\n}",
+    "variables": []
+  },
+  "id": "Stocktake Report_Format",
+  "deleted": false,
+  "gitSyncId": "618b5832da7cd651ee2730f2_628b333d7901344ba8d1b85d"
+}

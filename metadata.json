@@ -213,8 +213,8 @@
       "publishedUserSetOnLoad": false
     },
     "Stocktake Count_GetStocktakeCounts": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
+      "unpublishedUserSetOnLoad": true,
+      "publishedUserSetOnLoad": true
     },
     "Stocktake Count_GetStocktakeJobOrder": {
       "unpublishedUserSetOnLoad": false,
@@ -272,6 +272,10 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "Stocktake Report_Format.createStocktakeTable": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Stocktake Report_GetBinCarriers": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
@@ -281,6 +285,10 @@
       "publishedUserSetOnLoad": false
     },
     "Stocktake Report_GetSiteWarehouses": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Report_GetStockOnHand": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
@@ -297,6 +305,10 @@
       "publishedUserSetOnLoad": false
     },
     "Stocktake Report_GetWarehouseBins": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Report_HandleJobResponses.activeJobResponse": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
