@@ -26,7 +26,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tid:selectStocktakeCarrier.selectedOptionValue\n\t\t},\n    query: `\nquery GetCarrier($id:ID!){\n  getCarrier(id:$id){\n    id\n    code\n    status {\n\t\t  code\n\t\t\tid\n\t\t}\n\t\towner {\n\t\t\tid\n\t\t\tname\n\t\t}\n  }\n}\n    `\n})\n}}",
+      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tcode:selectStocktakeCarrier.selectedOptionLabel\n\t\t},\n    query: `\nquery GetCarrier($code:String!){\n  queryCarrier(filter:{code:{eq:$code}}){\n    id\n    code\n    status {\n\t\t  code\n\t\t\tid\n\t\t}\n\t\towner {\n\t\t\tid\n\t\t\tname\n\t\t}\n  }\n}\n    `\n})\n}}",
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
@@ -47,7 +47,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n    variables: {\n\t\t\tid:selectStocktakeCarrier.selectedOptionValue\n\t\t},\n    query: `\nquery GetCarrier($id:ID!){\n  getCarrier(id:$id){\n    id\n    code\n    status {\n\t\t  code\n\t\t\tid\n\t\t}\n\t\towner {\n\t\t\tid\n\t\t\tname\n\t\t}\n  }\n}\n    `\n})"
+      "JSON.stringify({\n    variables: {\n\t\t\tcode:selectStocktakeCarrier.selectedOptionLabel\n\t\t},\n    query: `\nquery GetCarrier($code:String!){\n  queryCarrier(filter:{code:{eq:$code}}){\n    id\n    code\n    status {\n\t\t  code\n\t\t\tid\n\t\t}\n\t\towner {\n\t\t\tid\n\t\t\tname\n\t\t}\n  }\n}\n    `\n})"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

@@ -37,7 +37,7 @@
         "apiContentType": "application/json"
       }
     },
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -49,7 +49,7 @@
     "jsonPathKeys": [
       "JSON.stringify({\n    variables: {\n\t\t\tid:GetStocktakeJobOrder.data.data.queryJobOrder[0].id,\n\t\t},\n    query: `\nquery GetJobOrder($id:ID!){\n  getJobOrder(id:$id) {\n\t\tparent {\n\t\t\tid\n\t\t}\n    jobResponses {\n      id\n\t\t\tendDateTime\n      equipment {\n        id\n      }\n      materialActual {\n        carrier {\n          id\n        }\n      }\n    }\n  }\n}`\n})"
     ],
-    "userSetOnLoad": false,
+    "userSetOnLoad": true,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []

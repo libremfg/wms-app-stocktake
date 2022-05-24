@@ -6,7 +6,7 @@
     "pluginType": "JS",
     "actions": [],
     "archivedActions": [],
-    "body": "export default {\n\n\tloadPage: async () => {\n\t\tif (appsmith.URL.queryParams.Site != null) {\n\t\t\treturn GetUserSites.run()\n\t\t\t.then(() => GetSiteWarehouses.run())\n\t\t\t.then(() => GetWarehouseBins.run())\n\t\t\t.then(() => HandleSelects.selectBin())\n\t\t}\n\t},\n\t\n}",
+    "body": "export default {\n\n\tloadPage: async () => {\n\t\tif (appsmith.URL.queryParams.Site != null) {\n\t\t\t\n\t\t\tif (Formatting.carrierSelectDefault() != \"\") {\n\t\t\t\treturn GetUserSites.run()\n\t\t\t\t.then(() => GetSiteWarehouses.run())\n\t\t\t\t.then(() => GetWarehouseBins.run())\n\t\t\t\t.then(() => HandleSelects.selectBin())\n\t\t\t\t.then(() => HandleSelects.selectCarrier())\n\t\t\t} else {\n\t\t\t\treturn GetUserSites.run()\n\t\t\t\t.then(() => GetSiteWarehouses.run())\n\t\t\t\t.then(() => GetWarehouseBins.run())\n\t\t\t\t.then(() => HandleSelects.selectBin())\n\t\t\t}\n\t\t}\n\t},\n\t\n}",
     "variables": []
   },
   "id": "Stocktake Count_LoadFromRedirect",

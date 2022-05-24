@@ -750,7 +750,7 @@
                                 }
                               ],
                               "labelPosition": "Auto",
-                              "options": "{{GetBinCarriers.data.data.getEquipment.carriers}}",
+                              "options": "{{GetBinCarriers.data.data.queryEquipment[0].carriers}}",
                               "placeholderText": "Select option",
                               "isDisabled": false,
                               "key": "etfghx8tw9",
@@ -796,7 +796,7 @@
                               ],
                               "shouldTruncate": false,
                               "truncateButtonColor": "#FFC13D",
-                              "text": "Status: {{GetCarrierDetails.data.data.getCarrier.status.code}}",
+                              "text": "Status: {{GetCarrierDetails.data.data.queryCarrier[0].status.code}}",
                               "key": "904owjazh3",
                               "rightColumn": 32,
                               "textAlign": "LEFT",
@@ -1549,7 +1549,7 @@
               "confirmBeforeExecute": false,
               "pluginType": "API",
               "jsonPathKeys": [
-                "JSON.stringify({\n    variables: {\n\t\t\tequip:selectStocktakeBin.selectedOptionValue,\n\t\t},\n    query: `\nquery QueryJobOrder($equip:[ID!]!) {\n  queryJobOrder (filter:{dispatchStatus:{eq:ACTIVE}}) @cascade{\n\t\tid\n\t\tname\n\t\tparent {\n\t\t\tid\n\t\t\tname\n\t\t}\n    equipment(filter:{id:$equip}) {\n      id\n    }\n  }\n}`\n})"
+                "JSON.stringify({\n    variables: {\n\t\t\tequip:selectStocktakeBin.selectedOptionLabel,\n\t\t},\n    query: `\nquery QueryJobOrder($equip:String!) {\n  queryJobOrder (filter:{dispatchStatus:{eq:ACTIVE}}) @cascade{\n\t\tid\n\t\tname\n\t\tparent {\n\t\t\tid\n\t\t\tname\n\t\t}\n    equipment(filter:{name:{eq:$equip}}) {\n      id\n    }\n  }\n}`\n})"
               ],
               "timeoutInMillisecond": 10000
             },
@@ -1561,22 +1561,12 @@
               "confirmBeforeExecute": false,
               "pluginType": "JS",
               "jsonPathKeys": [
-                "async () => {\n\t\tif (appsmith.URL.queryParams.Site != null) {\n\t\t\treturn GetUserSites.run()\n\t\t\t.then(() => GetSiteWarehouses.run())\n\t\t\t.then(() => GetWarehouseBins.run())\n\t\t\t.then(() => HandleSelects.selectBin())\n\t\t}\n\t}"
+                "async () => {\n\t\tif (appsmith.URL.queryParams.Site != null) {\n\t\t\t\n\t\t\tif (Formatting.carrierSelectDefault() != \"\") {\n\t\t\t\treturn GetUserSites.run()\n\t\t\t\t.then(() => GetSiteWarehouses.run())\n\t\t\t\t.then(() => GetWarehouseBins.run())\n\t\t\t\t.then(() => HandleSelects.selectBin())\n\t\t\t\t.then(() => HandleSelects.selectCarrier())\n\t\t\t} else {\n\t\t\t\treturn GetUserSites.run()\n\t\t\t\t.then(() => GetSiteWarehouses.run())\n\t\t\t\t.then(() => GetWarehouseBins.run())\n\t\t\t\t.then(() => HandleSelects.selectBin())\n\t\t\t}\n\t\t}\n\t}"
               ],
               "timeoutInMillisecond": 10000
             }
           ],
           [
-            {
-              "id": "Stocktake Count_GetBinCarriers",
-              "name": "GetBinCarriers",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "JSON.stringify({\n    variables: {\n\t\t\tid:selectStocktakeBin.selectedOptionValue\n\t\t},\n    query: `\nquery GetEquipment($id:ID!){\n  getEquipment(id:$id){\n    id\n    name\n    carriers {\n      label:code\n      value:id\n    }\n  }\n}\n    `\n})"
-              ],
-              "timeoutInMillisecond": 10000
-            },
             {
               "id": "Stocktake Count_GetSiteWarehouses",
               "name": "GetSiteWarehouses",
@@ -1600,22 +1590,24 @@
           ],
           [
             {
+              "id": "Stocktake Count_GetBinCarriers",
+              "name": "GetBinCarriers",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "JSON.stringify({\n    variables: {\n\t\t\tname:selectStocktakeBin.selectedOptionLabel\n\t\t},\n    query: `\nquery GetEquipment($name:String!){\n  queryEquipment(filter:{name:{eq:$name}}){\n    id\n    name\n    carriers {\n      label:code\n      value:id\n    }\n  }\n}\n    `\n})"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
               "id": "Stocktake Count_GetCarrierDetails",
               "name": "GetCarrierDetails",
               "confirmBeforeExecute": false,
               "pluginType": "API",
               "jsonPathKeys": [
-                "JSON.stringify({\n    variables: {\n\t\t\tid:selectStocktakeCarrier.selectedOptionValue\n\t\t},\n    query: `\nquery GetCarrier($id:ID!){\n  getCarrier(id:$id){\n    id\n    code\n    status {\n\t\t  code\n\t\t\tid\n\t\t}\n\t\towner {\n\t\t\tid\n\t\t\tname\n\t\t}\n  }\n}\n    `\n})"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Stocktake Count_GetJobOrderJobResponses",
-              "name": "GetJobOrderJobResponses",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "JSON.stringify({\n    variables: {\n\t\t\tid:GetStocktakeJobOrder.data.data.queryJobOrder[0].id,\n\t\t},\n    query: `\nquery GetJobOrder($id:ID!){\n  getJobOrder(id:$id) {\n\t\tparent {\n\t\t\tid\n\t\t}\n    jobResponses {\n      id\n\t\t\tendDateTime\n      equipment {\n        id\n      }\n      materialActual {\n        carrier {\n          id\n        }\n      }\n    }\n  }\n}`\n})"
+                "JSON.stringify({\n    variables: {\n\t\t\tcode:selectStocktakeCarrier.selectedOptionLabel\n\t\t},\n    query: `\nquery GetCarrier($code:String!){\n  queryCarrier(filter:{code:{eq:$code}}){\n    id\n    code\n    status {\n\t\t  code\n\t\t\tid\n\t\t}\n\t\towner {\n\t\t\tid\n\t\t\tname\n\t\t}\n  }\n}\n    `\n})"
               ],
               "timeoutInMillisecond": 10000
             }

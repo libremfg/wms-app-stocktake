@@ -209,8 +209,8 @@
       "publishedUserSetOnLoad": false
     },
     "Stocktake Count_GetJobOrderJobResponses": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
+      "unpublishedUserSetOnLoad": true,
+      "publishedUserSetOnLoad": true
     },
     "Stocktake Count_GetMaterialDefinition": {
       "unpublishedUserSetOnLoad": false,
@@ -281,14 +281,6 @@
       "publishedUserSetOnLoad": false
     },
     "Stocktake Count_HandleSelects.selectCarrier": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
-    "Stocktake Count_JSObject1.myFun1": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
-    "Stocktake Count_JSObject1.myFun2": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },

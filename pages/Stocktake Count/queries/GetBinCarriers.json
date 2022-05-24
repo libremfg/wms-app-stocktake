@@ -26,7 +26,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tid:selectStocktakeBin.selectedOptionValue\n\t\t},\n    query: `\nquery GetEquipment($id:ID!){\n  getEquipment(id:$id){\n    id\n    name\n    carriers {\n      label:code\n      value:id\n    }\n  }\n}\n    `\n})\n}}",
+      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tname:selectStocktakeBin.selectedOptionLabel\n\t\t},\n    query: `\nquery GetEquipment($name:String!){\n  queryEquipment(filter:{name:{eq:$name}}){\n    id\n    name\n    carriers {\n      label:code\n      value:id\n    }\n  }\n}\n    `\n})\n}}",
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
@@ -47,7 +47,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n    variables: {\n\t\t\tid:selectStocktakeBin.selectedOptionValue\n\t\t},\n    query: `\nquery GetEquipment($id:ID!){\n  getEquipment(id:$id){\n    id\n    name\n    carriers {\n      label:code\n      value:id\n    }\n  }\n}\n    `\n})"
+      "JSON.stringify({\n    variables: {\n\t\t\tname:selectStocktakeBin.selectedOptionLabel\n\t\t},\n    query: `\nquery GetEquipment($name:String!){\n  queryEquipment(filter:{name:{eq:$name}}){\n    id\n    name\n    carriers {\n      label:code\n      value:id\n    }\n  }\n}\n    `\n})"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
