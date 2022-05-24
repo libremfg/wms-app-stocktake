@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "LoadFromRedirect",
+    "pageId": "Stocktake Count",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\n\tloadPage: async () => {\n\t\tif (appsmith.URL.queryParams.Site != null) {\n\t\t\treturn GetUserSites.run()\n\t\t\t.then(() => GetSiteWarehouses.run())\n\t\t\t.then(() => GetWarehouseBins.run())\n\t\t\t.then(() => HandleSelects.selectBin())\n\t\t}\n\t},\n\t\n}",
+    "variables": []
+  },
+  "id": "Stocktake Count_LoadFromRedirect",
+  "deleted": false,
+  "gitSyncId": "618b5832da7cd651ee2730f2_628c90c17901344ba8d21fed"
+}

@@ -1425,8 +1425,9 @@
                     {
                       "boxShadow": "none",
                       "widgetName": "btnConfirmCloseCount",
-                      "onClick": "{{HandleSelects.close()}}",
+                      "onClick": "{{HandleSelects.closeJobResponse()}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "dynamicPropertyPathList": [],
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca02633.svg",
                       "topRow": 15,
@@ -1439,7 +1440,7 @@
                           "key": "onClick"
                         }
                       ],
-                      "leftColumn": 43,
+                      "leftColumn": 41,
                       "dynamicBindingPathList": [
                         {
                           "key": "buttonColor"
@@ -1451,7 +1452,7 @@
                       "text": "Confirm",
                       "isDisabled": false,
                       "key": "7ptt6agk03",
-                      "rightColumn": 59,
+                      "rightColumn": 57,
                       "isDefaultClickDisabled": true,
                       "widgetId": "2sdy2v3xc2",
                       "buttonStyle": "PRIMARY_BUTTON",

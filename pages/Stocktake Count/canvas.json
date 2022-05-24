@@ -74,7 +74,7 @@
                       "type": "SELECT_WIDGET",
                       "serverSideFiltering": false,
                       "hideCard": false,
-                      "defaultOptionValue": "",
+                      "defaultOptionValue": "{{Formatting.siteSelectDefault()}}",
                       "animateLoading": true,
                       "parentColumnSpace": 23.390625,
                       "dynamicTriggerPathList": [
@@ -89,6 +89,9 @@
                         },
                         {
                           "key": "accentColor"
+                        },
+                        {
+                          "key": "defaultOptionValue"
                         }
                       ],
                       "labelPosition": "Left",
@@ -125,7 +128,7 @@
                       "type": "SELECT_WIDGET",
                       "serverSideFiltering": false,
                       "hideCard": false,
-                      "defaultOptionValue": "",
+                      "defaultOptionValue": "{{Formatting.warehouseSelectDefault()}}",
                       "animateLoading": true,
                       "parentColumnSpace": 23.390625,
                       "dynamicTriggerPathList": [
@@ -140,6 +143,9 @@
                         },
                         {
                           "key": "accentColor"
+                        },
+                        {
+                          "key": "defaultOptionValue"
                         }
                       ],
                       "labelPosition": "Left",
@@ -176,7 +182,7 @@
                       "type": "SELECT_WIDGET",
                       "serverSideFiltering": false,
                       "hideCard": false,
-                      "defaultOptionValue": "",
+                      "defaultOptionValue": "{{Formatting.binSelectDefault()}}",
                       "animateLoading": true,
                       "parentColumnSpace": 8.458984375,
                       "dynamicTriggerPathList": [
@@ -191,6 +197,9 @@
                         },
                         {
                           "key": "options"
+                        },
+                        {
+                          "key": "defaultOptionValue"
                         }
                       ],
                       "labelPosition": "Left",
@@ -720,7 +729,7 @@
                               "type": "SELECT_WIDGET",
                               "serverSideFiltering": false,
                               "hideCard": false,
-                              "defaultOptionValue": "",
+                              "defaultOptionValue": "{{Formatting.carrierSelectDefault()}}",
                               "animateLoading": true,
                               "parentColumnSpace": 8.458984375,
                               "dynamicTriggerPathList": [
@@ -735,6 +744,9 @@
                                 },
                                 {
                                   "key": "options"
+                                },
+                                {
+                                  "key": "defaultOptionValue"
                                 }
                               ],
                               "labelPosition": "Auto",
@@ -1538,6 +1550,18 @@
               "pluginType": "API",
               "jsonPathKeys": [
                 "JSON.stringify({\n    variables: {\n\t\t\tequip:selectStocktakeBin.selectedOptionValue,\n\t\t},\n    query: `\nquery QueryJobOrder($equip:[ID!]!) {\n  queryJobOrder (filter:{dispatchStatus:{eq:ACTIVE}}) @cascade{\n\t\tid\n\t\tname\n\t\tparent {\n\t\t\tid\n\t\t\tname\n\t\t}\n    equipment(filter:{id:$equip}) {\n      id\n    }\n  }\n}`\n})"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Stocktake Count_LoadFromRedirect.loadPage",
+              "name": "LoadFromRedirect.loadPage",
+              "collectionId": "Stocktake Count_LoadFromRedirect",
+              "clientSideExecution": true,
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "async () => {\n\t\tif (appsmith.URL.queryParams.Site != null) {\n\t\t\treturn GetUserSites.run()\n\t\t\t.then(() => GetSiteWarehouses.run())\n\t\t\t.then(() => GetWarehouseBins.run())\n\t\t\t.then(() => HandleSelects.selectBin())\n\t\t}\n\t}"
               ],
               "timeoutInMillisecond": 10000
             }

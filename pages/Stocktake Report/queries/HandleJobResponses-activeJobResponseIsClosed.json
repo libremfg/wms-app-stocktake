@@ -16,7 +16,7 @@
     "pageId": "Stocktake Report",
     "collectionId": "Stocktake Report_HandleJobResponses",
     "actionConfiguration": {
-      "timeoutInMillisecond": 0,
+      "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "body": "() => {\n\t\tlet id = HandleJobResponses.activeJobResponse()\n\t\tif (id != \"\") {\n\t\t\tfor (let i = 0; i < GetJobOrderJobResponses.data.data.getJobOrder.jobResponses.length; i++) {\n\t\t\t\tif (GetJobOrderJobResponses.data.data.getJobOrder.jobResponses[i].endDateTime != null) {\n\t\t\t\t\treturn true\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t\treturn false\n\t}",

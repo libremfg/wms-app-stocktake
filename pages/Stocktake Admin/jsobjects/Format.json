@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "Format",
+    "pageId": "Stocktake Admin",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\n\tgetFinalisedListString: () => {\n\t\tvar ret = \"\"\n\t\tfor (const chr in listFinalisedLocations.selectedItem) {\n\t\t\tret = ret + listFinalisedLocations.selectedItem[chr]\n\t\t}\n\t\treturn ret\n\t}\n}",
+    "variables": []
+  },
+  "id": "Stocktake Admin_Format",
+  "deleted": false,
+  "gitSyncId": "618b5832da7cd651ee2730f2_628c88e57901344ba8d21a0a"
+}

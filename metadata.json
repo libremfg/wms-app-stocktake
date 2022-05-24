@@ -96,6 +96,10 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "Stocktake Admin_Format.getFinalisedListString": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Stocktake Admin_FormatCreateStocktakeMutation.getStocktakeJobOrderInput": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
@@ -176,7 +180,23 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "Stocktake Count_Formatting.binSelectDefault": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Count_Formatting.carrierSelectDefault": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Count_Formatting.siteSelectDefault": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Stocktake Count_Formatting.stocktakeCountTable": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Count_Formatting.warehouseSelectDefault": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
@@ -276,6 +296,10 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "Stocktake Count_LoadFromRedirect.loadPage": {
+      "unpublishedUserSetOnLoad": true,
+      "publishedUserSetOnLoad": true
+    },
     "Stocktake Count_Validation.canSubmit": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
@@ -344,7 +368,7 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
-    "Stocktake Report_HandleSelects.close": {
+    "Stocktake Report_HandleSelects.closeJobResponse": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
