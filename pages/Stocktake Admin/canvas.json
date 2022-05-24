@@ -180,6 +180,7 @@
                             {
                               "boxShadow": "none",
                               "widgetName": "btnOpenPlanStocktakeModal",
+                              "onClick": "{{showModal('modalPlanStocktake')}}",
                               "buttonColor": "#03B365",
                               "displayName": "Button",
                               "iconSVG": "/static/media/icon.cca02633.svg",
@@ -190,7 +191,11 @@
                               "hideCard": false,
                               "animateLoading": true,
                               "parentColumnSpace": 15.4560546875,
-                              "dynamicTriggerPathList": [],
+                              "dynamicTriggerPathList": [
+                                {
+                                  "key": "onClick"
+                                }
+                              ],
                               "leftColumn": 1,
                               "dynamicBindingPathList": [],
                               "text": "Plan Stocktake",
