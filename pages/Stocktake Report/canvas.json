@@ -39,7 +39,7 @@
               "type": "SELECT_WIDGET",
               "serverSideFiltering": false,
               "hideCard": false,
-              "defaultOptionValue": "",
+              "defaultOptionValue": "{{Format.siteSelectDefault()}}",
               "animateLoading": true,
               "parentColumnSpace": 23.390625,
               "dynamicTriggerPathList": [
@@ -54,6 +54,9 @@
                 },
                 {
                   "key": "accentColor"
+                },
+                {
+                  "key": "defaultOptionValue"
                 }
               ],
               "labelPosition": "Left",
@@ -90,7 +93,7 @@
               "type": "SELECT_WIDGET",
               "serverSideFiltering": false,
               "hideCard": false,
-              "defaultOptionValue": "",
+              "defaultOptionValue": "{{Format.warehouseSelectDefault()}}",
               "animateLoading": true,
               "parentColumnSpace": 23.390625,
               "dynamicTriggerPathList": [
@@ -105,6 +108,9 @@
                 },
                 {
                   "key": "accentColor"
+                },
+                {
+                  "key": "defaultOptionValue"
                 }
               ],
               "labelPosition": "Left",
@@ -176,7 +182,7 @@
                       "type": "SELECT_WIDGET",
                       "serverSideFiltering": false,
                       "hideCard": false,
-                      "defaultOptionValue": "",
+                      "defaultOptionValue": "{{Format.carrierSelectDefault()}}",
                       "animateLoading": true,
                       "parentColumnSpace": 13.210205078125,
                       "dynamicTriggerPathList": [
@@ -191,10 +197,13 @@
                         },
                         {
                           "key": "options"
+                        },
+                        {
+                          "key": "defaultOptionValue"
                         }
                       ],
                       "labelPosition": "Left",
-                      "options": "{{GetBinCarriers.data.data.getEquipment.carriers}}",
+                      "options": "{{GetBinCarriers.data.data.queryEquipment[0].carriers}}",
                       "placeholderText": "Select option",
                       "isDisabled": false,
                       "key": "etfghx8tw9",
@@ -226,7 +235,7 @@
                       "type": "SELECT_WIDGET",
                       "serverSideFiltering": false,
                       "hideCard": false,
-                      "defaultOptionValue": "",
+                      "defaultOptionValue": "{{Format.binSelectDefault()}}",
                       "animateLoading": true,
                       "parentColumnSpace": 13.210205078125,
                       "dynamicTriggerPathList": [
@@ -241,10 +250,13 @@
                         },
                         {
                           "key": "options"
+                        },
+                        {
+                          "key": "defaultOptionValue"
                         }
                       ],
                       "labelPosition": "Left",
-                      "options": "{{GetWarehouseBins.data.data.getEquipment.children}}",
+                      "options": "{{GetWarehouseBins.data.data.queryEquipment[0].children}}",
                       "placeholderText": "Select option",
                       "isDisabled": false,
                       "key": "etfghx8tw9",
@@ -1497,74 +1509,7 @@
             }
           ]
         },
-        "layoutOnLoadActions": [
-          [
-            {
-              "id": "Stocktake Report_GetStocktakeJobOrder",
-              "name": "GetStocktakeJobOrder",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "JSON.stringify({\n    variables: {\n\t\t\tequip:selectReportBin.selectedOptionValue,\n\t\t},\n    query: `\nquery QueryJobOrder($equip:[ID!]!) {\n  queryJobOrder (filter:{dispatchStatus:{eq:ACTIVE}}) @cascade{\n\t\tid\n\t\tname\n\t\tparent {\n\t\t\tid\n\t\t\tname\n\t\t}\n    equipment(filter:{id:$equip}) {\n      id\n    }\n  }\n}`\n})"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Stocktake Report_GetUserSites",
-              "name": "GetUserSites",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "JSON.stringify({\n    variables: {\n\t\t\tname:appsmith.user.email\n\t\t},\n    query: `\nquery($name:String!){\n  getUser(username:$name){\n\t\tid\n    name\n    hasRole@cascade{\n      role{\n        name\n        hasGrantedRights(filter:{name:{eq:isAdmin}}){\n          name\n        }\n      }\n      responsibilities(filter:{equipmentLevel:{eq:Site}}){\n        id\n        name\n      }\n    }\n  }\n}\n    `\n})"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "Stocktake Report_GetBinCarriers",
-              "name": "GetBinCarriers",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "JSON.stringify({\n    variables: {\n\t\t\tid:selectReportBin.selectedOptionValue\n\t\t},\n    query: `\nquery GetEquipment($id:ID!){\n  getEquipment(id:$id){\n    id\n    name\n    carriers {\n      label:code\n      value:id\n    }\n  }\n}\n    `\n})"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Stocktake Report_GetSiteWarehouses",
-              "name": "GetSiteWarehouses",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "JSON.stringify({\n    variables: {\n\t\t\tid:selectSite.selectedOptionValue,\n\t\t},\n    query: `\n\tquery($id:ID!){\n\t\tgetEquipment(id:$id){\n\t\t\tid\n\t\t\tchildren {\n\t\t\t\tvalue:id\n\t\t\t\tlabel:name\n\t\t\t}\n\t\t}\n\t}`\n})"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Stocktake Report_GetWarehouseBins",
-              "name": "GetWarehouseBins",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "JSON.stringify({\n    variables: {\n\t\t\tid:selectWarehouse.selectedOptionValue\n\t\t},\n    query: `\nquery GetEquipment($id:ID!){\n  getEquipment(id:$id){\n    id\n    name\n    children {\n      label:name \n      value:id\n    }\n  }\n}\n    `\n})"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "Stocktake Report_GetJobOrderJobResponses",
-              "name": "GetJobOrderJobResponses",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "JSON.stringify({\n    variables: {\n\t\t\tid:GetStocktakeJobOrder.data.data.queryJobOrder[0].id,\n\t\t},\n    query: `\nquery GetJobOrder($id:ID!){\n  getJobOrder(id:$id) {\n\t\tparent {\n\t\t\tid\n\t\t}\n    jobResponses {\n      id\n\t\t\tendDateTime\n      equipment {\n        id\n      }\n      materialActual {\n        carrier {\n          id\n\t\t\t\t\tcode\n        }\n      }\n    }\n  }\n}`\n})"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ]
-        ],
+        "layoutOnLoadActions": [],
         "widgetNames": [
           "Canvas1",
           "Canvas2",
@@ -1595,7 +1540,7 @@
           "txtCloseCountConfirmTitle",
           "txtStocktakeReportsTitle"
         ],
-        "validOnPageLoadActions": true,
+        "validOnPageLoadActions": false,
         "id": "Stocktake Report",
         "deleted": false,
         "policies": [],

@@ -21,7 +21,7 @@
       "encodeParamsToggle": true,
       "body": "() => {\n\t\tvar table = appsmith.store.table\n\t\ttable[tableStocktakeReport.selectedRowIndex].AdjustmentQuantity = parseInt(inputSetAdjustmnet.text)\n\t\tstoreValue(\"table\",table)\n\t\tcloseModal(\"modalSetAdjustment\")\n\t}",
       "jsArguments": [],
-      "isAsync": true
+      "isAsync": false
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [
