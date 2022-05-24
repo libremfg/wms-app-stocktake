@@ -114,7 +114,7 @@
                 }
               ],
               "labelPosition": "Left",
-              "options": "{{GetSiteWarehouses.data.data.getEquipment.children}}",
+              "options": "{{GetSiteWarehouses.data.data.queryEquipment[0].children}}",
               "labelStyle": "BOLD",
               "placeholderText": "Select option",
               "isDisabled": false,
