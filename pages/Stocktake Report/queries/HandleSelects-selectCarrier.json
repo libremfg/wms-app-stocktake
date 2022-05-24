@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\tGetStockOnHand.run()\n\t\tGetStocktakeCounts.run()\n\t}",
+      "body": "() => {\n\t\treturn GetStockOnHand.run()\n\t\t.then(() => GetStocktakeCounts.run())\n\t\t.then(() => Format.createStocktakeTable())\n\t}",
       "jsArguments": [],
       "isAsync": true
     },
@@ -33,7 +33,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\tGetStockOnHand.run()\n\t\tGetStocktakeCounts.run()\n\t}"
+      "() => {\n\t\treturn GetStockOnHand.run()\n\t\t.then(() => GetStocktakeCounts.run())\n\t\t.then(() => Format.createStocktakeTable())\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

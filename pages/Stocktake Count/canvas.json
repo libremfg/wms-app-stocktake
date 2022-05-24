@@ -1531,9 +1531,7 @@
                 "JSON.stringify({\n    variables: {\n\t\t\tid:selectStocktakeCarrier.selectedOptionValue\n\t\t},\n    query: `\nquery GetCarrier($id:ID!){\n  getCarrier(id:$id){\n    id\n    code\n    status {\n\t\t  code\n\t\t\tid\n\t\t}\n\t\towner {\n\t\t\tid\n\t\t\tname\n\t\t}\n  }\n}\n    `\n})"
               ],
               "timeoutInMillisecond": 10000
-            }
-          ],
-          [
+            },
             {
               "id": "Stocktake Count_GetJobOrderJobResponses",
               "name": "GetJobOrderJobResponses",
