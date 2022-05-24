@@ -901,7 +901,7 @@
                               "labelTextSize": "0.875rem",
                               "backgroundColor": "transparent",
                               "rightColumn": 62,
-                              "onListItemClick": "{{navigateTo('Stocktake Report',{Site: selectSite.selectedOptionValue, Warehouse: selectWarehouse.selectedOptionValue, Location: Format.getFinalisedListString()},'NEW_WINDOW')}}",
+                              "onListItemClick": "{{navigateTo('Stocktake Report',{Site: selectSite.selectedOptionLabel, Warehouse: selectWarehouse.selectedOptionLabel, Location: Format.getFinalisedListString()},'NEW_WINDOW')}}",
                               "itemBackgroundColor": "#FFFFFF",
                               "widgetId": "naq4oqstq6",
                               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
