@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "GetJobOrderJobResponses",
+    "name": "CloseJobResponse",
     "datasource": {
       "name": "Libre",
       "pluginId": "restapi-plugin",
@@ -26,7 +26,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tid:GetStocktakeJobOrder.data.data.queryJobOrder[0].id,\n\t\t},\n    query: `\nquery GetJobOrder($id:ID!){\n  getJobOrder(id:$id) {\n\t\tparent {\n\t\t\tid\n\t\t}\n    jobResponses {\n      id\n\t\t\tendDateTime\n      equipment {\n        id\n      }\n      materialActual {\n        carrier {\n          id\n\t\t\t\t\tcode\n        }\n      }\n    }\n  }\n}`\n})\n}}",
+      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tinput:[HandleJobResponses.activeJobResponse()],\n\t\t\ttime:moment(),\n\t\t},\n    query: `\nmutation CloseJobResponse($input:[ID!]!,$time:DateTime!){\n  updateJobResponse(input:{\n    filter:{id:$input},\n    set:{endDateTime:$time}\n  }){\n    numUids\n  }\n}`\n})\n}}",
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
@@ -37,7 +37,7 @@
         "apiContentType": "application/json"
       }
     },
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -47,14 +47,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n    variables: {\n\t\t\tid:GetStocktakeJobOrder.data.data.queryJobOrder[0].id,\n\t\t},\n    query: `\nquery GetJobOrder($id:ID!){\n  getJobOrder(id:$id) {\n\t\tparent {\n\t\t\tid\n\t\t}\n    jobResponses {\n      id\n\t\t\tendDateTime\n      equipment {\n        id\n      }\n      materialActual {\n        carrier {\n          id\n\t\t\t\t\tcode\n        }\n      }\n    }\n  }\n}`\n})"
+      "JSON.stringify({\n    variables: {\n\t\t\tinput:[HandleJobResponses.activeJobResponse()],\n\t\t\ttime:moment(),\n\t\t},\n    query: `\nmutation CloseJobResponse($input:[ID!]!,$time:DateTime!){\n  updateJobResponse(input:{\n    filter:{id:$input},\n    set:{endDateTime:$time}\n  }){\n    numUids\n  }\n}`\n})"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Stocktake Report_GetJobOrderJobResponses",
+  "id": "Stocktake Report_CloseJobResponse",
   "deleted": false,
-  "gitSyncId": "618b5832da7cd651ee2730f2_628b288f7901344ba8d1b530"
+  "gitSyncId": "618b5832da7cd651ee2730f2_628c688d7901344ba8d21059"
 }

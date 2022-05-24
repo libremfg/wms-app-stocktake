@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "addCommentSelect",
-    "fullyQualifiedName": "HandleSelects.addCommentSelect",
+    "name": "close",
+    "fullyQualifiedName": "HandleSelects.close",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -19,9 +19,9 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\tvar table = appsmith.store.table\n\t\ttable[tableStocktakeReport.selectedRowIndex].Comment = inputAddComment.text\n\t\tstoreValue(\"table\",table)\n\t\tcloseModal(\"modalAddComment\")\n\t}",
+      "body": "function close() { [native code] }",
       "jsArguments": [],
-      "isAsync": true
+      "isAsync": false
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [
@@ -33,14 +33,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\tvar table = appsmith.store.table\n\t\ttable[tableStocktakeReport.selectedRowIndex].Comment = inputAddComment.text\n\t\tstoreValue(\"table\",table)\n\t\tcloseModal(\"modalAddComment\")\n\t}"
+      "function close() { [native code] }"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Stocktake Report_HandleSelects.addCommentSelect",
+  "id": "Stocktake Report_HandleSelects.close",
   "deleted": false,
-  "gitSyncId": "618b5832da7cd651ee2730f2_628b45ed7901344ba8d1becb"
+  "gitSyncId": "618b5832da7cd651ee2730f2_628c6cd67901344ba8d211a5"
 }

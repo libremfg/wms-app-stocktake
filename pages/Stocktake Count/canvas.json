@@ -973,6 +973,49 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
+                    },
+                    {
+                      "widgetName": "txtCountOpenClosed",
+                      "displayName": "Text",
+                      "iconSVG": "/static/media/icon.97c59b52.svg",
+                      "topRow": 17,
+                      "bottomRow": 21,
+                      "parentRowSpace": 10,
+                      "type": "TEXT_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "overflow": "NONE",
+                      "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+                      "parentColumnSpace": 13.210205078125,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 42,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "fontFamily"
+                        },
+                        {
+                          "key": "borderRadius"
+                        },
+                        {
+                          "key": "text"
+                        }
+                      ],
+                      "shouldTruncate": false,
+                      "truncateButtonColor": "#FFC13D",
+                      "text": "{{Validation.countOpenText()}}",
+                      "key": "n7a09a9j84",
+                      "rightColumn": 61,
+                      "textAlign": "LEFT",
+                      "widgetId": "azc68r93jc",
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "textColor": "#231F20",
+                      "version": 1,
+                      "parentId": "oa40w2vcw4",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "fontSize": "1rem"
                     }
                   ],
                   "key": "m0cwt5q3x0",
@@ -1519,6 +1562,16 @@
                 "JSON.stringify({\n    variables: {\n\t\t\tid:selectSite.selectedOptionValue,\n\t\t},\n    query: `\n\tquery($id:ID!){\n\t\tgetEquipment(id:$id){\n\t\t\tid\n\t\t\tchildren {\n\t\t\t\tvalue:id\n\t\t\t\tlabel:name\n\t\t\t}\n\t\t}\n\t}`\n})"
               ],
               "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Stocktake Count_GetWarehouseBins",
+              "name": "GetWarehouseBins",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "JSON.stringify({\n    variables: {\n\t\t\tid:selectWarehouse.selectedOptionValue\n\t\t},\n    query: `\nquery GetEquipment($id:ID!){\n  getEquipment(id:$id){\n    id\n    name\n    children {\n      label:name \n      value:id\n    }\n  }\n}\n    `\n})"
+              ],
+              "timeoutInMillisecond": 10000
             }
           ],
           [
@@ -1538,7 +1591,7 @@
               "confirmBeforeExecute": false,
               "pluginType": "API",
               "jsonPathKeys": [
-                "JSON.stringify({\n    variables: {\n\t\t\tid:GetStocktakeJobOrder.data.data.queryJobOrder[0].id,\n\t\t},\n    query: `\nquery GetJobOrder($id:ID!){\n  getJobOrder(id:$id) {\n\t\tparent {\n\t\t\tid\n\t\t}\n    jobResponses {\n      id\n      equipment {\n        id\n      }\n      materialActual {\n        carrier {\n          id\n        }\n      }\n    }\n  }\n}`\n})"
+                "JSON.stringify({\n    variables: {\n\t\t\tid:GetStocktakeJobOrder.data.data.queryJobOrder[0].id,\n\t\t},\n    query: `\nquery GetJobOrder($id:ID!){\n  getJobOrder(id:$id) {\n\t\tparent {\n\t\t\tid\n\t\t}\n    jobResponses {\n      id\n\t\t\tendDateTime\n      equipment {\n        id\n      }\n      materialActual {\n        carrier {\n          id\n        }\n      }\n    }\n  }\n}`\n})"
               ],
               "timeoutInMillisecond": 10000
             }
@@ -1571,6 +1624,7 @@
           "tabMaterialSelect",
           "tableStocktakeCounts",
           "txtCarrierStatus",
+          "txtCountOpenClosed",
           "txtCountedItemsTitle",
           "txtStocktakeCountTitle",
           "txtStocktakeCountsBin",
