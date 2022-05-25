@@ -404,7 +404,7 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
-    "Stocktake Report_LoadFromRedirect.loadPage": {
+    "Stocktake Report_LoadPage.loadPage": {
       "unpublishedUserSetOnLoad": true,
       "publishedUserSetOnLoad": true
     },
