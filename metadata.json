@@ -184,6 +184,14 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "Stocktake Count_Errors.addStocktakeCountNoOwner": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Count_Errors.addStocktakeCountOwner": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Stocktake Count_Formatting.activeCarrier": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
