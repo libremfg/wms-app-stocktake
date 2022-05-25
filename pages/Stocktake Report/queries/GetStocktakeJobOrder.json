@@ -37,7 +37,7 @@
         "apiContentType": "application/json"
       }
     },
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -49,7 +49,7 @@
     "jsonPathKeys": [
       "JSON.stringify({\n    variables: {\n\t\t\tequip:selectReportBin.selectedOptionLabel,\n\t\t},\n    query: `\nquery QueryJobOrder($equip:String!) {\n  queryJobOrder (filter:{dispatchStatus:{eq:ACTIVE}}) @cascade{\n\t\tid\n\t\tname\n\t\tparent {\n\t\t\tid\n\t\t\tname\n\t\t}\n    equipment(filter:{name:{eq:$equip}}) {\n      id\n    }\n  }\n}`\n})"
     ],
-    "userSetOnLoad": false,
+    "userSetOnLoad": true,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []

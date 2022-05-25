@@ -37,7 +37,7 @@
         "apiContentType": "application/json"
       }
     },
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -49,7 +49,7 @@
     "jsonPathKeys": [
       "JSON.stringify({\n    variables: {\n\t\t\tname:selectReportBin.selectedOptionLabel\n\t\t},\n    query: `\nquery GetEquipment($name:String!){\n  queryEquipment(filter:{name:{eq:$name}}){\n    id\n    name\n    carriers {\n      label:code\n      value:id\n    }\n  }\n}\n    `\n})"
     ],
-    "userSetOnLoad": false,
+    "userSetOnLoad": true,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
