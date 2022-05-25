@@ -300,6 +300,10 @@
       "unpublishedUserSetOnLoad": true,
       "publishedUserSetOnLoad": true
     },
+    "Stocktake Count_Validation.activeMaterial": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Stocktake Count_Validation.canSubmit": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
