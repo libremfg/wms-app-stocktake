@@ -470,7 +470,7 @@
                                 }
                               ],
                               "labelPosition": "Auto",
-                              "options": "{{_.map(GetMaterialsAtLocation.data.data.getStockOnHand, \"material\")}}",
+                              "options": "{{Formatting.stockedMaterialsList()}}",
                               "placeholderText": "Select option",
                               "isDisabled": false,
                               "key": "etfghx8tw9",
@@ -1510,16 +1510,6 @@
             }
           ],
           [
-            {
-              "id": "Stocktake Count_GetMaterialsAtLocation",
-              "name": "GetMaterialsAtLocation",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "JSON.stringify({\n    variables: {\n\t\t\tstorage:selectStocktakeBin.selectedOptionLabel,\n\t\t\tcarrier:selectStocktakeCarrier.selectedOptionValue\n\t\t},\n    query: `\nquery GetEquipment($storage:String!,$carrier:ID!){\n  getStockOnHand(filter:{carrier:{id:$carrier},storageLocation:{name:$storage}}){\n    material {\n      label:code\n      value:id\n    }\n  }\n}\n    `\n})"
-              ],
-              "timeoutInMillisecond": 10000
-            },
             {
               "id": "Stocktake Count_GetStocktakeJobOrder",
               "name": "GetStocktakeJobOrder",

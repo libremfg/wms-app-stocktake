@@ -216,6 +216,10 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "Stocktake Count_Formatting.stockedMaterialsList": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Stocktake Count_Formatting.stocktakeCountTable": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
@@ -245,8 +249,8 @@
       "publishedUserSetOnLoad": false
     },
     "Stocktake Count_GetMaterialsAtLocation": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
+      "unpublishedUserSetOnLoad": true,
+      "publishedUserSetOnLoad": true
     },
     "Stocktake Count_GetPartners": {
       "unpublishedUserSetOnLoad": false,
