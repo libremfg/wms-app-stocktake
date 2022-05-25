@@ -180,7 +180,6 @@
                             {
                               "boxShadow": "none",
                               "widgetName": "btnOpenPlanStocktakeModal",
-                              "onClick": "{{showModal('modalPlanStocktake')}}",
                               "buttonColor": "#03B365",
                               "displayName": "Button",
                               "iconSVG": "/static/media/icon.cca02633.svg",
@@ -191,11 +190,7 @@
                               "hideCard": false,
                               "animateLoading": true,
                               "parentColumnSpace": 15.4560546875,
-                              "dynamicTriggerPathList": [
-                                {
-                                  "key": "onClick"
-                                }
-                              ],
+                              "dynamicTriggerPathList": [],
                               "leftColumn": 1,
                               "dynamicBindingPathList": [],
                               "text": "Plan Stocktake",
@@ -1088,7 +1083,11 @@
                               "gridGap": 0,
                               "animateLoading": true,
                               "parentColumnSpace": 15.4560546875,
-                              "dynamicTriggerPathList": [],
+                              "dynamicTriggerPathList": [
+                                {
+                                  "key": "onListItemClick"
+                                }
+                              ],
                               "leftColumn": 1,
                               "dynamicBindingPathList": [
                                 {
@@ -1283,6 +1282,7 @@
                               "labelTextSize": "0.875rem",
                               "backgroundColor": "transparent",
                               "rightColumn": 21,
+                              "onListItemClick": "{{navigateTo('#Stocktake Report',{{{{Site: selectSite.selectedOptionLabel, Warehouse: selectWarehouse.selectedOptionLabel, Location: Format.getUncountedListString()}}}},'NEW_WINDOW')}}",
                               "itemBackgroundColor": "#FFFFFF",
                               "widgetId": "lr3bxq3v03",
                               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
@@ -1483,7 +1483,11 @@
                               "gridGap": 0,
                               "animateLoading": true,
                               "parentColumnSpace": 15.4560546875,
-                              "dynamicTriggerPathList": [],
+                              "dynamicTriggerPathList": [
+                                {
+                                  "key": "onListItemClick"
+                                }
+                              ],
                               "leftColumn": 21,
                               "dynamicBindingPathList": [
                                 {
@@ -1675,6 +1679,7 @@
                               "labelTextSize": "0.875rem",
                               "backgroundColor": "transparent",
                               "rightColumn": 41,
+                              "onListItemClick": "{{navigateTo('#Stocktake Report',{{{{Site: selectSite.selectedOptionLabel, Warehouse: selectWarehouse.selectedOptionLabel, Location: Format.getCountedListString()}}}},'NEW_WINDOW')}}",
                               "itemBackgroundColor": "#FFFFFF",
                               "widgetId": "ltbotxpqdn",
                               "accentColor": "{{appsmith.theme.colors.primaryColor}}",

@@ -96,7 +96,15 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "Stocktake Admin_Format.getCountedListString": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Stocktake Admin_Format.getFinalisedListString": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Admin_Format.getUncountedListString": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
