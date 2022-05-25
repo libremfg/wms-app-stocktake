@@ -16,7 +16,7 @@
     "pageId": "Stocktake Report",
     "collectionId": "Stocktake Report_LoadFromRedirect",
     "actionConfiguration": {
-      "timeoutInMillisecond": 10000,
+      "timeoutInMillisecond": 0,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "body": "async () => {\n\t\tif (appsmith.URL.queryParams.Site != null) {\n\t\t\t\treturn GetUserSites.run()\n\t\t\t\t.then(() => GetSiteWarehouses.run())\n\t\t\t\t.then(() => GetWarehouseBins.run())\n\t\t\t\t.then(() => HandleSelects.selectBin())\n\t\t\t\t.then(() => HandleSelects.selectCarrier())\n\t\t\t} else {\n\t\t\t\treturn GetUserSites.run()\n\t\t\t\t.then(() => GetSiteWarehouses.run())\n\t\t\t\t.then(() => GetWarehouseBins.run())\n\t\t\t\t.then(() => HandleSelects.selectBin())\n\t\t\t}\n\t\t}",
@@ -24,7 +24,6 @@
       "isAsync": true
     },
     "executeOnLoad": true,
-    "clientSideExecution": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -43,5 +42,5 @@
   },
   "id": "Stocktake Report_LoadFromRedirect.loadPage",
   "deleted": false,
-  "gitSyncId": "618b5832da7cd651ee2730f2_628c97ac7901344ba8d2220f"
+  "gitSyncId": "618b5832da7cd651ee2730f2_628d86d67901344ba8d26203"
 }
