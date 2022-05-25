@@ -1483,7 +1483,7 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "width": 698
+              "width": 814
             }
           ]
         },

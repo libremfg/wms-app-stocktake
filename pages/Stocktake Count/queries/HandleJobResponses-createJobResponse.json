@@ -19,9 +19,9 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\tif (GetJobOrderJobResponses.data.data.getJobOrder.jobResponses.length == 0) {\n\t\t\tif (selectStocktakeCarrier.selectedOptionValue == \"\") {\n\t\t\t\treturn CreateJobResponseNoCarrier.run()\n\t\t\t\t.then(() => GetJobOrderJobResponses.run())\n\t\t\t} else {\n\t\t\t\treturn CreateJobResponseCarrier.run()\n\t\t\t\t.then(() => GetJobOrderJobResponses.run())\n\t\t\t}\n\t\t}\n\t\tif (HandleJobResponses.activeJobResponse() == \"\") {\n\t\t\tif (selectStocktakeCarrier.selectedOptionValue == \"\") {\n\t\t\t\treturn CreateJobResponseNoCarrier.run()\n\t\t\t\t.then(() => GetJobOrderJobResponses.run())\n\t\t\t} else {\n\t\t\t\treturn CreateJobResponseCarrier.run()\n\t\t\t\t.then(() => GetJobOrderJobResponses.run())\n\t\t\t}\n\t\t}\n\t\treturn GetJobOrderJobResponses.run()\n\t}",
+      "body": "() => {\n\t\tif (GetJobOrderJobResponses.data.data.getJobOrder.jobResponses.length == 0) {\n\t\t\tif (selectStocktakeCarrier.selectedOptionLabel == \"\") {\n\t\t\t\treturn CreateJobResponseNoCarrier.run()\n\t\t\t\t.then(() => GetJobOrderJobResponses.run())\n\t\t\t} else {\n\t\t\t\treturn CreateJobResponseCarrier.run()\n\t\t\t\t.then(() => GetJobOrderJobResponses.run())\n\t\t\t}\n\t\t}\n\t\tif (HandleJobResponses.activeJobResponse() == \"\") {\n\t\t\tif (selectStocktakeCarrier.selectedOptionLabel == \"\") {\n\t\t\t\treturn CreateJobResponseNoCarrier.run()\n\t\t\t\t.then(() => GetJobOrderJobResponses.run())\n\t\t\t} else {\n\t\t\t\treturn CreateJobResponseCarrier.run()\n\t\t\t\t.then(() => GetJobOrderJobResponses.run())\n\t\t\t}\n\t\t}\n\t\treturn GetJobOrderJobResponses.run()\n\t}",
       "jsArguments": [],
-      "isAsync": true
+      "isAsync": false
     },
     "executeOnLoad": false,
     "clientSideExecution": true,
@@ -34,7 +34,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\tif (GetJobOrderJobResponses.data.data.getJobOrder.jobResponses.length == 0) {\n\t\t\tif (selectStocktakeCarrier.selectedOptionValue == \"\") {\n\t\t\t\treturn CreateJobResponseNoCarrier.run()\n\t\t\t\t.then(() => GetJobOrderJobResponses.run())\n\t\t\t} else {\n\t\t\t\treturn CreateJobResponseCarrier.run()\n\t\t\t\t.then(() => GetJobOrderJobResponses.run())\n\t\t\t}\n\t\t}\n\t\tif (HandleJobResponses.activeJobResponse() == \"\") {\n\t\t\tif (selectStocktakeCarrier.selectedOptionValue == \"\") {\n\t\t\t\treturn CreateJobResponseNoCarrier.run()\n\t\t\t\t.then(() => GetJobOrderJobResponses.run())\n\t\t\t} else {\n\t\t\t\treturn CreateJobResponseCarrier.run()\n\t\t\t\t.then(() => GetJobOrderJobResponses.run())\n\t\t\t}\n\t\t}\n\t\treturn GetJobOrderJobResponses.run()\n\t}"
+      "() => {\n\t\tif (GetJobOrderJobResponses.data.data.getJobOrder.jobResponses.length == 0) {\n\t\t\tif (selectStocktakeCarrier.selectedOptionLabel == \"\") {\n\t\t\t\treturn CreateJobResponseNoCarrier.run()\n\t\t\t\t.then(() => GetJobOrderJobResponses.run())\n\t\t\t} else {\n\t\t\t\treturn CreateJobResponseCarrier.run()\n\t\t\t\t.then(() => GetJobOrderJobResponses.run())\n\t\t\t}\n\t\t}\n\t\tif (HandleJobResponses.activeJobResponse() == \"\") {\n\t\t\tif (selectStocktakeCarrier.selectedOptionLabel == \"\") {\n\t\t\t\treturn CreateJobResponseNoCarrier.run()\n\t\t\t\t.then(() => GetJobOrderJobResponses.run())\n\t\t\t} else {\n\t\t\t\treturn CreateJobResponseCarrier.run()\n\t\t\t\t.then(() => GetJobOrderJobResponses.run())\n\t\t\t}\n\t\t}\n\t\treturn GetJobOrderJobResponses.run()\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
