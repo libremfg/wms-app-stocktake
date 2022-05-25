@@ -152,11 +152,19 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "Stocktake Admin_MutationCloseStocktake": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Stocktake Admin_StocktakeLists.getCountedList": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
     "Stocktake Admin_StocktakeLists.getFinishedList": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Admin_StocktakeLists.getJobOrderList": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },

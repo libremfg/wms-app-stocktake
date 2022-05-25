@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "GetWarehouseStocktakes",
+    "name": "MutationCloseStocktake",
     "datasource": {
       "name": "Libre",
       "pluginId": "restapi-plugin",
@@ -26,7 +26,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tid:[selectWarehouse.selectedOptionValue]\n\t\t},\n    query: `\nquery GetStocktake($id:[ID!]!){\n  queryJobOrder(filter:{name:{regexp:\"/^stocktake/\"},dispatchStatus:{eq:ACTIVE}})@cascade{\n    name\n\t\tid\n    equipment (filter:{id:$id}){\n      id\n    }\n  }\n}\n    `\n})\n}}",
+      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tids:StocktakeLists.getJobOrderList()\n\t\t},\n    query: `\nmutation CloseStocktake($ids:[ID!]!){\n  updateJobOrder(input:{\n    filter:{id:$ids},\n    set:{dispatchStatus:CLOSED}\n  }){numUids}\n}\n    `\n})\n}}",
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
@@ -47,14 +47,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n    variables: {\n\t\t\tid:[selectWarehouse.selectedOptionValue]\n\t\t},\n    query: `\nquery GetStocktake($id:[ID!]!){\n  queryJobOrder(filter:{name:{regexp:\"/^stocktake/\"},dispatchStatus:{eq:ACTIVE}})@cascade{\n    name\n\t\tid\n    equipment (filter:{id:$id}){\n      id\n    }\n  }\n}\n    `\n})"
+      "JSON.stringify({\n    variables: {\n\t\t\tids:StocktakeLists.getJobOrderList()\n\t\t},\n    query: `\nmutation CloseStocktake($ids:[ID!]!){\n  updateJobOrder(input:{\n    filter:{id:$ids},\n    set:{dispatchStatus:CLOSED}\n  }){numUids}\n}\n    `\n})"
     ],
-    "userSetOnLoad": true,
+    "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Stocktake Admin_GetWarehouseStocktakes",
+  "id": "Stocktake Admin_MutationCloseStocktake",
   "deleted": false,
-  "gitSyncId": "618b5832da7cd651ee2730f2_626b7745cca31f35e65b6678"
+  "gitSyncId": "618b5832da7cd651ee2730f2_628db28f7901344ba8d26b16"
 }

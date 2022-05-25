@@ -219,7 +219,7 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "onOptionChange": "{{HandleSelects.selectBin()}}"
+                      "onOptionChange": "{{HandleSelects.selectCarrier()}}"
                     },
                     {
                       "boxShadow": "none",
