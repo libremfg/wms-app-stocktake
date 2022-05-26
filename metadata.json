@@ -152,6 +152,10 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "Stocktake Admin_HandleSelects.planStocktake": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Stocktake Admin_JS_SiteList.getUserSiteList": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false

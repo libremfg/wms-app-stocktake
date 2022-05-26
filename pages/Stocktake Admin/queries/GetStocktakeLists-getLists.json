@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\treturn GetWarehouseStocktakes.run()\n\t\t.then(() => GetStocktakeFinalisedLocations.run())\n\t\t.then(() => GetStocktakeJobResponses.run())\n\t\t.then(() => GetStocktakeCountedLocations.run())\n\t\t.then(() => GetWarehouseBins.run())\n\t}",
+      "body": "() => {\n\t\treturn GetWarehouseStocktakes.run()\n\t\t.then(() => GetWarehouseBins.run())\n\t\t.then(() => GetStocktakeFinalisedLocations.run())\n\t\t.then(() => GetStocktakeJobResponses.run())\n\t\t.then(() => GetStocktakeCountedLocations.run())\n\t}",
       "jsArguments": [],
       "isAsync": true
     },
@@ -34,7 +34,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\treturn GetWarehouseStocktakes.run()\n\t\t.then(() => GetStocktakeFinalisedLocations.run())\n\t\t.then(() => GetStocktakeJobResponses.run())\n\t\t.then(() => GetStocktakeCountedLocations.run())\n\t\t.then(() => GetWarehouseBins.run())\n\t}"
+      "() => {\n\t\treturn GetWarehouseStocktakes.run()\n\t\t.then(() => GetWarehouseBins.run())\n\t\t.then(() => GetStocktakeFinalisedLocations.run())\n\t\t.then(() => GetStocktakeJobResponses.run())\n\t\t.then(() => GetStocktakeCountedLocations.run())\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

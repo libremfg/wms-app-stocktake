@@ -26,7 +26,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tid:GetWarehouseStocktakes.data.data.queryJobOrder[0].id\n\t\t},\n    query: `\nquery GetStocktakeFinalisedLocations($id:ID!){\n  getJobOrder(id:$id){\n    name\n    children (filter:{dispatchStatus:{eq:ACTIVE}}}){\n      name\n\t\t\tequipment {\n\t\t\t\tname\n\t\t\t}\n      jobResponses (filter:{not:{has:endDateTime}}){\n        id \n        materialActual {\n\t\t\t\t\tcarrier {\n\t\t\t\t\t\tcode\n\t\t\t\t\t\tid\n\t\t\t\t\t}\n\t\t\t\t}\n      }\n    }\n  }\n}\n    `\n})\n}}",
+      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tid:GetWarehouseStocktakes.data.data.queryJobOrder[0].id\n\t\t},\n    query: `\nquery GetStocktakeFinalisedLocations($id:ID!){\n  getJobOrder(id:$id){\n    name\n    children (filter:{dispatchStatus:{eq:ACTIVE}}){\n      name\n\t\t\tequipment {\n\t\t\t\tname\n\t\t\t}\n      jobResponses (filter:{not:{has:endDateTime}}){\n        id \n        materialActual {\n\t\t\t\t\tcarrier {\n\t\t\t\t\t\tcode\n\t\t\t\t\t\tid\n\t\t\t\t\t}\n\t\t\t\t}\n      }\n    }\n  }\n}\n    `\n})\n}}",
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
@@ -44,7 +44,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n    variables: {\n\t\t\tid:GetWarehouseStocktakes.data.data.queryJobOrder[0].id\n\t\t},\n    query: `\nquery GetStocktakeFinalisedLocations($id:ID!){\n  getJobOrder(id:$id){\n    name\n    children (filter:{dispatchStatus:{eq:ACTIVE}}}){\n      name\n\t\t\tequipment {\n\t\t\t\tname\n\t\t\t}\n      jobResponses (filter:{not:{has:endDateTime}}){\n        id \n        materialActual {\n\t\t\t\t\tcarrier {\n\t\t\t\t\t\tcode\n\t\t\t\t\t\tid\n\t\t\t\t\t}\n\t\t\t\t}\n      }\n    }\n  }\n}\n    `\n})"
+      "JSON.stringify({\n    variables: {\n\t\t\tid:GetWarehouseStocktakes.data.data.queryJobOrder[0].id\n\t\t},\n    query: `\nquery GetStocktakeFinalisedLocations($id:ID!){\n  getJobOrder(id:$id){\n    name\n    children (filter:{dispatchStatus:{eq:ACTIVE}}){\n      name\n\t\t\tequipment {\n\t\t\t\tname\n\t\t\t}\n      jobResponses (filter:{not:{has:endDateTime}}){\n        id \n        materialActual {\n\t\t\t\t\tcarrier {\n\t\t\t\t\t\tcode\n\t\t\t\t\t\tid\n\t\t\t\t\t}\n\t\t\t\t}\n      }\n    }\n  }\n}\n    `\n})"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

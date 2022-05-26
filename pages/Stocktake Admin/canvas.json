@@ -109,41 +109,6 @@
                           "children": [
                             {
                               "boxShadow": "none",
-                              "widgetName": "txtNextStocktake",
-                              "displayName": "Text",
-                              "iconSVG": "/static/media/icon.97c59b52.svg",
-                              "topRow": 7,
-                              "bottomRow": 11,
-                              "parentRowSpace": 10,
-                              "type": "TEXT_WIDGET",
-                              "hideCard": false,
-                              "animateLoading": true,
-                              "overflow": "NONE",
-                              "parentColumnSpace": 15.4560546875,
-                              "dynamicTriggerPathList": [],
-                              "fontFamily": "System Default",
-                              "leftColumn": 1,
-                              "dynamicBindingPathList": [],
-                              "shouldTruncate": false,
-                              "truncateButtonColor": "#FFC13D",
-                              "text": "Next Stocktake:",
-                              "key": "fu7qrnxqwl",
-                              "labelTextSize": "0.875rem",
-                              "rightColumn": 17,
-                              "textAlign": "LEFT",
-                              "widgetId": "3dfctel716",
-                              "isVisible": true,
-                              "fontStyle": "BOLD",
-                              "textColor": "#231F20",
-                              "version": 1,
-                              "parentId": "88dveq1h3s",
-                              "renderMode": "CANVAS",
-                              "isLoading": false,
-                              "borderRadius": "0px",
-                              "fontSize": "0.875rem"
-                            },
-                            {
-                              "boxShadow": "none",
                               "widgetName": "txtLastStocktake",
                               "displayName": "Text",
                               "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -180,17 +145,22 @@
                             {
                               "boxShadow": "none",
                               "widgetName": "btnOpenPlanStocktakeModal",
+                              "onClick": "{{showModal('modalPlanStocktake')}}",
                               "buttonColor": "#03B365",
                               "displayName": "Button",
                               "iconSVG": "/static/media/icon.cca02633.svg",
-                              "topRow": 12,
-                              "bottomRow": 16,
+                              "topRow": 8,
+                              "bottomRow": 12,
                               "parentRowSpace": 10,
                               "type": "BUTTON_WIDGET",
                               "hideCard": false,
                               "animateLoading": true,
                               "parentColumnSpace": 15.4560546875,
-                              "dynamicTriggerPathList": [],
+                              "dynamicTriggerPathList": [
+                                {
+                                  "key": "onClick"
+                                }
+                              ],
                               "leftColumn": 1,
                               "dynamicBindingPathList": [],
                               "text": "Plan Stocktake",
@@ -2091,6 +2061,7 @@
                     {
                       "boxShadow": "none",
                       "widgetName": "btnConfirmPlanStocktake",
+                      "onClick": "{{CreateStocktakeJobOrders.run(() => closeModal('modalPlanStocktake'), () => {})}}",
                       "buttonColor": "#03B365",
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca02633.svg",
@@ -2099,7 +2070,13 @@
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
                       "leftColumn": 34,
+                      "dynamicBindingPathList": [],
                       "text": "Confirm",
                       "isDisabled": false,
                       "key": "odblawswop",
@@ -2481,7 +2458,6 @@
           "txtFinalisedLocationsTitle",
           "txtLastStocktake",
           "txtListCycleCounts",
-          "txtNextStocktake",
           "txtOngoingCycleCounts",
           "txtOngoingStocktakeTitle",
           "txtPlanStocktakeTitle",
