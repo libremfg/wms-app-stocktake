@@ -384,6 +384,10 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "Stocktake Report_GetStocktakeComparisons": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Stocktake Report_GetStocktakeCounts": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
