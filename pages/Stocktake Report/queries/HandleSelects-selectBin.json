@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\tGetBinCarriers.run()\n\t\treturn GetStocktakeJobOrder.run()\n\t\t.then(() => GetJobOrderJobResponses.run())\n\t\t.then(() => GetStockOnHand.run())\n\t\t.then(() => GetStocktakeCounts.run())\n\t\t.then(() => Format.createStocktakeTable())\n\t}",
+      "body": "() => {\n\t\tGetBinCarriers.run()\n\t\treturn GetStocktakeJobOrder.run()\n\t\t.then(() => GetJobOrderJobResponses.run())\n\t\t.then(() => GetStockOnHand.run())\n\t\t.then(() => GetStocktakeCounts.run())\n\t\t.then(() => Format.createQuantities())\n\t\t.then(() => Format.createMissing())\n\t\t.then(() => Format.createUnexpected())\n\t\t.then(() => Format.createValid())\n\t\t.then(() => Format.createErrored())\n\t}",
       "jsArguments": [],
       "isAsync": true
     },
@@ -33,7 +33,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\tGetBinCarriers.run()\n\t\treturn GetStocktakeJobOrder.run()\n\t\t.then(() => GetJobOrderJobResponses.run())\n\t\t.then(() => GetStockOnHand.run())\n\t\t.then(() => GetStocktakeCounts.run())\n\t\t.then(() => Format.createStocktakeTable())\n\t}"
+      "() => {\n\t\tGetBinCarriers.run()\n\t\treturn GetStocktakeJobOrder.run()\n\t\t.then(() => GetJobOrderJobResponses.run())\n\t\t.then(() => GetStockOnHand.run())\n\t\t.then(() => GetStocktakeCounts.run())\n\t\t.then(() => Format.createQuantities())\n\t\t.then(() => Format.createMissing())\n\t\t.then(() => Format.createUnexpected())\n\t\t.then(() => Format.createValid())\n\t\t.then(() => Format.createErrored())\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

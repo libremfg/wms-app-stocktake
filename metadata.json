@@ -224,6 +224,10 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "Stocktake Count_Formatting.stockCountInput": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Stocktake Count_Formatting.stockedMaterialsList": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
@@ -352,7 +356,23 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
-    "Stocktake Report_Format.createStocktakeTable": {
+    "Stocktake Report_Format.createErrored": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Report_Format.createMissing": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Report_Format.createQuantities": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Report_Format.createUnexpected": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Report_Format.createValid": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
