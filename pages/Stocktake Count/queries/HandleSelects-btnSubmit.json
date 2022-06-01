@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\treturn HandleJobResponses.createJobResponse()\n\t\t\t.then(() => HandleJobResponses.submitCounts())\n\t}",
+      "body": "() => {\n\t\treturn HandleJobResponses.createJobResponse()\n\t\t\t.then(() => AddStocktakeCount.run())\n\t}",
       "jsArguments": [],
       "isAsync": false
     },
@@ -33,7 +33,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\treturn HandleJobResponses.createJobResponse()\n\t\t\t.then(() => HandleJobResponses.submitCounts())\n\t}"
+      "() => {\n\t\treturn HandleJobResponses.createJobResponse()\n\t\t\t.then(() => AddStocktakeCount.run())\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

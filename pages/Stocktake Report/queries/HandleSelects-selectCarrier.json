@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\treturn GetStockOnHand.run()\n\t\t.then(() => GetStocktakeCounts.run())\n\t\t.then(() => Format.createQuantities())\n\t\t.then(() => Format.createMissing())\n\t\t.then(() => Format.createUnexpected())\n\t\t.then(() => Format.createValid())\n\t\t.then(() => Format.createErrored())\n\t}",
+      "body": "() => {\n\t\treturn GetStocktakeComparisons.run()\n\t\t.then(() => Format.createQuantities())\n\t\t.then(() => Format.createMissing())\n\t\t.then(() => Format.createUnexpected())\n\t\t.then(() => Format.createValid())\n\t\t.then(() => Format.createErrored())\n\t}",
       "jsArguments": [],
       "isAsync": true
     },
@@ -33,7 +33,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\treturn GetStockOnHand.run()\n\t\t.then(() => GetStocktakeCounts.run())\n\t\t.then(() => Format.createQuantities())\n\t\t.then(() => Format.createMissing())\n\t\t.then(() => Format.createUnexpected())\n\t\t.then(() => Format.createValid())\n\t\t.then(() => Format.createErrored())\n\t}"
+      "() => {\n\t\treturn GetStocktakeComparisons.run()\n\t\t.then(() => Format.createQuantities())\n\t\t.then(() => Format.createMissing())\n\t\t.then(() => Format.createUnexpected())\n\t\t.then(() => Format.createValid())\n\t\t.then(() => Format.createErrored())\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "async () => {\n\t\tvar table = []\n\t\tstoreValue(\"table\", table)\n\t\tif (appsmith.URL.queryParams.Site != null) {\n\t\t\t\n\t\t\tif (Format.carrierSelectDefault() != \"\") {\n\t\t\t\treturn GetUserSites.run()\n\t\t\t\t.then(() => GetSiteWarehouses.run())\n\t\t\t\t.then(() => GetWarehouseBins.run())\n\t\t\t\t.then(() => HandleSelects.selectBin())\n\t\t\t\t.then(() => HandleSelects.selectCarrier())\n\t\t\t} else {\n\t\t\t\treturn GetUserSites.run()\n\t\t\t\t.then(() => GetSiteWarehouses.run())\n\t\t\t\t.then(() => GetWarehouseBins.run())\n\t\t\t\t.then(() => HandleSelects.selectBin())\n\t\t\t}\n\t\t} \n\t\treturn GetUserSites.run()\n\t}",
+      "body": "async () => {\n\t\tvar table = []\n\t\tstoreValue(\"quantitiesTable\", table)\n\t\tstoreValue(\"erroredSerialsTable\", table)\n\t\tstoreValue(\"missingSerialsTable\", table)\n\t\tstoreValue(\"unexpectedSerialsTable\", table)\n\t\tstoreValue(\"validSerialsTable\", table)\n\t\tif (appsmith.URL.queryParams.Site != null) {\n\t\t\t\n\t\t\tif (Format.carrierSelectDefault() != \"\") {\n\t\t\t\treturn GetUserSites.run()\n\t\t\t\t.then(() => GetSiteWarehouses.run())\n\t\t\t\t.then(() => GetWarehouseBins.run())\n\t\t\t\t.then(() => HandleSelects.selectBin())\n\t\t\t\t.then(() => HandleSelects.selectCarrier())\n\t\t\t} else {\n\t\t\t\treturn GetUserSites.run()\n\t\t\t\t.then(() => GetSiteWarehouses.run())\n\t\t\t\t.then(() => GetWarehouseBins.run())\n\t\t\t\t.then(() => HandleSelects.selectBin())\n\t\t\t}\n\t\t} \n\t\treturn GetUserSites.run()\n\t}",
       "jsArguments": [],
       "isAsync": true
     },
@@ -33,7 +33,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "async () => {\n\t\tvar table = []\n\t\tstoreValue(\"table\", table)\n\t\tif (appsmith.URL.queryParams.Site != null) {\n\t\t\t\n\t\t\tif (Format.carrierSelectDefault() != \"\") {\n\t\t\t\treturn GetUserSites.run()\n\t\t\t\t.then(() => GetSiteWarehouses.run())\n\t\t\t\t.then(() => GetWarehouseBins.run())\n\t\t\t\t.then(() => HandleSelects.selectBin())\n\t\t\t\t.then(() => HandleSelects.selectCarrier())\n\t\t\t} else {\n\t\t\t\treturn GetUserSites.run()\n\t\t\t\t.then(() => GetSiteWarehouses.run())\n\t\t\t\t.then(() => GetWarehouseBins.run())\n\t\t\t\t.then(() => HandleSelects.selectBin())\n\t\t\t}\n\t\t} \n\t\treturn GetUserSites.run()\n\t}"
+      "async () => {\n\t\tvar table = []\n\t\tstoreValue(\"quantitiesTable\", table)\n\t\tstoreValue(\"erroredSerialsTable\", table)\n\t\tstoreValue(\"missingSerialsTable\", table)\n\t\tstoreValue(\"unexpectedSerialsTable\", table)\n\t\tstoreValue(\"validSerialsTable\", table)\n\t\tif (appsmith.URL.queryParams.Site != null) {\n\t\t\t\n\t\t\tif (Format.carrierSelectDefault() != \"\") {\n\t\t\t\treturn GetUserSites.run()\n\t\t\t\t.then(() => GetSiteWarehouses.run())\n\t\t\t\t.then(() => GetWarehouseBins.run())\n\t\t\t\t.then(() => HandleSelects.selectBin())\n\t\t\t\t.then(() => HandleSelects.selectCarrier())\n\t\t\t} else {\n\t\t\t\treturn GetUserSites.run()\n\t\t\t\t.then(() => GetSiteWarehouses.run())\n\t\t\t\t.then(() => GetWarehouseBins.run())\n\t\t\t\t.then(() => HandleSelects.selectBin())\n\t\t\t}\n\t\t} \n\t\treturn GetUserSites.run()\n\t}"
     ],
     "userSetOnLoad": true,
     "confirmBeforeExecute": false,

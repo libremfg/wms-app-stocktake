@@ -184,11 +184,7 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
-    "Stocktake Count_AddStocktakeCountNoOwner": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
-    "Stocktake Count_AddStocktakeCountOwner": {
+    "Stocktake Count_AddStocktakeCount": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
@@ -300,10 +296,6 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
-    "Stocktake Count_HandleJobResponses.submitCounts": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
     "Stocktake Count_HandleOwnerStatus.getOwnerID": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
@@ -384,6 +376,10 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "Stocktake Report_Format.stocktakeAdjustmentUnexpectedInput": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Stocktake Report_Format.warehouseSelectDefault": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
@@ -400,15 +396,7 @@
       "unpublishedUserSetOnLoad": true,
       "publishedUserSetOnLoad": true
     },
-    "Stocktake Report_GetStockOnHand": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
     "Stocktake Report_GetStocktakeComparisons": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
-    "Stocktake Report_GetStocktakeCounts": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
@@ -465,6 +453,10 @@
       "publishedUserSetOnLoad": true
     },
     "Stocktake Report_StocktakeAdjustment": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Report_StocktakeAdjustmentUnexpected": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },

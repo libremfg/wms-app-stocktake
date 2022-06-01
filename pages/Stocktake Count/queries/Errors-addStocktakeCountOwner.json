@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\tif (AddStocktakeCountOwner.data.errors != null) {\n\t\t\tshowAlert(AddStocktakeCountOwner.data.errors[0])\n\t\t}\n\t}",
+      "body": "() => {\n\t\tif (AddStocktakeCount.data.errors != null) {\n\t\t\tshowAlert(AddStocktakeCount.data.errors[0])\n\t\t}\n\t}",
       "jsArguments": [],
       "isAsync": false
     },
@@ -33,7 +33,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\tif (AddStocktakeCountOwner.data.errors != null) {\n\t\t\tshowAlert(AddStocktakeCountOwner.data.errors[0])\n\t\t}\n\t}"
+      "() => {\n\t\tif (AddStocktakeCount.data.errors != null) {\n\t\t\tshowAlert(AddStocktakeCount.data.errors[0])\n\t\t}\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
