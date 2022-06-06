@@ -404,6 +404,10 @@
       "unpublishedUserSetOnLoad": true,
       "publishedUserSetOnLoad": true
     },
+    "Stocktake Report_GetUnexpectedSubLotState": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Stocktake Report_GetUserSites": {
       "unpublishedUserSetOnLoad": true,
       "publishedUserSetOnLoad": true
@@ -428,6 +432,10 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "Stocktake Report_HandleSelects.adjustUnexpectedClick": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Stocktake Report_HandleSelects.closeJobResponse": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
@@ -441,6 +449,10 @@
       "publishedUserSetOnLoad": false
     },
     "Stocktake Report_HandleSelects.setAdjustmentSelect": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Report_HandleSelects.unexpectedRowClick": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },

@@ -19,7 +19,7 @@
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 58,
+          "version": 59,
           "minHeight": 1000,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
@@ -1521,6 +1521,18 @@
                 "JSON.stringify({\n    variables: {\n\t\t\tname:appsmith.user.email\n\t\t},\n    query: `\nquery($name:String!){\n  getUser(username:$name){\n\t\tid\n    name\n    hasRole@cascade{\n      role{\n        name\n        hasGrantedRights(filter:{name:{eq:isAdmin}}){\n          name\n        }\n      }\n      responsibilities(filter:{equipmentLevel:{eq:Site}}){\n        id\n        name\n      }\n    }\n  }\n}\n    `\n})"
               ],
               "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Stocktake Count_LoadFromRedirect.loadPage",
+              "name": "LoadFromRedirect.loadPage",
+              "collectionId": "Stocktake Count_LoadFromRedirect",
+              "clientSideExecution": true,
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "async () => {\n\t\tif (appsmith.URL.queryParams.Site != null) {\n\t\t\t\n\t\t\tif (Formatting.carrierSelectDefault() != \"\") {\n\t\t\t\treturn GetUserSites.run()\n\t\t\t\t.then(() => GetSiteWarehouses.run())\n\t\t\t\t.then(() => GetWarehouseBins.run())\n\t\t\t\t.then(() => HandleSelects.selectBin())\n\t\t\t\t.then(() => HandleSelects.selectCarrier())\n\t\t\t} else {\n\t\t\t\treturn GetUserSites.run()\n\t\t\t\t.then(() => GetSiteWarehouses.run())\n\t\t\t\t.then(() => GetWarehouseBins.run())\n\t\t\t\t.then(() => HandleSelects.selectBin())\n\t\t\t}\n\t\t}\n\t}"
+              ],
+              "timeoutInMillisecond": 10000
             }
           ],
           [
@@ -1553,9 +1565,7 @@
                 "JSON.stringify({\n    variables: null,\n    query: `\n\tquery{\n\t\tqueryPartner{\n\t\t\tvalue:id\n\t\t\tlabel:name\n\t\t}\n\t}`\n})"
               ],
               "timeoutInMillisecond": 300003
-            }
-          ],
-          [
+            },
             {
               "id": "Stocktake Count_GetStocktakeJobOrder",
               "name": "GetStocktakeJobOrder",
@@ -1563,18 +1573,6 @@
               "pluginType": "API",
               "jsonPathKeys": [
                 "JSON.stringify({\n    variables: {\n\t\t\tequip:selectStocktakeBin.selectedOptionLabel,\n\t\t},\n    query: `\nquery QueryJobOrder($equip:String!) {\n  queryJobOrder (filter:{dispatchStatus:{eq:ACTIVE}}) @cascade{\n\t\tid\n\t\tname\n\t\tparent {\n\t\t\tid\n\t\t\tname\n\t\t}\n    equipment(filter:{name:{eq:$equip}}) {\n      id\n    }\n  }\n}`\n})"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Stocktake Count_LoadFromRedirect.loadPage",
-              "name": "LoadFromRedirect.loadPage",
-              "collectionId": "Stocktake Count_LoadFromRedirect",
-              "clientSideExecution": true,
-              "confirmBeforeExecute": false,
-              "pluginType": "JS",
-              "jsonPathKeys": [
-                "async () => {\n\t\tif (appsmith.URL.queryParams.Site != null) {\n\t\t\t\n\t\t\tif (Formatting.carrierSelectDefault() != \"\") {\n\t\t\t\treturn GetUserSites.run()\n\t\t\t\t.then(() => GetSiteWarehouses.run())\n\t\t\t\t.then(() => GetWarehouseBins.run())\n\t\t\t\t.then(() => HandleSelects.selectBin())\n\t\t\t\t.then(() => HandleSelects.selectCarrier())\n\t\t\t} else {\n\t\t\t\treturn GetUserSites.run()\n\t\t\t\t.then(() => GetSiteWarehouses.run())\n\t\t\t\t.then(() => GetWarehouseBins.run())\n\t\t\t\t.then(() => HandleSelects.selectBin())\n\t\t\t}\n\t\t}\n\t}"
               ],
               "timeoutInMillisecond": 10000
             }

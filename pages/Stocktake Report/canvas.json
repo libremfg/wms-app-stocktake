@@ -19,7 +19,7 @@
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 58,
+          "version": 59,
           "minHeight": 1000,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
@@ -822,12 +822,13 @@
                               "widgetName": "tableValidSerials",
                               "defaultPageSize": 0,
                               "columnOrder": [
-                                "step",
-                                "task",
-                                "status",
-                                "action"
+                                "Serial",
+                                "Material",
+                                "Owner",
+                                "Status"
                               ],
                               "isVisibleDownload": true,
+                              "dynamicPropertyPathList": [],
                               "displayName": "Table",
                               "iconSVG": "/static/media/icon.db8a9cbd.svg",
                               "topRow": 4,
@@ -841,27 +842,6 @@
                               "parentColumnSpace": 20.193359375,
                               "dynamicTriggerPathList": [],
                               "dynamicBindingPathList": [
-                                {
-                                  "key": "primaryColumns.step.computedValue"
-                                },
-                                {
-                                  "key": "primaryColumns.task.computedValue"
-                                },
-                                {
-                                  "key": "primaryColumns.status.computedValue"
-                                },
-                                {
-                                  "key": "primaryColumns.action.computedValue"
-                                },
-                                {
-                                  "key": "primaryColumns.action.buttonColor"
-                                },
-                                {
-                                  "key": "primaryColumns.action.borderRadius"
-                                },
-                                {
-                                  "key": "primaryColumns.action.boxShadow"
-                                },
                                 {
                                   "key": "accentColor"
                                 },
@@ -891,88 +871,103 @@
                                 },
                                 {
                                   "key": "tableData"
+                                },
+                                {
+                                  "key": "primaryColumns.Serial.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.Material.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.Owner.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.Status.computedValue"
                                 }
                               ],
-                              "leftColumn": 41,
+                              "leftColumn": 45,
                               "primaryColumns": {
-                                "step": {
+                                "Serial": {
                                   "index": 0,
                                   "width": 150,
-                                  "id": "step",
+                                  "id": "Serial",
                                   "horizontalAlignment": "LEFT",
                                   "verticalAlignment": "CENTER",
                                   "columnType": "text",
+                                  "textColor": "",
                                   "textSize": "0.875rem",
                                   "enableFilter": true,
                                   "enableSort": true,
                                   "isVisible": true,
+                                  "isDisabled": false,
                                   "isCellVisible": true,
                                   "isDerived": false,
-                                  "label": "step",
-                                  "computedValue": "{{tableValidSerials.sanitizedTableData.map((currentRow) => ( currentRow.step))}}",
-                                  "labelColor": "#FFFFFF"
+                                  "label": "Serial",
+                                  "computedValue": "{{tableValidSerials.sanitizedTableData.map((currentRow) => ( currentRow.Serial))}}",
+                                  "cellBackground": ""
                                 },
-                                "task": {
+                                "Material": {
                                   "index": 1,
                                   "width": 150,
-                                  "id": "task",
+                                  "id": "Material",
                                   "horizontalAlignment": "LEFT",
                                   "verticalAlignment": "CENTER",
                                   "columnType": "text",
+                                  "textColor": "",
                                   "textSize": "0.875rem",
                                   "enableFilter": true,
                                   "enableSort": true,
                                   "isVisible": true,
+                                  "isDisabled": false,
                                   "isCellVisible": true,
                                   "isDerived": false,
-                                  "label": "task",
-                                  "computedValue": "{{tableValidSerials.sanitizedTableData.map((currentRow) => ( currentRow.task))}}",
-                                  "labelColor": "#FFFFFF"
+                                  "label": "Material",
+                                  "computedValue": "{{tableValidSerials.sanitizedTableData.map((currentRow) => ( currentRow.Material))}}",
+                                  "cellBackground": ""
                                 },
-                                "status": {
+                                "Owner": {
                                   "index": 2,
                                   "width": 150,
-                                  "id": "status",
+                                  "id": "Owner",
                                   "horizontalAlignment": "LEFT",
                                   "verticalAlignment": "CENTER",
                                   "columnType": "text",
+                                  "textColor": "",
                                   "textSize": "0.875rem",
                                   "enableFilter": true,
                                   "enableSort": true,
-                                  "isVisible": true,
+                                  "isVisible": false,
+                                  "isDisabled": false,
                                   "isCellVisible": true,
                                   "isDerived": false,
-                                  "label": "status",
-                                  "computedValue": "{{tableValidSerials.sanitizedTableData.map((currentRow) => ( currentRow.status))}}",
-                                  "labelColor": "#FFFFFF"
+                                  "label": "Owner",
+                                  "computedValue": "{{tableValidSerials.sanitizedTableData.map((currentRow) => ( currentRow.Owner))}}",
+                                  "cellBackground": ""
                                 },
-                                "action": {
+                                "Status": {
                                   "index": 3,
                                   "width": 150,
-                                  "id": "action",
+                                  "id": "Status",
                                   "horizontalAlignment": "LEFT",
                                   "verticalAlignment": "CENTER",
-                                  "columnType": "button",
+                                  "columnType": "text",
+                                  "textColor": "",
                                   "textSize": "0.875rem",
                                   "enableFilter": true,
                                   "enableSort": true,
-                                  "isVisible": true,
-                                  "isCellVisible": true,
+                                  "isVisible": false,
                                   "isDisabled": false,
+                                  "isCellVisible": true,
                                   "isDerived": false,
-                                  "label": "action",
-                                  "onClick": "{{currentRow.step === '#1' ? showAlert('Done', 'success') : currentRow.step === '#2' ? navigateTo('https://docs.appsmith.com/core-concepts/connecting-to-data-sources/querying-a-database',undefined,'NEW_WINDOW') : navigateTo('https://docs.appsmith.com/core-concepts/displaying-data-read/display-data-tables',undefined,'NEW_WINDOW')}}",
-                                  "computedValue": "{{tableValidSerials.sanitizedTableData.map((currentRow) => ( currentRow.action))}}",
-                                  "labelColor": "#FFFFFF",
-                                  "buttonColor": "{{tableValidSerials.sanitizedTableData.map((currentRow) => ( appsmith.theme.colors.primaryColor))}}",
-                                  "borderRadius": "{{tableValidSerials.sanitizedTableData.map((currentRow) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
-                                  "boxShadow": "{{tableValidSerials.sanitizedTableData.map((currentRow) => ( 'none'))}}"
+                                  "label": "Status",
+                                  "computedValue": "{{tableValidSerials.sanitizedTableData.map((currentRow) => ( currentRow.Status))}}",
+                                  "cellBackground": ""
                                 }
                               },
                               "delimiter": ",",
                               "key": "umztt2pal2",
                               "derivedColumns": {},
-                              "rightColumn": 63,
+                              "rightColumn": 64,
                               "textSize": "0.875rem",
                               "widgetId": "qqvmgx3otg",
                               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
@@ -1012,7 +1007,8 @@
                               "columnSizeMap": {
                                 "task": 245,
                                 "step": 62,
-                                "status": 75
+                                "status": 75,
+                                "Serial": 192
                               }
                             },
                             {
@@ -1170,7 +1166,7 @@
                               "delimiter": ",",
                               "key": "umztt2pal2",
                               "derivedColumns": {},
-                              "rightColumn": 19,
+                              "rightColumn": 21,
                               "textSize": "0.875rem",
                               "widgetId": "60biltm1jr",
                               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
@@ -1258,10 +1254,11 @@
                               "widgetName": "tableUnexpectedSerials",
                               "defaultPageSize": 0,
                               "columnOrder": [
-                                "Expected",
+                                "Serial",
                                 "Material",
                                 "Owner",
-                                "Status"
+                                "Status",
+                                "OwnerId"
                               ],
                               "isVisibleDownload": true,
                               "dynamicPropertyPathList": [],
@@ -1276,7 +1273,11 @@
                               "hideCard": false,
                               "animateLoading": true,
                               "parentColumnSpace": 20.193359375,
-                              "dynamicTriggerPathList": [],
+                              "dynamicTriggerPathList": [
+                                {
+                                  "key": "onRowSelected"
+                                }
+                              ],
                               "dynamicBindingPathList": [
                                 {
                                   "key": "accentColor"
@@ -1309,9 +1310,6 @@
                                   "key": "tableData"
                                 },
                                 {
-                                  "key": "primaryColumns.Expected.computedValue"
-                                },
-                                {
                                   "key": "primaryColumns.Material.computedValue"
                                 },
                                 {
@@ -1319,29 +1317,16 @@
                                 },
                                 {
                                   "key": "primaryColumns.Status.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.Serial.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.OwnerId.computedValue"
                                 }
                               ],
-                              "leftColumn": 19,
+                              "leftColumn": 21,
                               "primaryColumns": {
-                                "Expected": {
-                                  "index": 0,
-                                  "width": 150,
-                                  "id": "Expected",
-                                  "horizontalAlignment": "LEFT",
-                                  "verticalAlignment": "CENTER",
-                                  "columnType": "text",
-                                  "textColor": "",
-                                  "textSize": "0.875rem",
-                                  "enableFilter": true,
-                                  "enableSort": true,
-                                  "isVisible": true,
-                                  "isDisabled": false,
-                                  "isCellVisible": true,
-                                  "isDerived": false,
-                                  "label": "Expected",
-                                  "computedValue": "{{tableUnexpectedSerials.sanitizedTableData.map((currentRow) => ( currentRow.Expected))}}",
-                                  "cellBackground": ""
-                                },
                                 "Material": {
                                   "index": 1,
                                   "width": 150,
@@ -1398,12 +1383,51 @@
                                   "label": "Status",
                                   "computedValue": "{{tableUnexpectedSerials.sanitizedTableData.map((currentRow) => ( currentRow.Status))}}",
                                   "cellBackground": ""
+                                },
+                                "Serial": {
+                                  "index": 0,
+                                  "width": 150,
+                                  "id": "Serial",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "text",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "Serial",
+                                  "computedValue": "{{tableUnexpectedSerials.sanitizedTableData.map((currentRow) => ( currentRow.Serial))}}",
+                                  "cellBackground": ""
+                                },
+                                "OwnerId": {
+                                  "index": 4,
+                                  "width": 150,
+                                  "id": "OwnerId",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "text",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "OwnerId",
+                                  "computedValue": "{{tableUnexpectedSerials.sanitizedTableData.map((currentRow) => ( currentRow.OwnerId))}}",
+                                  "cellBackground": ""
                                 }
                               },
                               "delimiter": ",",
+                              "onRowSelected": "{{HandleSelects.unexpectedRowClick()}}",
                               "key": "umztt2pal2",
                               "derivedColumns": {},
-                              "rightColumn": 41,
+                              "rightColumn": 45,
                               "textSize": "0.875rem",
                               "widgetId": "i17ig2mlt8",
                               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
@@ -1443,7 +1467,9 @@
                               "columnSizeMap": {
                                 "task": 245,
                                 "step": 62,
-                                "status": 75
+                                "status": 75,
+                                "Serial": 191,
+                                "Material": 165
                               }
                             },
                             {
@@ -1460,7 +1486,7 @@
                               "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
                               "parentColumnSpace": 20.193359375,
                               "dynamicTriggerPathList": [],
-                              "leftColumn": 19,
+                              "leftColumn": 21,
                               "dynamicBindingPathList": [
                                 {
                                   "key": "fontFamily"
@@ -1473,7 +1499,7 @@
                               "truncateButtonColor": "#FFC13D",
                               "text": "Unexpected Serials",
                               "key": "pe7l7stv1i",
-                              "rightColumn": 35,
+                              "rightColumn": 37,
                               "textAlign": "LEFT",
                               "widgetId": "gee0k47c6d",
                               "isVisible": true,
@@ -1500,7 +1526,7 @@
                               "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
                               "parentColumnSpace": 20.193359375,
                               "dynamicTriggerPathList": [],
-                              "leftColumn": 41,
+                              "leftColumn": 45,
                               "dynamicBindingPathList": [
                                 {
                                   "key": "fontFamily"
@@ -1513,7 +1539,7 @@
                               "truncateButtonColor": "#FFC13D",
                               "text": "Valid Serials",
                               "key": "pe7l7stv1i",
-                              "rightColumn": 57,
+                              "rightColumn": 61,
                               "textAlign": "LEFT",
                               "widgetId": "4dz74l1r3v",
                               "isVisible": true,
@@ -1570,12 +1596,18 @@
                               "widgetName": "tableErroredSerials",
                               "defaultPageSize": 0,
                               "columnOrder": [
-                                "step",
-                                "task",
-                                "status",
-                                "action"
+                                "SerialNumber",
+                                "Material",
+                                "Error",
+                                "ExpectedLocation",
+                                "ExpectedCarrier",
+                                "ExpectedStatus",
+                                "CountedStatus",
+                                "ExpectedOwner",
+                                "CountedOwner"
                               ],
                               "isVisibleDownload": true,
+                              "dynamicPropertyPathList": [],
                               "displayName": "Table",
                               "iconSVG": "/static/media/icon.db8a9cbd.svg",
                               "topRow": 1,
@@ -1589,27 +1621,6 @@
                               "parentColumnSpace": 20.193359375,
                               "dynamicTriggerPathList": [],
                               "dynamicBindingPathList": [
-                                {
-                                  "key": "primaryColumns.step.computedValue"
-                                },
-                                {
-                                  "key": "primaryColumns.task.computedValue"
-                                },
-                                {
-                                  "key": "primaryColumns.status.computedValue"
-                                },
-                                {
-                                  "key": "primaryColumns.action.computedValue"
-                                },
-                                {
-                                  "key": "primaryColumns.action.buttonColor"
-                                },
-                                {
-                                  "key": "primaryColumns.action.borderRadius"
-                                },
-                                {
-                                  "key": "primaryColumns.action.boxShadow"
-                                },
                                 {
                                   "key": "accentColor"
                                 },
@@ -1639,82 +1650,207 @@
                                 },
                                 {
                                   "key": "tableData"
+                                },
+                                {
+                                  "key": "primaryColumns.SerialNumber.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.Material.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.Error.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.ExpectedLocation.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.ExpectedCarrier.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.ExpectedStatus.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.CountedStatus.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.ExpectedOwner.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.CountedOwner.computedValue"
                                 }
                               ],
                               "leftColumn": 0,
                               "primaryColumns": {
-                                "step": {
+                                "SerialNumber": {
                                   "index": 0,
                                   "width": 150,
-                                  "id": "step",
+                                  "id": "SerialNumber",
                                   "horizontalAlignment": "LEFT",
                                   "verticalAlignment": "CENTER",
                                   "columnType": "text",
+                                  "textColor": "",
                                   "textSize": "0.875rem",
                                   "enableFilter": true,
                                   "enableSort": true,
                                   "isVisible": true,
+                                  "isDisabled": false,
                                   "isCellVisible": true,
                                   "isDerived": false,
-                                  "label": "step",
-                                  "computedValue": "{{tableErroredSerials.sanitizedTableData.map((currentRow) => ( currentRow.step))}}",
-                                  "labelColor": "#FFFFFF"
+                                  "label": "SerialNumber",
+                                  "computedValue": "{{tableErroredSerials.sanitizedTableData.map((currentRow) => ( currentRow.SerialNumber))}}",
+                                  "cellBackground": ""
                                 },
-                                "task": {
+                                "Material": {
                                   "index": 1,
                                   "width": 150,
-                                  "id": "task",
+                                  "id": "Material",
                                   "horizontalAlignment": "LEFT",
                                   "verticalAlignment": "CENTER",
                                   "columnType": "text",
+                                  "textColor": "",
                                   "textSize": "0.875rem",
                                   "enableFilter": true,
                                   "enableSort": true,
                                   "isVisible": true,
+                                  "isDisabled": false,
                                   "isCellVisible": true,
                                   "isDerived": false,
-                                  "label": "task",
-                                  "computedValue": "{{tableErroredSerials.sanitizedTableData.map((currentRow) => ( currentRow.task))}}",
-                                  "labelColor": "#FFFFFF"
+                                  "label": "Material",
+                                  "computedValue": "{{tableErroredSerials.sanitizedTableData.map((currentRow) => ( currentRow.Material))}}",
+                                  "cellBackground": ""
                                 },
-                                "status": {
+                                "Error": {
                                   "index": 2,
                                   "width": 150,
-                                  "id": "status",
+                                  "id": "Error",
                                   "horizontalAlignment": "LEFT",
                                   "verticalAlignment": "CENTER",
                                   "columnType": "text",
+                                  "textColor": "",
                                   "textSize": "0.875rem",
                                   "enableFilter": true,
                                   "enableSort": true,
                                   "isVisible": true,
+                                  "isDisabled": false,
                                   "isCellVisible": true,
                                   "isDerived": false,
-                                  "label": "status",
-                                  "computedValue": "{{tableErroredSerials.sanitizedTableData.map((currentRow) => ( currentRow.status))}}",
-                                  "labelColor": "#FFFFFF"
+                                  "label": "Error",
+                                  "computedValue": "{{tableErroredSerials.sanitizedTableData.map((currentRow) => ( currentRow.Error))}}",
+                                  "cellBackground": ""
                                 },
-                                "action": {
+                                "ExpectedLocation": {
                                   "index": 3,
                                   "width": 150,
-                                  "id": "action",
+                                  "id": "ExpectedLocation",
                                   "horizontalAlignment": "LEFT",
                                   "verticalAlignment": "CENTER",
-                                  "columnType": "button",
+                                  "columnType": "text",
+                                  "textColor": "",
                                   "textSize": "0.875rem",
                                   "enableFilter": true,
                                   "enableSort": true,
                                   "isVisible": true,
-                                  "isCellVisible": true,
                                   "isDisabled": false,
+                                  "isCellVisible": true,
                                   "isDerived": false,
-                                  "label": "action",
-                                  "onClick": "{{currentRow.step === '#1' ? showAlert('Done', 'success') : currentRow.step === '#2' ? navigateTo('https://docs.appsmith.com/core-concepts/connecting-to-data-sources/querying-a-database',undefined,'NEW_WINDOW') : navigateTo('https://docs.appsmith.com/core-concepts/displaying-data-read/display-data-tables',undefined,'NEW_WINDOW')}}",
-                                  "computedValue": "{{tableErroredSerials.sanitizedTableData.map((currentRow) => ( currentRow.action))}}",
-                                  "labelColor": "#FFFFFF",
-                                  "buttonColor": "{{tableErroredSerials.sanitizedTableData.map((currentRow) => ( appsmith.theme.colors.primaryColor))}}",
-                                  "borderRadius": "{{tableErroredSerials.sanitizedTableData.map((currentRow) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
-                                  "boxShadow": "{{tableErroredSerials.sanitizedTableData.map((currentRow) => ( 'none'))}}"
+                                  "label": "ExpectedLocation",
+                                  "computedValue": "{{tableErroredSerials.sanitizedTableData.map((currentRow) => ( currentRow.ExpectedLocation))}}",
+                                  "cellBackground": ""
+                                },
+                                "ExpectedCarrier": {
+                                  "index": 4,
+                                  "width": 150,
+                                  "id": "ExpectedCarrier",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "text",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "ExpectedCarrier",
+                                  "computedValue": "{{tableErroredSerials.sanitizedTableData.map((currentRow) => ( currentRow.ExpectedCarrier))}}",
+                                  "cellBackground": ""
+                                },
+                                "ExpectedStatus": {
+                                  "index": 5,
+                                  "width": 150,
+                                  "id": "ExpectedStatus",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "text",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "ExpectedStatus",
+                                  "computedValue": "{{tableErroredSerials.sanitizedTableData.map((currentRow) => ( currentRow.ExpectedStatus))}}",
+                                  "cellBackground": ""
+                                },
+                                "CountedStatus": {
+                                  "index": 6,
+                                  "width": 150,
+                                  "id": "CountedStatus",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "text",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "CountedStatus",
+                                  "computedValue": "{{tableErroredSerials.sanitizedTableData.map((currentRow) => ( currentRow.CountedStatus))}}",
+                                  "cellBackground": ""
+                                },
+                                "ExpectedOwner": {
+                                  "index": 7,
+                                  "width": 150,
+                                  "id": "ExpectedOwner",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "text",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "ExpectedOwner",
+                                  "computedValue": "{{tableErroredSerials.sanitizedTableData.map((currentRow) => ( currentRow.ExpectedOwner))}}",
+                                  "cellBackground": ""
+                                },
+                                "CountedOwner": {
+                                  "index": 8,
+                                  "width": 150,
+                                  "id": "CountedOwner",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "text",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "CountedOwner",
+                                  "computedValue": "{{tableErroredSerials.sanitizedTableData.map((currentRow) => ( currentRow.CountedOwner))}}",
+                                  "cellBackground": ""
                                 }
                               },
                               "delimiter": ",",
@@ -2774,6 +2910,7 @@
                     {
                       "boxShadow": "none",
                       "widgetName": "btnConfirmAdjustUnexpected",
+                      "onClick": "{{StocktakeAdjustmentUnexpected.run(() => HandleSelects.adjustUnexpectedClick(), () => {})}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca02633.svg",
@@ -2782,7 +2919,11 @@
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
-                      "dynamicTriggerPathList": [],
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
                       "leftColumn": 1,
                       "dynamicBindingPathList": [
                         {
@@ -2830,11 +2971,14 @@
                         },
                         {
                           "key": "borderRadius"
+                        },
+                        {
+                          "key": "text"
                         }
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
-                      "text": "Previous Carrier: ",
+                      "text": "Previous Carrier: {{GetUnexpectedSubLotState.data.data.getStockOnHand[GetUnexpectedSubLotState.data.data.getStockOnHand.length-1].carrier.code}}",
                       "key": "pe7l7stv1i",
                       "rightColumn": 55,
                       "textAlign": "LEFT",
@@ -2870,11 +3014,14 @@
                         },
                         {
                           "key": "borderRadius"
+                        },
+                        {
+                          "key": "text"
                         }
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
-                      "text": "Previous Bin:",
+                      "text": "Previous Bin:{{GetUnexpectedSubLotState.data.data.getStockOnHand[GetUnexpectedSubLotState.data.data.getStockOnHand.length-1].storageLocation.name}}",
                       "key": "pe7l7stv1i",
                       "rightColumn": 55,
                       "textAlign": "LEFT",
@@ -2917,7 +3064,7 @@
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
-                      "text": "Status: {{tableUnexpectedSerials.selectedRow}}",
+                      "text": "Status: {{appsmith.store.unexpectedSerialsTable[tableUnexpectedSerials.selectedRowIndex].Status}}",
                       "key": "pe7l7stv1i",
                       "rightColumn": 50,
                       "textAlign": "LEFT",
@@ -2960,7 +3107,7 @@
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
-                      "text": "Owner: {{tableUnexpectedSerials.selectedRow}}",
+                      "text": "Owner: {{appsmith.store.unexpectedSerialsTable[tableUnexpectedSerials.selectedRowIndex].Owner}}",
                       "key": "pe7l7stv1i",
                       "rightColumn": 50,
                       "textAlign": "LEFT",
@@ -3089,7 +3236,7 @@
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
-                      "text": "Serial Number: {{tableUnexpectedSerials.selectedRow}}",
+                      "text": "Serial Number: {{appsmith.store.unexpectedSerialsTable[tableUnexpectedSerials.selectedRowIndex].Serial}}",
                       "key": "pe7l7stv1i",
                       "rightColumn": 50,
                       "textAlign": "LEFT",
@@ -3132,7 +3279,7 @@
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
-                      "text": "Material: {{tableUnexpectedSerials.selectedRow}}",
+                      "text": "Material: {{appsmith.store.unexpectedSerialsTable[tableUnexpectedSerials.selectedRowIndex].Material}}",
                       "key": "pe7l7stv1i",
                       "rightColumn": 50,
                       "textAlign": "LEFT",
@@ -3211,9 +3358,21 @@
               "confirmBeforeExecute": false,
               "pluginType": "API",
               "jsonPathKeys": [
-                "JSON.stringify({\n    variables: {\t\n  input: HandleJobResponses.activeJobResponse()\n\t\t},\n    query: `\nquery GetStocktakeComparison($input:ID!){\n  getStoctakeActualComparison(input:{id:$input}){\n    quantities {\n      material{id,code}\n\t\t\tstatus{id,code}\n\t\t\towner{id,name}\n      counted\n      expected\n    }\n    serialised {\n      missingSubLots{\n        materialSubLot{code}\n\t\t\t\tmaterial{code}\n\t\t\t\towner{name}\n\t\t\t\tstatus{code}\n      }\n      unexpectedSubLots {\n        materialSubLot{code}\n\t\t\t\tmaterial{code}\n\t\t\t\towner{name}\n\t\t\t\tstatus{code}\n\t\t\t\tcarrier{code}\n\t\t\t\tstorageLocation{name}\n      }\n      erroredSubLots {\n        error\n        subLot {id,code}\n\t\t\t\tmaterial {code}\n\t\t\t\texpectedLocation {name}\n\t\t\t\tcountedLocation {name}\n\t\t\t\texpectedCarrier {code}\n\t\t\t\tcountedCarrier {code}\n\t\t\t\texpectedStatus {code}\n\t\t\t\tcountedStatus {code}\n\t\t\t\texpectedOwner {name}\n\t\t\t\tcountedOwner {name}\n      }\n      validSubLots {\n        materialSubLot{code}\n\t\t\t\tmaterial{code}\n\t\t\t\towner{name}\n\t\t\t\tstatus{code}\n      }\n    }\n  }\n}`\n})"
+                "JSON.stringify({\n    variables: {\t\n  input: HandleJobResponses.activeJobResponse()\n\t\t},\n    query: `\nquery GetStocktakeComparison($input:ID!){\n  getStoctakeActualComparison(input:{id:$input}){\n    quantities {\n      material{id,code}\n\t\t\tstatus{id,code}\n\t\t\towner{id,companyCode}\n      counted\n      expected\n    }\n    serialised {\n      missingSubLots{\n        materialSubLot{code}\n\t\t\t\tmaterial{code}\n\t\t\t\towner{companyCode}\n\t\t\t\tstatus{code}\n      }\n      unexpectedSubLots {\n        materialSubLot{code}\n\t\t\t\tmaterial{code}\n\t\t\t\towner{id,companyCode}\n\t\t\t\tstatus{code}\n\t\t\t\tcarrier{code}\n\t\t\t\tstorageLocation{name}\n      }\n      erroredSubLots {\n        error\n        subLot {id,code}\n\t\t\t\tmaterial {code}\n\t\t\t\texpectedLocation {name}\n\t\t\t\tcountedLocation {name}\n\t\t\t\texpectedCarrier {code}\n\t\t\t\tcountedCarrier {code}\n\t\t\t\texpectedStatus {code}\n\t\t\t\tcountedStatus {code}\n\t\t\t\texpectedOwner {companyCode}\n\t\t\t\tcountedOwner {companyCode}\n      }\n      validSubLots {\n        materialSubLot{code}\n\t\t\t\tmaterial{code}\n\t\t\t\towner{companyCode}\n\t\t\t\tstatus{code}\n      }\n    }\n  }\n}`\n})"
               ],
               "timeoutInMillisecond": 20000
+            }
+          ],
+          [
+            {
+              "id": "Stocktake Report_GetUnexpectedSubLotState",
+              "name": "GetUnexpectedSubLotState",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "JSON.stringify({\n    variables: {\n\t\t\tcode:tableUnexpectedSerials.tableData[tableUnexpectedSerials.selectedRowIndex].Serial,\n\t\t},\n    query: `\nquery UnexpectedState($code:String!){\n  getStockOnHand(filter:{materialSubLot:{code:$code},groupBy:{carrier:true,status:true,storageLocation:true}}){\n    carrier{code}\n    storageLocation{name}\n\t\tquantity\n  }\n}\n`\n})"
+              ],
+              "timeoutInMillisecond": 10000
             }
           ]
         ],
