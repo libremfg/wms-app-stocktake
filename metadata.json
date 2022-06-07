@@ -392,6 +392,10 @@
       "unpublishedUserSetOnLoad": true,
       "publishedUserSetOnLoad": true
     },
+    "Stocktake Report_GetMissingSubLotStocktake": {
+      "unpublishedUserSetOnLoad": true,
+      "publishedUserSetOnLoad": true
+    },
     "Stocktake Report_GetSiteWarehouses": {
       "unpublishedUserSetOnLoad": true,
       "publishedUserSetOnLoad": true
@@ -437,6 +441,10 @@
       "publishedUserSetOnLoad": false
     },
     "Stocktake Report_HandleSelects.closeJobResponse": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Report_HandleSelects.missingRowClick": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },

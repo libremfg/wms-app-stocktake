@@ -21,7 +21,7 @@
       "encodeParamsToggle": true,
       "body": "() => {\n\t\tif (GetStocktakeComparisons.data == null) {\n\t\t\tlet ret = []\n\t\t\treturn ret\n\t\t}\n\t\tvar ret = []\n\t\tfor (let i = 0; i < GetStocktakeComparisons.data.data.getStoctakeActualComparison.serialised.missingSubLots.length ; i ++) {\n\t\t\tlet line = GetStocktakeComparisons.data.data.getStoctakeActualComparison.serialised.missingSubLots[i]\n\t\t\tlet owner = \"\"\n\t\t\tif (line.owner != null) {\n\t\t\t\towner = line.owner.companyCode\n\t\t\t}\n\t\t\tlet row = {\n\t\t\t\t\"Serial\": line.materialSubLot.code,\n\t\t\t\t\"Material\": line.material.code,\n\t\t\t\t\"Owner\": owner,\n\t\t\t\t\"Status\": line.status.code,\n\t\t\t}\n\t\t\tret.push(row)\n\t\t}\n\t\tstoreValue(\"missingSerialsTable\", ret)\n\t\treturn ret\n\t}",
       "jsArguments": [],
-      "isAsync": true
+      "isAsync": false
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [

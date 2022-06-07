@@ -1235,7 +1235,8 @@
                       "columnOrder": [
                         "Material",
                         "Quantity",
-                        "Status"
+                        "Status",
+                        "Owner"
                       ],
                       "isVisibleDownload": true,
                       "dynamicPropertyPathList": [],
@@ -1290,6 +1291,9 @@
                         },
                         {
                           "key": "primaryColumns.Status.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.Owner.computedValue"
                         }
                       ],
                       "leftColumn": 1,
@@ -1344,6 +1348,25 @@
                           "isDerived": false,
                           "label": "Status",
                           "computedValue": "{{tableStocktakeCounts.sanitizedTableData.map((currentRow) => ( currentRow.Status))}}"
+                        },
+                        "Owner": {
+                          "index": 3,
+                          "width": 150,
+                          "id": "Owner",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "Owner",
+                          "computedValue": "{{tableStocktakeCounts.sanitizedTableData.map((currentRow) => ( currentRow.Owner))}}",
+                          "cellBackground": ""
                         }
                       },
                       "delimiter": ",",

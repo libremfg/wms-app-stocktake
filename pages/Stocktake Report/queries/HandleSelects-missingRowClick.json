@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "unexpectedRowClick",
-    "fullyQualifiedName": "HandleSelects.unexpectedRowClick",
+    "name": "missingRowClick",
+    "fullyQualifiedName": "HandleSelects.missingRowClick",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\tGetUnexpectedSubLotState.run()\n\t\tshowModal(\"modalUnexpectedSerialAdjust\")\n\t}",
+      "body": "() => {\n\t\tGetMissingSubLotStocktake.run()\n\t\tshowModal(\"modalMissingSerialHistory\")\n\t}",
       "jsArguments": [],
       "isAsync": true
     },
@@ -33,14 +33,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\tGetUnexpectedSubLotState.run()\n\t\tshowModal(\"modalUnexpectedSerialAdjust\")\n\t}"
+      "() => {\n\t\tGetMissingSubLotStocktake.run()\n\t\tshowModal(\"modalMissingSerialHistory\")\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Stocktake Report_HandleSelects.unexpectedRowClick",
+  "id": "Stocktake Report_HandleSelects.missingRowClick",
   "deleted": false,
-  "gitSyncId": "618b5832da7cd651ee2730f2_6296f7a4b4c51656bfebd530"
+  "gitSyncId": "618b5832da7cd651ee2730f2_629ea8d0aeaa1802518ac6d0"
 }

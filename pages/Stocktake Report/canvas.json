@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1480,
+          "bottomRow": 990,
           "containerStyle": "none",
           "snapRows": 99,
           "parentRowSpace": 1,
@@ -885,7 +885,7 @@
                                   "key": "primaryColumns.Status.computedValue"
                                 }
                               ],
-                              "leftColumn": 45,
+                              "leftColumn": 46,
                               "primaryColumns": {
                                 "Serial": {
                                   "index": 0,
@@ -1016,12 +1016,13 @@
                               "widgetName": "tableMissingSerials",
                               "defaultPageSize": 0,
                               "columnOrder": [
-                                "step",
-                                "task",
-                                "status",
-                                "action"
+                                "Serial",
+                                "Material",
+                                "Owner",
+                                "Status"
                               ],
                               "isVisibleDownload": true,
+                              "dynamicPropertyPathList": [],
                               "displayName": "Table",
                               "iconSVG": "/static/media/icon.db8a9cbd.svg",
                               "topRow": 4,
@@ -1033,29 +1034,12 @@
                               "hideCard": false,
                               "animateLoading": true,
                               "parentColumnSpace": 20.207275390625,
-                              "dynamicTriggerPathList": [],
+                              "dynamicTriggerPathList": [
+                                {
+                                  "key": "onRowSelected"
+                                }
+                              ],
                               "dynamicBindingPathList": [
-                                {
-                                  "key": "primaryColumns.step.computedValue"
-                                },
-                                {
-                                  "key": "primaryColumns.task.computedValue"
-                                },
-                                {
-                                  "key": "primaryColumns.status.computedValue"
-                                },
-                                {
-                                  "key": "primaryColumns.action.computedValue"
-                                },
-                                {
-                                  "key": "primaryColumns.action.buttonColor"
-                                },
-                                {
-                                  "key": "primaryColumns.action.borderRadius"
-                                },
-                                {
-                                  "key": "primaryColumns.action.boxShadow"
-                                },
                                 {
                                   "key": "accentColor"
                                 },
@@ -1085,88 +1069,104 @@
                                 },
                                 {
                                   "key": "tableData"
+                                },
+                                {
+                                  "key": "primaryColumns.Serial.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.Material.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.Owner.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.Status.computedValue"
                                 }
                               ],
                               "leftColumn": 0,
                               "primaryColumns": {
-                                "step": {
+                                "Serial": {
                                   "index": 0,
                                   "width": 150,
-                                  "id": "step",
+                                  "id": "Serial",
                                   "horizontalAlignment": "LEFT",
                                   "verticalAlignment": "CENTER",
                                   "columnType": "text",
+                                  "textColor": "",
                                   "textSize": "0.875rem",
                                   "enableFilter": true,
                                   "enableSort": true,
                                   "isVisible": true,
+                                  "isDisabled": false,
                                   "isCellVisible": true,
                                   "isDerived": false,
-                                  "label": "step",
-                                  "computedValue": "{{tableMissingSerials.sanitizedTableData.map((currentRow) => ( currentRow.step))}}",
-                                  "labelColor": "#FFFFFF"
+                                  "label": "Serial",
+                                  "computedValue": "{{tableMissingSerials.sanitizedTableData.map((currentRow) => ( currentRow.Serial))}}",
+                                  "cellBackground": ""
                                 },
-                                "task": {
+                                "Material": {
                                   "index": 1,
                                   "width": 150,
-                                  "id": "task",
+                                  "id": "Material",
                                   "horizontalAlignment": "LEFT",
                                   "verticalAlignment": "CENTER",
                                   "columnType": "text",
+                                  "textColor": "",
                                   "textSize": "0.875rem",
                                   "enableFilter": true,
                                   "enableSort": true,
                                   "isVisible": true,
+                                  "isDisabled": false,
                                   "isCellVisible": true,
                                   "isDerived": false,
-                                  "label": "task",
-                                  "computedValue": "{{tableMissingSerials.sanitizedTableData.map((currentRow) => ( currentRow.task))}}",
-                                  "labelColor": "#FFFFFF"
+                                  "label": "Material",
+                                  "computedValue": "{{tableMissingSerials.sanitizedTableData.map((currentRow) => ( currentRow.Material))}}",
+                                  "cellBackground": ""
                                 },
-                                "status": {
+                                "Owner": {
                                   "index": 2,
                                   "width": 150,
-                                  "id": "status",
+                                  "id": "Owner",
                                   "horizontalAlignment": "LEFT",
                                   "verticalAlignment": "CENTER",
                                   "columnType": "text",
+                                  "textColor": "",
                                   "textSize": "0.875rem",
                                   "enableFilter": true,
                                   "enableSort": true,
                                   "isVisible": true,
+                                  "isDisabled": false,
                                   "isCellVisible": true,
                                   "isDerived": false,
-                                  "label": "status",
-                                  "computedValue": "{{tableMissingSerials.sanitizedTableData.map((currentRow) => ( currentRow.status))}}",
-                                  "labelColor": "#FFFFFF"
+                                  "label": "Owner",
+                                  "computedValue": "{{tableMissingSerials.sanitizedTableData.map((currentRow) => ( currentRow.Owner))}}",
+                                  "cellBackground": ""
                                 },
-                                "action": {
+                                "Status": {
                                   "index": 3,
                                   "width": 150,
-                                  "id": "action",
+                                  "id": "Status",
                                   "horizontalAlignment": "LEFT",
                                   "verticalAlignment": "CENTER",
-                                  "columnType": "button",
+                                  "columnType": "text",
+                                  "textColor": "",
                                   "textSize": "0.875rem",
                                   "enableFilter": true,
                                   "enableSort": true,
                                   "isVisible": true,
-                                  "isCellVisible": true,
                                   "isDisabled": false,
+                                  "isCellVisible": true,
                                   "isDerived": false,
-                                  "label": "action",
-                                  "onClick": "{{currentRow.step === '#1' ? showAlert('Done', 'success') : currentRow.step === '#2' ? navigateTo('https://docs.appsmith.com/core-concepts/connecting-to-data-sources/querying-a-database',undefined,'NEW_WINDOW') : navigateTo('https://docs.appsmith.com/core-concepts/displaying-data-read/display-data-tables',undefined,'NEW_WINDOW')}}",
-                                  "computedValue": "{{tableMissingSerials.sanitizedTableData.map((currentRow) => ( currentRow.action))}}",
-                                  "labelColor": "#FFFFFF",
-                                  "buttonColor": "{{tableMissingSerials.sanitizedTableData.map((currentRow) => ( appsmith.theme.colors.primaryColor))}}",
-                                  "borderRadius": "{{tableMissingSerials.sanitizedTableData.map((currentRow) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
-                                  "boxShadow": "{{tableMissingSerials.sanitizedTableData.map((currentRow) => ( 'none'))}}"
+                                  "label": "Status",
+                                  "computedValue": "{{tableMissingSerials.sanitizedTableData.map((currentRow) => ( currentRow.Status))}}",
+                                  "cellBackground": ""
                                 }
                               },
                               "delimiter": ",",
+                              "onRowSelected": "{{HandleSelects.missingRowClick()}}",
                               "key": "umztt2pal2",
                               "derivedColumns": {},
-                              "rightColumn": 21,
+                              "rightColumn": 23,
                               "textSize": "0.875rem",
                               "widgetId": "60biltm1jr",
                               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
@@ -1206,7 +1206,9 @@
                               "columnSizeMap": {
                                 "task": 245,
                                 "step": 62,
-                                "status": 75
+                                "status": 75,
+                                "Serial": 186,
+                                "Material": 162
                               }
                             },
                             {
@@ -1236,7 +1238,7 @@
                               "truncateButtonColor": "#FFC13D",
                               "text": "Missing Serials",
                               "key": "pe7l7stv1i",
-                              "rightColumn": 16,
+                              "rightColumn": 8,
                               "textAlign": "LEFT",
                               "widgetId": "h4fr8i7tie",
                               "isVisible": true,
@@ -1325,7 +1327,7 @@
                                   "key": "primaryColumns.OwnerId.computedValue"
                                 }
                               ],
-                              "leftColumn": 21,
+                              "leftColumn": 23,
                               "primaryColumns": {
                                 "Material": {
                                   "index": 1,
@@ -1427,7 +1429,7 @@
                               "onRowSelected": "{{HandleSelects.unexpectedRowClick()}}",
                               "key": "umztt2pal2",
                               "derivedColumns": {},
-                              "rightColumn": 45,
+                              "rightColumn": 46,
                               "textSize": "0.875rem",
                               "widgetId": "i17ig2mlt8",
                               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
@@ -1469,7 +1471,7 @@
                                 "step": 62,
                                 "status": 75,
                                 "Serial": 191,
-                                "Material": 165
+                                "Material": 171
                               }
                             },
                             {
@@ -1486,7 +1488,7 @@
                               "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
                               "parentColumnSpace": 20.193359375,
                               "dynamicTriggerPathList": [],
-                              "leftColumn": 21,
+                              "leftColumn": 23,
                               "dynamicBindingPathList": [
                                 {
                                   "key": "fontFamily"
@@ -1499,7 +1501,7 @@
                               "truncateButtonColor": "#FFC13D",
                               "text": "Unexpected Serials",
                               "key": "pe7l7stv1i",
-                              "rightColumn": 37,
+                              "rightColumn": 31,
                               "textAlign": "LEFT",
                               "widgetId": "gee0k47c6d",
                               "isVisible": true,
@@ -1526,7 +1528,7 @@
                               "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
                               "parentColumnSpace": 20.193359375,
                               "dynamicTriggerPathList": [],
-                              "leftColumn": 45,
+                              "leftColumn": 46,
                               "dynamicBindingPathList": [
                                 {
                                   "key": "fontFamily"
@@ -1539,7 +1541,7 @@
                               "truncateButtonColor": "#FFC13D",
                               "text": "Valid Serials",
                               "key": "pe7l7stv1i",
-                              "rightColumn": 61,
+                              "rightColumn": 52,
                               "textAlign": "LEFT",
                               "widgetId": "4dz74l1r3v",
                               "isVisible": true,
@@ -1896,7 +1898,12 @@
                               "columnSizeMap": {
                                 "task": 245,
                                 "step": 62,
-                                "status": 75
+                                "status": 75,
+                                "ExpectedOwner": 126,
+                                "CountedStatus": 125,
+                                "ExpectedStatus": 126,
+                                "ExpectedCarrier": 124,
+                                "Error": 298
                               }
                             }
                           ],
@@ -2022,7 +2029,7 @@
               "key": "w9bevdlidh",
               "labelTextSize": "0.875rem",
               "backgroundColor": "#FFFFFF",
-              "rightColumn": 60,
+              "rightColumn": 64,
               "widgetId": "l5a49zr2sd",
               "containerStyle": "card",
               "isVisible": true,
@@ -3322,6 +3329,277 @@
               "isLoading": false,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "width": 550
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "modalMissingSerialHistory",
+              "isCanvas": true,
+              "displayName": "Modal",
+              "iconSVG": "/static/media/icon.4975978e.svg",
+              "topRow": 20,
+              "bottomRow": 44,
+              "parentRowSpace": 10,
+              "type": "MODAL_WIDGET",
+              "hideCard": false,
+              "shouldScrollContents": true,
+              "animateLoading": true,
+              "parentColumnSpace": 21.669189453125,
+              "leftColumn": 9,
+              "dynamicBindingPathList": [
+                {
+                  "key": "borderRadius"
+                }
+              ],
+              "children": [
+                {
+                  "boxShadow": "none",
+                  "widgetName": "Canvas9",
+                  "displayName": "Canvas",
+                  "topRow": 0,
+                  "bottomRow": 350,
+                  "parentRowSpace": 1,
+                  "type": "CANVAS_WIDGET",
+                  "canExtend": true,
+                  "hideCard": true,
+                  "shouldScrollContents": false,
+                  "minHeight": 352,
+                  "parentColumnSpace": 1,
+                  "leftColumn": 0,
+                  "dynamicBindingPathList": [
+                    {
+                      "key": "borderRadius"
+                    },
+                    {
+                      "key": "accentColor"
+                    }
+                  ],
+                  "children": [
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "IconButton1",
+                      "onClick": "{{closeModal('modalMissingSerialHistory')}}",
+                      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "displayName": "Icon Button",
+                      "iconSVG": "/static/media/icon.1a0c634a.svg",
+                      "topRow": 1,
+                      "bottomRow": 5,
+                      "type": "ICON_BUTTON_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "leftColumn": 56,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "buttonColor"
+                        },
+                        {
+                          "key": "borderRadius"
+                        }
+                      ],
+                      "iconSize": 24,
+                      "isDisabled": false,
+                      "key": "z9v84ufeg4",
+                      "isDeprecated": false,
+                      "rightColumn": 64,
+                      "iconName": "cross",
+                      "widgetId": "wml1luaklh",
+                      "isVisible": true,
+                      "version": 1,
+                      "parentId": "cxh5sppmda",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "buttonVariant": "TERTIARY"
+                    },
+                    {
+                      "widgetName": "missingSerialHistoryTitle",
+                      "displayName": "Text",
+                      "iconSVG": "/static/media/icon.97c59b52.svg",
+                      "topRow": 1,
+                      "bottomRow": 5,
+                      "type": "TEXT_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "overflow": "NONE",
+                      "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 1,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "fontFamily"
+                        },
+                        {
+                          "key": "borderRadius"
+                        }
+                      ],
+                      "shouldTruncate": false,
+                      "truncateButtonColor": "#FFC13D",
+                      "text": "Serial History",
+                      "key": "wb9ab2t2z5",
+                      "isDeprecated": false,
+                      "rightColumn": 41,
+                      "textAlign": "LEFT",
+                      "widgetId": "7vz5z1dq7s",
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "textColor": "#231F20",
+                      "version": 1,
+                      "parentId": "cxh5sppmda",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "fontSize": "1.5rem"
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "Button2",
+                      "onClick": "{{closeModal('modalMissingSerialHistory')}}",
+                      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "displayName": "Button",
+                      "iconSVG": "/static/media/icon.cca02633.svg",
+                      "topRow": 28,
+                      "bottomRow": 32,
+                      "type": "BUTTON_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "leftColumn": 3,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "buttonColor"
+                        },
+                        {
+                          "key": "borderRadius"
+                        }
+                      ],
+                      "text": "Close",
+                      "isDisabled": false,
+                      "key": "qmaww03ct7",
+                      "isDeprecated": false,
+                      "rightColumn": 19,
+                      "isDefaultClickDisabled": true,
+                      "widgetId": "7ux7xui5qn",
+                      "buttonStyle": "PRIMARY",
+                      "isVisible": true,
+                      "recaptchaType": "V3",
+                      "version": 1,
+                      "parentId": "cxh5sppmda",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "buttonVariant": "SECONDARY",
+                      "placement": "CENTER"
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "Button3",
+                      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "displayName": "Button",
+                      "iconSVG": "/static/media/icon.cca02633.svg",
+                      "topRow": 28,
+                      "bottomRow": 32,
+                      "type": "BUTTON_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "leftColumn": 20,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "buttonColor"
+                        },
+                        {
+                          "key": "borderRadius"
+                        }
+                      ],
+                      "text": "Confirm",
+                      "isDisabled": false,
+                      "key": "qmaww03ct7",
+                      "isDeprecated": false,
+                      "rightColumn": 30,
+                      "isDefaultClickDisabled": true,
+                      "widgetId": "rr81nkouum",
+                      "buttonStyle": "PRIMARY_BUTTON",
+                      "isVisible": true,
+                      "recaptchaType": "V3",
+                      "version": 1,
+                      "parentId": "cxh5sppmda",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "buttonVariant": "PRIMARY",
+                      "placement": "CENTER"
+                    },
+                    {
+                      "widgetName": "Text1",
+                      "displayName": "Text",
+                      "iconSVG": "/static/media/icon.97c59b52.svg",
+                      "topRow": 7,
+                      "bottomRow": 26,
+                      "parentRowSpace": 10,
+                      "type": "TEXT_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "overflow": "NONE",
+                      "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+                      "parentColumnSpace": 6.9375,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 1,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "fontFamily"
+                        },
+                        {
+                          "key": "borderRadius"
+                        },
+                        {
+                          "key": "text"
+                        }
+                      ],
+                      "shouldTruncate": false,
+                      "truncateButtonColor": "#FFC13D",
+                      "text": "{{GetMissingSubLotStocktake.data.data.getStocktakeCount}}",
+                      "key": "wb9ab2t2z5",
+                      "isDeprecated": false,
+                      "rightColumn": 58,
+                      "textAlign": "LEFT",
+                      "widgetId": "yjhn9yvxzy",
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "textColor": "#231F20",
+                      "version": 1,
+                      "parentId": "cxh5sppmda",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "fontSize": "1rem"
+                    }
+                  ],
+                  "isDisabled": false,
+                  "key": "7x13k4pqe0",
+                  "isDeprecated": false,
+                  "rightColumn": 520.060546875,
+                  "detachFromLayout": true,
+                  "widgetId": "cxh5sppmda",
+                  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "isVisible": true,
+                  "version": 1,
+                  "parentId": "r0chr5cr4x",
+                  "renderMode": "CANVAS",
+                  "isLoading": false,
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
+                }
+              ],
+              "key": "m219cr4w3z",
+              "height": 352,
+              "isDeprecated": false,
+              "rightColumn": 33,
+              "detachFromLayout": true,
+              "widgetId": "r0chr5cr4x",
+              "canOutsideClickClose": true,
+              "canEscapeKeyClose": true,
+              "version": 2,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "width": 456
             }
           ]
         },
@@ -3378,6 +3656,8 @@
         ],
         "widgetNames": [
           "Button1",
+          "Button2",
+          "Button3",
           "Canvas1",
           "Canvas2",
           "Canvas3",
@@ -3386,7 +3666,10 @@
           "Canvas6",
           "Canvas7",
           "Canvas8",
+          "Canvas9",
+          "IconButton1",
           "MainContainer",
+          "Text1",
           "btnAddComment",
           "btnCloseAddComment",
           "btnCloseConfirmModal",
@@ -3399,8 +3682,10 @@
           "ctnStocktakeReports",
           "inputAddComment",
           "inputSetAdjustmnet",
+          "missingSerialHistoryTitle",
           "modalAddComment",
           "modalConfirmCloseCount",
+          "modalMissingSerialHistory",
           "modalSetAdjustment",
           "modalUnexpectedSerialAdjust",
           "selectReportBin",
