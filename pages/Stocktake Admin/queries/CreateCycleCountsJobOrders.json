@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "GetWarehouseCycleCounts",
+    "name": "CreateCycleCountsJobOrders",
     "datasource": {
       "name": "Libre",
       "pluginId": "restapi-plugin",
@@ -26,7 +26,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tid:[selectWarehouse.selectedOptionValue]\n\t\t},\n    query: `\nquery GetStocktake($id:[ID!]!){\n  queryJobOrder(filter:{name:{regexp:\"/^cycleCount/\"}}){\n    name\n\t\tid\n    equipment (filter:{id:$id}){\n      id\n    }\n  }\n}\n    `\n})\n}}",
+      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tinput:FormatCreateStocktakeMutation.getCycleCountJobOrderInput()\n\t\t},\n    query: `\nmutation AddJobOrder($input:[AddJobOrderInput!]!){\n  addJobOrder(input:$input){numUids}\n}\n    `\n})\n}}",
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
@@ -47,14 +47,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n    variables: {\n\t\t\tid:[selectWarehouse.selectedOptionValue]\n\t\t},\n    query: `\nquery GetStocktake($id:[ID!]!){\n  queryJobOrder(filter:{name:{regexp:\"/^cycleCount/\"}}){\n    name\n\t\tid\n    equipment (filter:{id:$id}){\n      id\n    }\n  }\n}\n    `\n})"
+      "JSON.stringify({\n    variables: {\n\t\t\tinput:FormatCreateStocktakeMutation.getCycleCountJobOrderInput()\n\t\t},\n    query: `\nmutation AddJobOrder($input:[AddJobOrderInput!]!){\n  addJobOrder(input:$input){numUids}\n}\n    `\n})"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Stocktake Admin_GetWarehouseCycleCounts",
+  "id": "Stocktake Admin_CreateCycleCountsJobOrders",
   "deleted": false,
-  "gitSyncId": "618b5832da7cd651ee2730f2_626f423a8a368d6f1ef54845"
+  "gitSyncId": "618b5832da7cd651ee2730f2_629ecef3aeaa1802518ad218"
 }

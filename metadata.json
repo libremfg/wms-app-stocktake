@@ -88,6 +88,10 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "Stocktake Admin_CreateCycleCountsJobOrders": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Stocktake Admin_CreateStocktakeJobOrders": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
@@ -105,6 +109,10 @@
       "publishedUserSetOnLoad": false
     },
     "Stocktake Admin_Format.getUncountedListString": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Admin_FormatCreateStocktakeMutation.getCycleCountJobOrderInput": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
@@ -147,6 +155,10 @@
     "Stocktake Admin_GetWarehouseStocktakes": {
       "unpublishedUserSetOnLoad": true,
       "publishedUserSetOnLoad": true
+    },
+    "Stocktake Admin_HandleSelects.addCycleCounts": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
     },
     "Stocktake Admin_HandleSelects.closeStocktake": {
       "unpublishedUserSetOnLoad": false,
@@ -365,6 +377,10 @@
       "publishedUserSetOnLoad": false
     },
     "Stocktake Report_Format.createValid": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Stocktake Report_Format.missingSubLotStocktakeStateTable": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },

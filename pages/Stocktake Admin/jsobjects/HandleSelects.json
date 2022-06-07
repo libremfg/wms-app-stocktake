@@ -6,7 +6,7 @@
     "pluginType": "JS",
     "actions": [],
     "archivedActions": [],
-    "body": "export default {\n\n\tcloseStocktake: () => {\n\t\tcloseModal(\"modalCloseStocktake\")\n\t\treturn MutationCloseStocktake.run()\n\t\t.then(() => GetWarehouseStocktakes.run())\n\t\t.then(() => GetStocktakeFinalisedLocations.run())\n\t\t.then(() => GetStocktakeJobResponses.run())\n\t\t.then(() => GetStocktakeCountedLocations.run())\n\t},\n\tplanStocktake: () => {\n\t\tcloseModal(\"modalPlanStocktake\")\n\t\treturn CreateStocktakeJobOrders.run()\n\t\t.then(() => GetWarehouseStocktakes.run())\n\t\t.then(() => GetStocktakeFinalisedLocations.run())\n\t\t.then(() => GetStocktakeJobResponses.run())\n\t\t.then(() => GetStocktakeCountedLocations.run())\n\t}\n}",
+    "body": "export default {\n\n\tcloseStocktake: () => {\n\t\tcloseModal(\"modalCloseStocktake\")\n\t\treturn MutationCloseStocktake.run()\n\t\t.then(() => GetWarehouseStocktakes.run())\n\t\t.then(() => GetStocktakeFinalisedLocations.run())\n\t\t.then(() => GetStocktakeJobResponses.run())\n\t\t.then(() => GetStocktakeCountedLocations.run())\n\t},\n\tplanStocktake: () => {\n\t\tcloseModal(\"modalPlanStocktake\")\n\t\treturn CreateStocktakeJobOrders.run()\n\t\t.then(() => GetWarehouseStocktakes.run())\n\t\t.then(() => GetStocktakeFinalisedLocations.run())\n\t\t.then(() => GetStocktakeJobResponses.run())\n\t\t.then(() => GetStocktakeCountedLocations.run())\n\t},\n\taddCycleCounts: () => {\n\t\tcloseModal(\"modalAddCycleCount\")\n\t\treturn CreateCycleCountsJobOrders.run()\n\t\t.then(() => GetWarehouseCycleCounts.run())\n\t}\n}",
     "variables": []
   },
   "id": "Stocktake Admin_HandleSelects",
